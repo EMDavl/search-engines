@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="ru" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<title>Планарный граф — Википедия</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":[",\t."," \t,"],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","январь","февраль","март","апрель","май","июнь","июль","август","сентябрь","октябрь","ноябрь","декабрь"],"wgRequestId":"bbae7d45-5129-441f-af17-afe86d242b11","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Планарный_граф","wgTitle":"Планарный граф","wgCurRevisionId":136236049,"wgRevisionId":136236049,"wgArticleId":684207,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Википедия:Статьи с нерабочими ссылками","Теория графов","Семейства графов","Планарные графы"],"wgPageViewLanguage":"ru","wgPageContentLanguage":
+"ru","wgPageContentModel":"wikitext","wgRelevantPageName":"Планарный_граф","wgRelevantArticleId":684207,"wgIsProbablyEditable":true,"wgRelevantPageIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgNoticeProject":"wikipedia","wgFlaggedRevsParams":{"tags":{"accuracy":{"levels":1}}},"wgStableRevisionId":136236049,"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgPopupsFlags":6,"wgVisualEditor":{"pageLanguageCode":"ru","pageLanguageDir":"ltr","pageVariantFallbacks":"ru"},"wgMFDisplayWikibaseDescriptions":{"search":true,"watchlist":true,"tagline":false,"nearby":true},"wgWMESchemaEditAttemptStepOversample":false,"wgWMEPageLength":10000,"wgULSCurrentAutonym":"русский","wgCentralAuthMobileDomain":false,"wgEditSubmitButtonLabelPublish":true,"wgULSPosition":"interlanguage","wgULSisCompactLinksEnabled":true,"wgVector2022LanguageInHeader":false,"wgULSisLanguageSelectorEmpty":false,"wgWikibaseItemId":"Q547823",
+"wgCheckUserClientHintsHeadersJsApi":["architecture","bitness","brands","fullVersionList","mobile","model","platform","platformVersion"],"GEHomepageSuggestedEditsEnableTopics":true,"wgGETopicsMatchModeEnabled":false,"wgGEStructuredTaskRejectionReasonTextInputEnabled":false,"wgGELevelingUpEnabledForUser":false};RLSTATE={"ext.globalCssJs.user.styles":"ready","site.styles":"ready","user.styles":"ready","ext.globalCssJs.user":"ready","user":"ready","user.options":"loading","ext.flaggedRevs.icons":"ready","oojs-ui-core.styles":"ready","oojs-ui.styles.indicators":"ready","mediawiki.widgets.styles":"ready","oojs-ui-core.icons":"ready","ext.math.styles":"ready","ext.cite.styles":"ready","skins.vector.styles.legacy":"ready","ext.flaggedRevs.basic":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","codex-search-styles":"ready","ext.uls.interlanguage":"ready","wikibase.client.init":"ready","ext.wikimediaBadges":"ready"};RLPAGEMODULES=["ext.cite.ux-enhancements",
+"mediawiki.page.media","mediawiki.toggleAllCollapsibles","site","mediawiki.page.ready","mediawiki.toc","skins.vector.legacy.js","ext.centralNotice.geoIP","ext.centralNotice.startUp","ext.flaggedRevs.advanced","ext.gadget.collapserefs","ext.gadget.directLinkToCommons","ext.gadget.referenceTooltips","ext.gadget.logo","ext.gadget.edittop","ext.gadget.blpEditNotice","ext.gadget.wikibugs","ext.gadget.sidebarRelated","ext.gadget.navboxDefaultGadgets","ext.urlShortener.toolbar","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.popups","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.echo.centralauth","ext.eventLogging","ext.wikimediaEvents","ext.navigationTiming","ext.uls.compactlinks","ext.uls.interface","ext.cx.eventlogging.campaigns","ext.checkUser.clientHints","ext.quicksurveys.init","ext.growthExperiments.SuggestedEditSession","oojs-ui.styles.icons-media","oojs-ui-core.icons"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="/w/load.php?lang=ru&amp;modules=codex-search-styles%7Cext.cite.styles%7Cext.flaggedRevs.basic%2Cicons%7Cext.math.styles%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cmediawiki.widgets.styles%7Coojs-ui-core.icons%2Cstyles%7Coojs-ui.styles.indicators%7Cskins.vector.styles.legacy%7Cwikibase.client.init&amp;only=styles&amp;skin=vector">
+<script async="" src="/w/load.php?lang=ru&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content="">
+<link rel="stylesheet" href="/w/load.php?lang=ru&amp;modules=site.styles&amp;only=styles&amp;skin=vector">
+<noscript><link rel="stylesheet" href="/w/load.php?lang=ru&amp;modules=noscript&amp;only=styles&amp;skin=vector"></noscript>
+<meta name="generator" content="MediaWiki 1.42.0-wmf.18">
+<meta name="referrer" content="origin">
+<meta name="referrer" content="origin-when-cross-origin">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=1000">
+<meta property="og:title" content="Планарный граф — Википедия">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="//upload.wikimedia.org">
+<link rel="alternate" media="only screen and (max-width: 720px)" href="//ru.m.wikipedia.org/wiki/%D0%9F%D0%BB%D0%B0%D0%BD%D0%B0%D1%80%D0%BD%D1%8B%D0%B9_%D0%B3%D1%80%D0%B0%D1%84">
+<link rel="alternate" type="application/x-wiki" title="Править" href="/w/index.php?title=%D0%9F%D0%BB%D0%B0%D0%BD%D0%B0%D1%80%D0%BD%D1%8B%D0%B9_%D0%B3%D1%80%D0%B0%D1%84&amp;action=edit">
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png">
+<link rel="icon" href="/static/favicon/wikipedia.ico">
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Википедия (ru)">
+<link rel="EditURI" type="application/rsd+xml" href="//ru.wikipedia.org/w/api.php?action=rsd">
+<link rel="canonical" href="https://ru.wikipedia.org/wiki/%D0%9F%D0%BB%D0%B0%D0%BD%D0%B0%D1%80%D0%BD%D1%8B%D0%B9_%D0%B3%D1%80%D0%B0%D1%84">
+<link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.ru">
+<link rel="alternate" type="application/atom+xml" title="Википедия — Atom-лента" href="/w/index.php?title=%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:%D0%A1%D0%B2%D0%B5%D0%B6%D0%B8%D0%B5_%D0%BF%D1%80%D0%B0%D0%B2%D0%BA%D0%B8&amp;feed=atom">
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+<link rel="dns-prefetch" href="//login.wikimedia.org">
+</head>
+<body class="skin-vector-legacy mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Планарный_граф rootpage-Планарный_граф skin-vector action-view"><div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice"><!-- CentralNotice --></div>
+	<div class="mw-indicators">
+	</div>
+	<h1 id="firstHeading" class="firstHeading mw-first-heading"><span class="mw-page-title-main">Планарный граф</span></h1>
+	<div id="bodyContent" class="vector-body">
+		<div id="siteSub" class="noprint">Материал из Википедии — свободной энциклопедии</div>
+		<div id="contentSub"><div id="mw-content-subtitle"></div></div>
+		<div id="contentSub2"></div>
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Перейти к навигации</a>
+		<a class="mw-jump-link" href="#searchInput">Перейти к поиску</a>
+		<div id="mw-content-text" class="mw-body-content"><div class="mw-content-ltr mw-parser-output" lang="ru" dir="ltr"><p><b>Плана́рный граф</b>&#160;— <a href="/wiki/%D0%93%D1%80%D0%B0%D1%84_(%D0%BC%D0%B0%D1%82%D0%B5%D0%BC%D0%B0%D1%82%D0%B8%D0%BA%D0%B0)" title="Граф (математика)">граф</a>, который можно изобразить на <a href="/wiki/%D0%9F%D0%BB%D0%BE%D1%81%D0%BA%D0%BE%D1%81%D1%82%D1%8C_(%D0%B3%D0%B5%D0%BE%D0%BC%D0%B5%D1%82%D1%80%D0%B8%D1%8F)" class="mw-redirect" title="Плоскость (геометрия)">плоскости</a> без пересечений <a href="/wiki/%D0%A0%D0%B5%D0%B1%D1%80%D0%BE_(%D0%B3%D0%B5%D0%BE%D0%BC%D0%B5%D1%82%D1%80%D0%B8%D1%8F)" title="Ребро (геометрия)">рёбер</a> не по вершинам. Какое-либо конкретное изображение планарного графа на плоскости без пересечения рёбер не по вершинам называется <b>плоским графом</b>. Иначе говоря, планарный граф <a href="/wiki/%D0%98%D0%B7%D0%BE%D0%BC%D0%BE%D1%80%D1%84%D0%B8%D0%B7%D0%BC_%D0%B3%D1%80%D0%B0%D1%84%D0%BE%D0%B2" title="Изоморфизм графов">изоморфен</a> некоторому плоскому графу, изображённому на плоскости так, что его вершины&#160;— это <a href="/wiki/%D0%A2%D0%BE%D1%87%D0%BA%D0%B0_(%D0%B3%D0%B5%D0%BE%D0%BC%D0%B5%D1%82%D1%80%D0%B8%D1%8F)" title="Точка (геометрия)">точки</a> плоскости, а рёбра&#160;— кривые на плоскости, которые если и пересекаются между собой, то только по вершинам. Области, на которые граф разбивает плоскость, называются его <b>гранями</b>. Неограниченная часть плоскости&#160;— тоже грань, называемая <b>внешней гранью</b>. Любой плоский граф может быть спрямлён, то есть перерисован на плоскости так, что все его рёбра будут отрезками прямых.
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="ru" dir="ltr"><h2 id="mw-toc-heading">Содержание</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Свойства"><span class="tocnumber">1</span> <span class="toctext">Свойства</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Формула_Эйлера"><span class="tocnumber">1.1</span> <span class="toctext">Формула Эйлера</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-3"><a href="#Два_примера_непланарных_графов"><span class="tocnumber">2</span> <span class="toctext">Два примера непланарных графов</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#Полный_граф_с_пятью_вершинами"><span class="tocnumber">2.1</span> <span class="toctext">Полный граф с пятью вершинами</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#«Домики_и_колодцы»"><span class="tocnumber">2.2</span> <span class="toctext">«Домики и колодцы»</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-6"><a href="#Теорема_Понтрягина_—_Куратовского"><span class="tocnumber">3</span> <span class="toctext">Теорема Понтрягина&#160;— Куратовского</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Компьютерная_проверка_на_планарность"><span class="tocnumber">4</span> <span class="toctext">Компьютерная проверка на планарность</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Признаки_непланарных_графов"><span class="tocnumber">5</span> <span class="toctext">Признаки непланарных графов</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Планарные_графы_в_задачах"><span class="tocnumber">6</span> <span class="toctext">Планарные графы в задачах</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#Обобщения"><span class="tocnumber">7</span> <span class="toctext">Обобщения</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#См._также"><span class="tocnumber">8</span> <span class="toctext">См. также</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#Примечания"><span class="tocnumber">9</span> <span class="toctext">Примечания</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#Ссылки"><span class="tocnumber">10</span> <span class="toctext">Ссылки</span></a></li>
+</ul>
+</div>
+
+<h2><span id=".D0.A1.D0.B2.D0.BE.D0.B9.D1.81.D1.82.D0.B2.D0.B0"></span><span class="mw-headline" id="Свойства">Свойства</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%D0%9F%D0%BB%D0%B0%D0%BD%D0%B0%D1%80%D0%BD%D1%8B%D0%B9_%D0%B3%D1%80%D0%B0%D1%84&amp;veaction=edit&amp;section=1" title="Редактировать раздел «Свойства»" class="mw-editsection-visualeditor"><span>править</span></a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=%D0%9F%D0%BB%D0%B0%D0%BD%D0%B0%D1%80%D0%BD%D1%8B%D0%B9_%D0%B3%D1%80%D0%B0%D1%84&amp;action=edit&amp;section=1" title="Редактировать код раздела «Свойства»"><span>править код</span></a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span id=".D0.A4.D0.BE.D1.80.D0.BC.D1.83.D0.BB.D0.B0_.D0.AD.D0.B9.D0.BB.D0.B5.D1.80.D0.B0"></span><span class="mw-headline" id="Формула_Эйлера">Формула Эйлера</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%D0%9F%D0%BB%D0%B0%D0%BD%D0%B0%D1%80%D0%BD%D1%8B%D0%B9_%D0%B3%D1%80%D0%B0%D1%84&amp;veaction=edit&amp;section=2" title="Редактировать раздел «Формула Эйлера»" class="mw-editsection-visualeditor"><span>править</span></a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=%D0%9F%D0%BB%D0%B0%D0%BD%D0%B0%D1%80%D0%BD%D1%8B%D0%B9_%D0%B3%D1%80%D0%B0%D1%84&amp;action=edit&amp;section=2" title="Редактировать код раздела «Формула Эйлера»"><span>править код</span></a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Для связного плоского графа справедливо следующее соотношение между количеством вершин <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle |V(G)|}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo stretchy="false">|</mo>
+        </mrow>
+        <mi>V</mi>
+        <mo stretchy="false">(</mo>
+        <mi>G</mi>
+        <mo stretchy="false">)</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo stretchy="false">|</mo>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle |V(G)|}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/36bb2eeaad41aa3288f7b5bfe4f15e3ab52377af" class="mwe-math-fallback-image-inline mw-invert" aria-hidden="true" style="vertical-align: -0.838ex; width:6.717ex; height:2.843ex;" alt="{\displaystyle |V(G)|}"></span>, рёбер <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle |E(G)|}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo stretchy="false">|</mo>
+        </mrow>
+        <mi>E</mi>
+        <mo stretchy="false">(</mo>
+        <mi>G</mi>
+        <mo stretchy="false">)</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo stretchy="false">|</mo>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle |E(G)|}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/d7dee525796077de65ec73c7f26e84054df1cd39" class="mwe-math-fallback-image-inline mw-invert" aria-hidden="true" style="vertical-align: -0.838ex; width:6.705ex; height:2.843ex;" alt="{\displaystyle |E(G)|}"></span> и граней <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle |F(G)|}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo stretchy="false">|</mo>
+        </mrow>
+        <mi>F</mi>
+        <mo stretchy="false">(</mo>
+        <mi>G</mi>
+        <mo stretchy="false">)</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo stretchy="false">|</mo>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle |F(G)|}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/0661f5eeb5854721adb704473f2326f596cda396" class="mwe-math-fallback-image-inline mw-invert" aria-hidden="true" style="vertical-align: -0.838ex; width:6.67ex; height:2.843ex;" alt="{\displaystyle |F(G)|}"></span> (включая внешнюю грань):
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \ |V(G)|-|E(G)|+|F(G)|=2.}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mtext>&#xA0;</mtext>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo stretchy="false">|</mo>
+        </mrow>
+        <mi>V</mi>
+        <mo stretchy="false">(</mo>
+        <mi>G</mi>
+        <mo stretchy="false">)</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo stretchy="false">|</mo>
+        </mrow>
+        <mo>&#x2212;<!-- − --></mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo stretchy="false">|</mo>
+        </mrow>
+        <mi>E</mi>
+        <mo stretchy="false">(</mo>
+        <mi>G</mi>
+        <mo stretchy="false">)</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo stretchy="false">|</mo>
+        </mrow>
+        <mo>+</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo stretchy="false">|</mo>
+        </mrow>
+        <mi>F</mi>
+        <mo stretchy="false">(</mo>
+        <mi>G</mi>
+        <mo stretchy="false">)</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo stretchy="false">|</mo>
+        </mrow>
+        <mo>=</mo>
+        <mn>2.</mn>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \ |V(G)|-|E(G)|+|F(G)|=2.}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/bf93fe8f12ae7331754be71de266aae355f3bca4" class="mwe-math-fallback-image-inline mw-invert" aria-hidden="true" style="vertical-align: -0.838ex; width:31.262ex; height:2.843ex;" alt="{\displaystyle \ |V(G)|-|E(G)|+|F(G)|=2.}"></span></dd></dl>
+<p>Оно было найдено <a href="/wiki/%D0%AD%D0%B9%D0%BB%D0%B5%D1%80,_%D0%9B%D0%B5%D0%BE%D0%BD%D0%B0%D1%80%D0%B4" title="Эйлер, Леонард">Эйлером</a> в 1736&#160;г.<sup id="cite_ref-Harary_126_1-0" class="reference"><a href="#cite_note-Harary_126-1">&#91;1&#93;</a></sup> при изучении свойств выпуклых <a href="/wiki/%D0%9C%D0%BD%D0%BE%D0%B3%D0%BE%D0%B3%D1%80%D0%B0%D0%BD%D0%BD%D0%B8%D0%BA" title="Многогранник">многогранников</a>. Это соотношение справедливо и для других поверхностей с точностью до коэффициента, называемого <a href="/wiki/%D0%AD%D0%B9%D0%BB%D0%B5%D1%80%D0%BE%D0%B2%D0%B0_%D1%85%D0%B0%D1%80%D0%B0%D0%BA%D1%82%D0%B5%D1%80%D0%B8%D1%81%D1%82%D0%B8%D0%BA%D0%B0" title="Эйлерова характеристика">эйлеровой характеристикой</a>. Это <a href="/wiki/%D0%98%D0%BD%D0%B2%D0%B0%D1%80%D0%B8%D0%B0%D0%BD%D1%82_(%D0%BC%D0%B0%D1%82%D0%B5%D0%BC%D0%B0%D1%82%D0%B8%D0%BA%D0%B0)" title="Инвариант (математика)">инвариант</a> поверхности, для плоскости или сферы он равен двум, а, например, для поверхности <a href="/wiki/%D0%A2%D0%BE%D1%80_(%D0%BF%D0%BE%D0%B2%D0%B5%D1%80%D1%85%D0%BD%D0%BE%D1%81%D1%82%D1%8C)" title="Тор (поверхность)">тора</a>&#160;— нулю.
+</p><p>Формула имеет множество полезных следствий. Во-первых, все плоские укладки одного графа имеют одинаковое количество граней. Во-вторых, если <b>каждая грань ограничена не менее чем тремя рёбрами</b> (при условии, что в графе больше двух рёбер), а <b>каждое ребро разделяет две грани</b>, то
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle 3|F(G)|\leq 2|E(G)|,}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mn>3</mn>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo stretchy="false">|</mo>
+        </mrow>
+        <mi>F</mi>
+        <mo stretchy="false">(</mo>
+        <mi>G</mi>
+        <mo stretchy="false">)</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo stretchy="false">|</mo>
+        </mrow>
+        <mo>&#x2264;<!-- ≤ --></mo>
+        <mn>2</mn>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo stretchy="false">|</mo>
+        </mrow>
+        <mi>E</mi>
+        <mo stretchy="false">(</mo>
+        <mi>G</mi>
+        <mo stretchy="false">)</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo stretchy="false">|</mo>
+        </mrow>
+        <mo>,</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle 3|F(G)|\leq 2|E(G)|,}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/40291011351d69d3d5237c12378b4ea7a3f73cc3" class="mwe-math-fallback-image-inline mw-invert" aria-hidden="true" style="vertical-align: -0.838ex; width:19.446ex; height:2.843ex;" alt="{\displaystyle 3|F(G)|\leq 2|E(G)|,}"></span></dd></dl>
+<p>следовательно,
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle |E(G)|\leq 3|V(G)|-6,}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo stretchy="false">|</mo>
+        </mrow>
+        <mi>E</mi>
+        <mo stretchy="false">(</mo>
+        <mi>G</mi>
+        <mo stretchy="false">)</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo stretchy="false">|</mo>
+        </mrow>
+        <mo>&#x2264;<!-- ≤ --></mo>
+        <mn>3</mn>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo stretchy="false">|</mo>
+        </mrow>
+        <mi>V</mi>
+        <mo stretchy="false">(</mo>
+        <mi>G</mi>
+        <mo stretchy="false">)</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo stretchy="false">|</mo>
+        </mrow>
+        <mo>&#x2212;<!-- − --></mo>
+        <mn>6</mn>
+        <mo>,</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle |E(G)|\leq 3|V(G)|-6,}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/1d608d0b24606aae2f721eca33e6927679d75131" class="mwe-math-fallback-image-inline mw-invert" aria-hidden="true" style="vertical-align: -0.838ex; width:22.333ex; height:2.843ex;" alt="{\displaystyle |E(G)|\leq 3|V(G)|-6,}"></span></dd></dl>
+<p>то есть при большем числе рёбер такой граф заведомо непланарен. Обратное утверждение неверно: в качестве контрпримера можно взять <a href="/wiki/%D0%93%D1%80%D0%B0%D1%84_%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D1%81%D0%B5%D0%BD%D0%B0" title="Граф Петерсена">граф Петерсена</a>. Отсюда следует, что в планарном графе всегда можно найти вершину степени не более 5.
+</p><p>Общая формула также легко обобщается на случай несвязного графа:
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle |V(G)|-|E(G)|+|F(G)|=1+|C(G)|,}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo stretchy="false">|</mo>
+        </mrow>
+        <mi>V</mi>
+        <mo stretchy="false">(</mo>
+        <mi>G</mi>
+        <mo stretchy="false">)</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo stretchy="false">|</mo>
+        </mrow>
+        <mo>&#x2212;<!-- − --></mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo stretchy="false">|</mo>
+        </mrow>
+        <mi>E</mi>
+        <mo stretchy="false">(</mo>
+        <mi>G</mi>
+        <mo stretchy="false">)</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo stretchy="false">|</mo>
+        </mrow>
+        <mo>+</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo stretchy="false">|</mo>
+        </mrow>
+        <mi>F</mi>
+        <mo stretchy="false">(</mo>
+        <mi>G</mi>
+        <mo stretchy="false">)</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo stretchy="false">|</mo>
+        </mrow>
+        <mo>=</mo>
+        <mn>1</mn>
+        <mo>+</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo stretchy="false">|</mo>
+        </mrow>
+        <mi>C</mi>
+        <mo stretchy="false">(</mo>
+        <mi>G</mi>
+        <mo stretchy="false">)</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo stretchy="false">|</mo>
+        </mrow>
+        <mo>,</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle |V(G)|-|E(G)|+|F(G)|=1+|C(G)|,}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/0a96565009bb6913781e4c597573059150058319" class="mwe-math-fallback-image-inline mw-invert" aria-hidden="true" style="vertical-align: -0.838ex; width:40.218ex; height:2.843ex;" alt="{\displaystyle |V(G)|-|E(G)|+|F(G)|=1+|C(G)|,}"></span></dd></dl>
+<p>где <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle |C(G)|}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo stretchy="false">|</mo>
+        </mrow>
+        <mi>C</mi>
+        <mo stretchy="false">(</mo>
+        <mi>G</mi>
+        <mo stretchy="false">)</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo stretchy="false">|</mo>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle |C(G)|}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/06fe94f1493e447aca4297d9290ea2bd74acd2c3" class="mwe-math-fallback-image-inline mw-invert" aria-hidden="true" style="vertical-align: -0.838ex; width:6.696ex; height:2.843ex;" alt="{\displaystyle |C(G)|}"></span>&#160;— количество компонент связности в графе.
+</p>
+<h2><span id=".D0.94.D0.B2.D0.B0_.D0.BF.D1.80.D0.B8.D0.BC.D0.B5.D1.80.D0.B0_.D0.BD.D0.B5.D0.BF.D0.BB.D0.B0.D0.BD.D0.B0.D1.80.D0.BD.D1.8B.D1.85_.D0.B3.D1.80.D0.B0.D1.84.D0.BE.D0.B2"></span><span class="mw-headline" id="Два_примера_непланарных_графов">Два примера непланарных графов</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%D0%9F%D0%BB%D0%B0%D0%BD%D0%B0%D1%80%D0%BD%D1%8B%D0%B9_%D0%B3%D1%80%D0%B0%D1%84&amp;veaction=edit&amp;section=3" title="Редактировать раздел «Два примера непланарных графов»" class="mw-editsection-visualeditor"><span>править</span></a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=%D0%9F%D0%BB%D0%B0%D0%BD%D0%B0%D1%80%D0%BD%D1%8B%D0%B9_%D0%B3%D1%80%D0%B0%D1%84&amp;action=edit&amp;section=3" title="Редактировать код раздела «Два примера непланарных графов»"><span>править код</span></a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span id=".D0.9F.D0.BE.D0.BB.D0.BD.D1.8B.D0.B9_.D0.B3.D1.80.D0.B0.D1.84_.D1.81_.D0.BF.D1.8F.D1.82.D1.8C.D1.8E_.D0.B2.D0.B5.D1.80.D1.88.D0.B8.D0.BD.D0.B0.D0.BC.D0.B8"></span><span class="mw-headline" id="Полный_граф_с_пятью_вершинами">Полный граф с пятью вершинами</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%D0%9F%D0%BB%D0%B0%D0%BD%D0%B0%D1%80%D0%BD%D1%8B%D0%B9_%D0%B3%D1%80%D0%B0%D1%84&amp;veaction=edit&amp;section=4" title="Редактировать раздел «Полный граф с пятью вершинами»" class="mw-editsection-visualeditor"><span>править</span></a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=%D0%9F%D0%BB%D0%B0%D0%BD%D0%B0%D1%80%D0%BD%D1%8B%D0%B9_%D0%B3%D1%80%D0%B0%D1%84&amp;action=edit&amp;section=4" title="Редактировать код раздела «Полный граф с пятью вершинами»"><span>править код</span></a><span class="mw-editsection-bracket">]</span></span></h3>
+<figure class="mw-halign-right" typeof="mw:File/Thumb"><a href="/wiki/%D0%A4%D0%B0%D0%B9%D0%BB:Complete_graph_K5.svg" class="mw-file-description"><img src="//upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Complete_graph_K5.svg/100px-Complete_graph_K5.svg.png" decoding="async" width="100" height="89" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Complete_graph_K5.svg/150px-Complete_graph_K5.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Complete_graph_K5.svg/200px-Complete_graph_K5.svg.png 2x" data-file-width="180" data-file-height="160" /></a><figcaption>K<sub>5</sub>, полный граф с пятью вершинами</figcaption></figure>
+<p><b>Лемма.</b> <a href="/wiki/%D0%9F%D0%BE%D0%BB%D0%BD%D1%8B%D0%B9_%D0%B3%D1%80%D0%B0%D1%84" title="Полный граф">Полный граф</a> с пятью вершинами (K<sub>5</sub>) нельзя уложить на плоскость.
+</p><p><b>Доказательство.</b> Для него не выполняется <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle E\leqslant 3V-6}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>E</mi>
+        <mo>&#x2A7D;<!-- ⩽ --></mo>
+        <mn>3</mn>
+        <mi>V</mi>
+        <mo>&#x2212;<!-- − --></mo>
+        <mn>6</mn>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle E\leqslant 3V-6}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/60bd3dfb05af32e910d5ddc085d3f5d51ded5b8f" class="mwe-math-fallback-image-inline mw-invert" aria-hidden="true" style="vertical-align: -0.505ex; width:11.827ex; height:2.343ex;" alt="{\displaystyle E\leqslant 3V-6}"></span>.
+</p>
+<div style="clear:both;"></div>
+<h3><span id=".C2.AB.D0.94.D0.BE.D0.BC.D0.B8.D0.BA.D0.B8_.D0.B8_.D0.BA.D0.BE.D0.BB.D0.BE.D0.B4.D1.86.D1.8B.C2.BB"></span><span class="mw-headline" id="«Домики_и_колодцы»">«Домики и колодцы»</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%D0%9F%D0%BB%D0%B0%D0%BD%D0%B0%D1%80%D0%BD%D1%8B%D0%B9_%D0%B3%D1%80%D0%B0%D1%84&amp;veaction=edit&amp;section=5" title="Редактировать раздел ««Домики и колодцы»»" class="mw-editsection-visualeditor"><span>править</span></a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=%D0%9F%D0%BB%D0%B0%D0%BD%D0%B0%D1%80%D0%BD%D1%8B%D0%B9_%D0%B3%D1%80%D0%B0%D1%84&amp;action=edit&amp;section=5" title="Редактировать код раздела ««Домики и колодцы»»"><span>править код</span></a><span class="mw-editsection-bracket">]</span></span></h3>
+<figure class="mw-halign-right" typeof="mw:File/Thumb"><a href="/wiki/%D0%A4%D0%B0%D0%B9%D0%BB:Complete_bipartite_graph_K3,3.svg" class="mw-file-description"><img src="//upload.wikimedia.org/wikipedia/commons/thumb/1/11/Complete_bipartite_graph_K3%2C3.svg/100px-Complete_bipartite_graph_K3%2C3.svg.png" decoding="async" width="100" height="76" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/1/11/Complete_bipartite_graph_K3%2C3.svg/150px-Complete_bipartite_graph_K3%2C3.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/1/11/Complete_bipartite_graph_K3%2C3.svg/200px-Complete_bipartite_graph_K3%2C3.svg.png 2x" data-file-width="1062" data-file-height="805" /></a><figcaption>Граф «домики и колодцы» (K<sub>3,3</sub>)</figcaption></figure>
+<div class="hatnote navigation-not-searchable">Основная статья: <b><a href="/wiki/%D0%94%D0%BE%D0%BC%D0%B8%D0%BA%D0%B8_%D0%B8_%D0%BA%D0%BE%D0%BB%D0%BE%D0%B4%D1%86%D1%8B" title="Домики и колодцы">Домики и колодцы</a></b></div>
+<p><b>Задача о трёх колодцах</b>. Есть три дома и три колодца. Можно ли так проложить дорожки между домами и колодцами, чтобы от каждого дома к каждому колодцу вела дорожка, и никакие две дорожки не пересекались бы. Мосты строить нельзя.
+</p><p><b>Лемма.</b> Полный <a href="/wiki/%D0%94%D0%B2%D1%83%D0%B4%D0%BE%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D0%B3%D1%80%D0%B0%D1%84" title="Двудольный граф">двудольный граф</a> с тремя вершинами в каждой из долей (K<sub>3,3</sub>) нельзя уложить на плоскость.
+</p><p><b>Доказательство.</b> По формуле Эйлера граф имеет 5 граней.
+</p><p>У двудольного графа любая грань (включая внешнюю) содержит чётное число рёбер&#160;— а значит, не менее 4. Поскольку каждое ребро включается в ровно две грани, получается соотношение <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle 4F\leqslant 2E}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mn>4</mn>
+        <mi>F</mi>
+        <mo>&#x2A7D;<!-- ⩽ --></mo>
+        <mn>2</mn>
+        <mi>E</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle 4F\leqslant 2E}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/9239246582885203291808a6033f15610d31989d" class="mwe-math-fallback-image-inline mw-invert" aria-hidden="true" style="vertical-align: -0.505ex; width:8.94ex; height:2.343ex;" alt="{\displaystyle 4F\leqslant 2E}"></span>, <style data-mw-deduplicate="TemplateStyles:r117753614">.mw-parser-output .ts-math{white-space:nowrap;font-family:times,serif,palatino linotype,new athena unicode,athena,gentium,code2000;font-size:120%}</style><span class="ts-math" style="font-style:italic;">F</span>&#160;— количество граней, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r117753614"><span class="ts-math" style="font-style:italic;">E</span>&#160;— количество рёбер. Подставляем в это неравенство <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r117753614"><span class="ts-math"><i>F</i> = 5</span> и <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r117753614"><span class="ts-math"><i>E</i> = 9</span> и видим, что оно не выполняется.
+</p>
+<div style="clear:both;"></div>
+<h2><span id=".D0.A2.D0.B5.D0.BE.D1.80.D0.B5.D0.BC.D0.B0_.D0.9F.D0.BE.D0.BD.D1.82.D1.80.D1.8F.D0.B3.D0.B8.D0.BD.D0.B0_.E2.80.94_.D0.9A.D1.83.D1.80.D0.B0.D1.82.D0.BE.D0.B2.D1.81.D0.BA.D0.BE.D0.B3.D0.BE"></span><span class="mw-headline" id="Теорема_Понтрягина_—_Куратовского">Теорема Понтрягина&#160;— Куратовского</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%D0%9F%D0%BB%D0%B0%D0%BD%D0%B0%D1%80%D0%BD%D1%8B%D0%B9_%D0%B3%D1%80%D0%B0%D1%84&amp;veaction=edit&amp;section=6" title="Редактировать раздел «Теорема Понтрягина — Куратовского»" class="mw-editsection-visualeditor"><span>править</span></a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=%D0%9F%D0%BB%D0%B0%D0%BD%D0%B0%D1%80%D0%BD%D1%8B%D0%B9_%D0%B3%D1%80%D0%B0%D1%84&amp;action=edit&amp;section=6" title="Редактировать код раздела «Теорема Понтрягина — Куратовского»"><span>править код</span></a><span class="mw-editsection-bracket">]</span></span></h2>
+<figure typeof="mw:File/Thumb"><a href="/wiki/%D0%A4%D0%B0%D0%B9%D0%BB:Kuratowski.gif" class="mw-file-description"><img src="//upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Kuratowski.gif/300px-Kuratowski.gif" decoding="async" width="300" height="196" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Kuratowski.gif/450px-Kuratowski.gif 1.5x, //upload.wikimedia.org/wikipedia/commons/0/0d/Kuratowski.gif 2x" data-file-width="484" data-file-height="316" /></a><figcaption>В общем случае найти K<sub>5</sub> или K<sub>3,3</sub> довольно сложно. <a href="/wiki/%D0%93%D1%80%D0%B0%D1%84_%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D1%81%D0%B5%D0%BD%D0%B0" title="Граф Петерсена">Граф Петерсена</a> несложно стянуть в K<sub>5</sub>, но в нём есть и K<sub>3,3</sub>.</figcaption></figure>
+<div class="hatnote navigation-not-searchable">Основная статья: <b><a href="/wiki/%D0%A2%D0%B5%D0%BE%D1%80%D0%B5%D0%BC%D0%B0_%D0%9F%D0%BE%D0%BD%D1%82%D1%80%D1%8F%D0%B3%D0%B8%D0%BD%D0%B0_%E2%80%94_%D0%9A%D1%83%D1%80%D0%B0%D1%82%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B3%D0%BE" title="Теорема Понтрягина — Куратовского">Теорема Понтрягина — Куратовского</a></b></div>
+<p>Очевидно утверждение: если граф <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r117753614"><span class="ts-math" style="font-style:italic;">G</span> содержит подграф, <a href="/wiki/%D0%93%D0%BE%D0%BC%D0%B5%D0%BE%D0%BC%D0%BE%D1%80%D1%84%D0%B8%D0%B7%D0%BC_%D0%B3%D1%80%D0%B0%D1%84%D0%BE%D0%B2" title="Гомеоморфизм графов">гомеоморфный</a> K<sub>5</sub> или K<sub>3,3</sub>, то его невозможно разложить на плоскости. Оказывается, верно и обратное.
+</p>
+<blockquote style="min-width:50%; max-width:70%;">
+<p>Граф планарен <i>тогда и только тогда, когда</i> он не содержит подграфов, <a href="/wiki/%D0%93%D0%BE%D0%BC%D0%B5%D0%BE%D0%BC%D0%BE%D1%80%D1%84%D0%B8%D0%B7%D0%BC_%D0%B3%D1%80%D0%B0%D1%84%D0%BE%D0%B2" title="Гомеоморфизм графов">гомеоморфных</a> полному графу из пяти вершин (K<sub>5</sub>) или графу «домики и колодцы» (K<sub>3,3</sub>).
+</p>
+</blockquote>
+<p>Теорему также можно сформулировать в следующем варианте (иногда его называют «<a href="/wiki/%D0%A2%D0%B5%D0%BE%D1%80%D0%B5%D0%BC%D0%B0_%D0%92%D0%B0%D0%B3%D0%BD%D0%B5%D1%80%D0%B0" title="Теорема Вагнера">теорема Вагнера</a>»).
+</p>
+<blockquote style="min-width:50%; max-width:70%;">
+<p>Граф планарен <i>тогда и только тогда, когда</i> не содержит подграфов, <a href="/wiki/%D0%A1%D1%82%D1%8F%D0%B3%D0%B8%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5_%D1%80%D0%B5%D0%B1%D1%80%D0%B0" title="Стягивание ребра">стягивающихся</a> в K<sub>5</sub> или K<sub>3,3</sub>.
+</p>
+</blockquote>
+<h2><span id=".D0.9A.D0.BE.D0.BC.D0.BF.D1.8C.D1.8E.D1.82.D0.B5.D1.80.D0.BD.D0.B0.D1.8F_.D0.BF.D1.80.D0.BE.D0.B2.D0.B5.D1.80.D0.BA.D0.B0_.D0.BD.D0.B0_.D0.BF.D0.BB.D0.B0.D0.BD.D0.B0.D1.80.D0.BD.D0.BE.D1.81.D1.82.D1.8C"></span><span class="mw-headline" id="Компьютерная_проверка_на_планарность">Компьютерная проверка на планарность</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%D0%9F%D0%BB%D0%B0%D0%BD%D0%B0%D1%80%D0%BD%D1%8B%D0%B9_%D0%B3%D1%80%D0%B0%D1%84&amp;veaction=edit&amp;section=7" title="Редактировать раздел «Компьютерная проверка на планарность»" class="mw-editsection-visualeditor"><span>править</span></a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=%D0%9F%D0%BB%D0%B0%D0%BD%D0%B0%D1%80%D0%BD%D1%8B%D0%B9_%D0%B3%D1%80%D0%B0%D1%84&amp;action=edit&amp;section=7" title="Редактировать код раздела «Компьютерная проверка на планарность»"><span>править код</span></a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="hatnote navigation-not-searchable">Основная статья: <b><a href="/wiki/%D0%9F%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D0%B0_%D0%BF%D0%BB%D0%B0%D0%BD%D0%B0%D1%80%D0%BD%D0%BE%D1%81%D1%82%D0%B8" title="Проверка планарности">Проверка планарности</a></b></div>
+<p>Первый алгоритм, отыскивающий подграф Куратовского за линейное время, разработан в 1974 году <a href="/wiki/%D0%A5%D0%BE%D0%BF%D0%BA%D1%80%D0%BE%D1%84%D1%82,_%D0%94%D0%B6%D0%BE%D0%BD" class="mw-redirect" title="Хопкрофт, Джон">Хопкрофтом</a> и <a href="/wiki/%D0%A2%D0%B0%D1%80%D1%8C%D1%8F%D0%BD,_%D0%A0%D0%BE%D0%B1%D0%B5%D1%80%D1%82" class="mw-redirect" title="Тарьян, Роберт">Тарьяном</a><sup id="cite_ref-2" class="reference"><a href="#cite_note-2">&#91;2&#93;</a></sup>.
+</p>
+<h2><span id=".D0.9F.D1.80.D0.B8.D0.B7.D0.BD.D0.B0.D0.BA.D0.B8_.D0.BD.D0.B5.D0.BF.D0.BB.D0.B0.D0.BD.D0.B0.D1.80.D0.BD.D1.8B.D1.85_.D0.B3.D1.80.D0.B0.D1.84.D0.BE.D0.B2"></span><span class="mw-headline" id="Признаки_непланарных_графов">Признаки непланарных графов</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%D0%9F%D0%BB%D0%B0%D0%BD%D0%B0%D1%80%D0%BD%D1%8B%D0%B9_%D0%B3%D1%80%D0%B0%D1%84&amp;veaction=edit&amp;section=8" title="Редактировать раздел «Признаки непланарных графов»" class="mw-editsection-visualeditor"><span>править</span></a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=%D0%9F%D0%BB%D0%B0%D0%BD%D0%B0%D1%80%D0%BD%D1%8B%D0%B9_%D0%B3%D1%80%D0%B0%D1%84&amp;action=edit&amp;section=8" title="Редактировать код раздела «Признаки непланарных графов»"><span>править код</span></a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><b>достаточное условие</b>&#160;— если граф содержит полный <a href="/wiki/%D0%94%D0%B2%D1%83%D0%B4%D0%BE%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D0%B3%D1%80%D0%B0%D1%84" title="Двудольный граф">двудольный подграф</a> K<sub>3,3</sub> или <a href="/wiki/%D0%9F%D0%BE%D0%BB%D0%BD%D1%8B%D0%B9_%D0%B3%D1%80%D0%B0%D1%84" title="Полный граф">полный подграф</a> K<sub>5</sub>, то он является непланарным;</li>
+<li><b>необходимое условие</b>&#160;— если граф непланарный, то он должен содержать больше 4 вершин, степень которых больше 3, или больше 5 вершин степени больше 2.</li></ul>
+<h2><span id=".D0.9F.D0.BB.D0.B0.D0.BD.D0.B0.D1.80.D0.BD.D1.8B.D0.B5_.D0.B3.D1.80.D0.B0.D1.84.D1.8B_.D0.B2_.D0.B7.D0.B0.D0.B4.D0.B0.D1.87.D0.B0.D1.85"></span><span class="mw-headline" id="Планарные_графы_в_задачах">Планарные графы в задачах</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%D0%9F%D0%BB%D0%B0%D0%BD%D0%B0%D1%80%D0%BD%D1%8B%D0%B9_%D0%B3%D1%80%D0%B0%D1%84&amp;veaction=edit&amp;section=9" title="Редактировать раздел «Планарные графы в задачах»" class="mw-editsection-visualeditor"><span>править</span></a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=%D0%9F%D0%BB%D0%B0%D0%BD%D0%B0%D1%80%D0%BD%D1%8B%D0%B9_%D0%B3%D1%80%D0%B0%D1%84&amp;action=edit&amp;section=9" title="Редактировать код раздела «Планарные графы в задачах»"><span>править код</span></a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><b>Раскраска карты</b>. Необходимо раскрасить плоскую карту заданным числом красок так, что любые две страны, имеющие общий участок границы, имели различные цвета. Оказывается, что при отсутствии <a href="/wiki/%D0%90%D0%BD%D0%BA%D0%BB%D0%B0%D0%B2" title="Анклав">анклавов</a>, всегда достаточно четырёх красок, но это утверждение чрезвычайно сложно доказать, см. <a href="/wiki/%D0%9F%D1%80%D0%BE%D0%B1%D0%BB%D0%B5%D0%BC%D0%B0_%D1%87%D0%B5%D1%82%D1%8B%D1%80%D1%91%D1%85_%D0%BA%D1%80%D0%B0%D1%81%D0%BE%D0%BA" class="mw-redirect" title="Проблема четырёх красок">Проблема четырёх красок</a>.
+</p><p><b>Спрямление графа (<a href="/wiki/%D0%A2%D0%B5%D0%BE%D1%80%D0%B5%D0%BC%D0%B0_%D0%A4%D0%B0%D1%80%D0%B8" class="mw-redirect" title="Теорема Фари">теорема Фари</a>).</b> Любой плоский граф можно перерисовать так, чтобы он остался плоским, а рёбра стали отрезками прямых.
+</p>
+<h2><span id=".D0.9E.D0.B1.D0.BE.D0.B1.D1.89.D0.B5.D0.BD.D0.B8.D1.8F"></span><span class="mw-headline" id="Обобщения">Обобщения</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%D0%9F%D0%BB%D0%B0%D0%BD%D0%B0%D1%80%D0%BD%D1%8B%D0%B9_%D0%B3%D1%80%D0%B0%D1%84&amp;veaction=edit&amp;section=10" title="Редактировать раздел «Обобщения»" class="mw-editsection-visualeditor"><span>править</span></a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=%D0%9F%D0%BB%D0%B0%D0%BD%D0%B0%D1%80%D0%BD%D1%8B%D0%B9_%D0%B3%D1%80%D0%B0%D1%84&amp;action=edit&amp;section=10" title="Редактировать код раздела «Обобщения»"><span>править код</span></a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Граф <i><a href="/wiki/%D0%A3%D0%BA%D0%BB%D0%B0%D0%B4%D0%BA%D0%B0_%D0%B3%D1%80%D0%B0%D1%84%D0%B0" class="mw-redirect" title="Укладка графа">укладывается</a></i> на некоторой поверхности, если его можно на ней нарисовать без пересечения рёбер. Уложенный граф называется <i>геометрическим</i>, его вершины&#160;— это точки поверхности, а рёбра&#160;— линии на ней. Области, на которые граф разбивает поверхность, называются <i>гранями</i>. Плоский граф&#160;— граф, уложенный на плоскость.
+</p><p><a href="/wiki/%D0%A7%D0%B8%D1%81%D0%BB%D0%BE_%D0%BF%D0%B5%D1%80%D0%B5%D1%81%D0%B5%D1%87%D0%B5%D0%BD%D0%B8%D0%B9_(%D1%82%D0%B5%D0%BE%D1%80%D0%B8%D1%8F_%D0%B3%D1%80%D0%B0%D1%84%D0%BE%D0%B2)" class="mw-redirect" title="Число пересечений (теория графов)">Число пересечений</a> графа <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r117753614"><span class="ts-math" style="font-style:italic;">G</span>&#160;— наименьшее число пересечений рёбер плоского рисунка графа <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r117753614"><span class="ts-math" style="font-style:italic;">G</span>. Таким образом, граф является планарным тогда и только тогда, когда его число пересечений равно нулю.
+</p><p><a href="/wiki/%D0%A2%D0%BE%D1%80%D0%BE%D0%B8%D0%B4%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D0%B3%D1%80%D0%B0%D1%84" title="Тороидальный граф">Тороидальный граф</a>&#160;— граф, который можно уложить на тор.
+</p>
+<h2><span id=".D0.A1.D0.BC._.D1.82.D0.B0.D0.BA.D0.B6.D0.B5"></span><span class="mw-headline" id="См._также">См. также</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%D0%9F%D0%BB%D0%B0%D0%BD%D0%B0%D1%80%D0%BD%D1%8B%D0%B9_%D0%B3%D1%80%D0%B0%D1%84&amp;veaction=edit&amp;section=11" title="Редактировать раздел «См. также»" class="mw-editsection-visualeditor"><span>править</span></a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=%D0%9F%D0%BB%D0%B0%D0%BD%D0%B0%D1%80%D0%BD%D1%8B%D0%B9_%D0%B3%D1%80%D0%B0%D1%84&amp;action=edit&amp;section=11" title="Редактировать код раздела «См. также»"><span>править код</span></a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/%D0%A1%D0%BB%D0%BE%D0%B2%D0%B0%D1%80%D1%8C_%D1%82%D0%B5%D1%80%D0%BC%D0%B8%D0%BD%D0%BE%D0%B2_%D1%82%D0%B5%D0%BE%D1%80%D0%B8%D0%B8_%D0%B3%D1%80%D0%B0%D1%84%D0%BE%D0%B2" class="mw-redirect" title="Словарь терминов теории графов">Словарь терминов теории графов</a></li>
+<li><a href="/wiki/%D0%A2%D0%B5%D0%BE%D1%80%D0%B8%D1%8F_%D0%B3%D1%80%D0%B0%D1%84%D0%BE%D0%B2" title="Теория графов">Теория графов</a></li>
+<li><a href="/wiki/%D0%9A%D0%BB%D0%B5%D1%82%D0%BA%D0%B0_(%D1%82%D0%B5%D0%BE%D1%80%D0%B8%D1%8F_%D0%B3%D1%80%D0%B0%D1%84%D0%BE%D0%B2)" title="Клетка (теория графов)">Клетка (теория графов)</a></li>
+<li><a href="/wiki/%D0%A2%D0%B5%D0%BE%D1%80%D0%B5%D0%BC%D0%B0_%D0%A4%D0%B0%D1%80%D0%B8" class="mw-redirect" title="Теорема Фари">Теорема Фари</a></li>
+<li><a href="/wiki/%D0%93%D0%B0%D0%BC%D0%BC%D0%B0-%D0%B0%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC" title="Гамма-алгоритм">Гамма-алгоритм</a>&#160;— алгоритм проверки графа на планарность и его плоской укладки</li></ul>
+<h2><span id=".D0.9F.D1.80.D0.B8.D0.BC.D0.B5.D1.87.D0.B0.D0.BD.D0.B8.D1.8F"></span><span class="mw-headline" id="Примечания">Примечания</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%D0%9F%D0%BB%D0%B0%D0%BD%D0%B0%D1%80%D0%BD%D1%8B%D0%B9_%D0%B3%D1%80%D0%B0%D1%84&amp;veaction=edit&amp;section=12" title="Редактировать раздел «Примечания»" class="mw-editsection-visualeditor"><span>править</span></a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=%D0%9F%D0%BB%D0%B0%D0%BD%D0%B0%D1%80%D0%BD%D1%8B%D0%B9_%D0%B3%D1%80%D0%B0%D1%84&amp;action=edit&amp;section=12" title="Редактировать код раздела «Примечания»"><span>править код</span></a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist columns" style="list-style-type: decimal;">
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-Harary_126-1"><span class="mw-cite-backlink"><a href="#cite_ref-Harary_126_1-0">↑</a></span> <span class="reference-text"><i>Харари Ф.</i> Теория графов УРСС стр. 126</span>
+</li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><a href="#cite_ref-2">↑</a></span> <span class="reference-text"><style data-mw-deduplicate="TemplateStyles:r134784925">.mw-parser-output cite.citation{font-style:inherit;word-wrap:break-word}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .citation:target{background-color:rgba(0,127,255,0.133)}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{background:url("//upload.wikimedia.org/wikipedia/commons/6/65/Lock-green.svg")right 0.1em center/9px no-repeat}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{background:url("//upload.wikimedia.org/wikipedia/commons/d/d6/Lock-gray-alt-2.svg")right 0.1em center/9px no-repeat}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{background:url("//upload.wikimedia.org/wikipedia/commons/a/aa/Lock-red-alt-2.svg")right 0.1em center/9px no-repeat}.mw-parser-output .cs1-ws-icon a{background:url("//upload.wikimedia.org/wikipedia/commons/4/4c/Wikisource-logo.svg")right 0.1em center/12px no-repeat}.mw-parser-output .cs1-code{color:inherit;background:inherit;border:none;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;color:#d33}.mw-parser-output .cs1-visible-error{color:#d33}.mw-parser-output .cs1-maint{display:none;color:#3a3;margin-left:0.3em}.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right{padding-right:0.2em}.mw-parser-output .citation .mw-selflink{font-weight:inherit}</style><cite id="CITEREFHopcroftTarjan1974" class="citation cs2"><a href="/w/index.php?title=John_Hopcroft&amp;action=edit&amp;redlink=1" class="new" title="John Hopcroft (страница отсутствует)">Hopcroft, John</a>; <a href="/w/index.php?title=Robert_Tarjan&amp;action=edit&amp;redlink=1" class="new" title="Robert Tarjan (страница отсутствует)">Tarjan, Robert E.</a> (1974), "Efficient planarity testing", <i><a href="/wiki/Journal_of_the_ACM" title="Journal of the ACM">Journal of the Association for Computing Machinery</a></i>, <b>21</b> (4): 549—568, <a href="/wiki/%D0%A6%D0%B8%D1%84%D1%80%D0%BE%D0%B2%D0%BE%D0%B9_%D0%B8%D0%B4%D0%B5%D0%BD%D1%82%D0%B8%D1%84%D0%B8%D0%BA%D0%B0%D1%82%D0%BE%D1%80_%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D0%B0" title="Цифровой идентификатор объекта">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1145%2F321850.321852">10.1145/321850.321852</a></cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Journal+of+the+Association+for+Computing+Machinery&amp;rft.atitle=Efficient+planarity+testing&amp;rft.volume=21&amp;rft.issue=4&amp;rft.pages=549%E2%80%94568&amp;rft.date=1974&amp;rft_id=info%3Adoi%2F10.1145%2F321850.321852&amp;rft.aulast=Hopcroft&amp;rft.aufirst=John&amp;rft.au=Tarjan%2C+Robert+E.&amp;rfr_id=info%3Asid%2Fru.wikipedia.org%3A%D0%9F%D0%BB%D0%B0%D0%BD%D0%B0%D1%80%D0%BD%D1%8B%D0%B9+%D0%B3%D1%80%D0%B0%D1%84" class="Z3988"></span>.</span>
+</li>
+</ol></div></div>
+<h2><span id=".D0.A1.D1.81.D1.8B.D0.BB.D0.BA.D0.B8"></span><span class="mw-headline" id="Ссылки">Ссылки</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%D0%9F%D0%BB%D0%B0%D0%BD%D0%B0%D1%80%D0%BD%D1%8B%D0%B9_%D0%B3%D1%80%D0%B0%D1%84&amp;veaction=edit&amp;section=13" title="Редактировать раздел «Ссылки»" class="mw-editsection-visualeditor"><span>править</span></a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=%D0%9F%D0%BB%D0%B0%D0%BD%D0%B0%D1%80%D0%BD%D1%8B%D0%B9_%D0%B3%D1%80%D0%B0%D1%84&amp;action=edit&amp;section=13" title="Редактировать код раздела «Ссылки»"><span>править код</span></a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a rel="nofollow" class="external text" href="https://web.archive.org/web/20130923213145/http://compscicenter.ru/program/lecture/6702">Видеолекция, посвящённая планарным графам</a></li>
+<li><i><a href="/wiki/%D0%9E%D0%BB%D1%8C%D1%88%D0%B0%D0%BD%D1%81%D0%BA%D0%B8%D0%B9,_%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80_%D0%AE%D1%80%D1%8C%D0%B5%D0%B2%D0%B8%D1%87" title="Ольшанский, Александр Юрьевич">А.&#160;Ю.&#160;Ольшанский</a></i>. <i><a rel="nofollow" class="external text" href="http://window.edu.ru/window_catalog/redir?id=20742&amp;file=9611_117.pdf">Плоские графы</a>&#160;<small class="ref-info">(недоступная ссылка)</small></i>, <a href="/wiki/%D0%A1%D0%BE%D1%80%D0%BE%D1%81%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%BE%D0%B1%D1%80%D0%B0%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D0%B6%D1%83%D1%80%D0%BD%D0%B0%D0%BB" title="Соросовский образовательный журнал">СОЖ</a>, <a href="/wiki/1996" class="mw-redirect" title="1996">1996</a>, No 11, с. 117—122.</li>
+<li><i><a href="/wiki/%D0%A5%D0%B0%D1%80%D0%B0%D1%80%D0%B8" title="Харари">Харари Ф.</a></i>. <a href="/wiki/%D0%A2%D0%B5%D0%BE%D1%80%D0%B8%D1%8F_%D0%B3%D1%80%D0%B0%D1%84%D0%BE%D0%B2" title="Теория графов">Теория графов</a>. <a href="/wiki/%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0" title="Москва">М.</a>: «<a href="/wiki/%D0%9C%D0%B8%D1%80_(%D0%B8%D0%B7%D0%B4%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D1%81%D1%82%D0%B2%D0%BE)" title="Мир (издательство)">Мир</a>». <a href="/wiki/1973" class="mw-redirect" title="1973">1973</a></li>
+<li><a rel="nofollow" class="external text" href="https://web.archive.org/web/20140111172402/http://rain.ifmo.ru/cat/view.php/theory/list">Дискретная математика: Алгоритмы, визуализация графов, апплеты</a></li></ul>
+<div role="navigation" class="navbox" aria-labelledby="Планарные_графы" data-name="Планарные графы"><table class="nowraplinks collapsible collapsed navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th scope="colgroup" class="navbox-title" colspan="2"><span class="navbox-gear" style="float:left;text-align:left;width:5em;margin-right:0.5em"><span class="noprint" typeof="mw:File"><a href="/wiki/%D0%A8%D0%B0%D0%B1%D0%BB%D0%BE%D0%BD:%D0%9F%D0%BB%D0%B0%D0%BD%D0%B0%D1%80%D0%BD%D1%8B%D0%B5_%D0%B3%D1%80%D0%B0%D1%84%D1%8B" title="Перейти к шаблону «Планарные графы»"><img alt="Перейти к шаблону «Планарные графы»" src="//upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Wikipedia_interwiki_section_gear_icon.svg/14px-Wikipedia_interwiki_section_gear_icon.svg.png" decoding="async" width="14" height="14" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Wikipedia_interwiki_section_gear_icon.svg/21px-Wikipedia_interwiki_section_gear_icon.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Wikipedia_interwiki_section_gear_icon.svg/28px-Wikipedia_interwiki_section_gear_icon.svg.png 2x" data-file-width="14" data-file-height="14" /></a></span>&#160;</span><div id="Планарные_графы" style="font-size:114%;margin:0 5em"><a class="mw-selflink selflink">Планарные графы</a></div></th></tr><tr><td class="navbox-list navbox-odd hlist" style="width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/1-%D0%BF%D0%BB%D0%B0%D0%BD%D0%B0%D1%80%D0%BD%D1%8B%D0%B9_%D0%B3%D1%80%D0%B0%D1%84" title="1-планарный граф">1-планарный граф</a></li>
+<li><a href="/wiki/%D0%90%D1%80%D1%85%D0%B8%D0%BC%D0%B5%D0%B4%D0%BE%D0%B2_%D0%B3%D1%80%D0%B0%D1%84" title="Архимедов граф">Архимедов граф</a></li>
+<li><a href="/wiki/%D0%91%D0%B8%D0%B4%D0%B8%D0%B0%D0%BA%D0%B8%D1%81-%D0%BA%D1%83%D0%B1" title="Бидиакис-куб">Бидиакис-куб</a></li>
+<li><a href="/wiki/%D0%92%D0%B5%D1%80%D0%B5%D1%82%D0%B5%D0%BD%D0%BE_%D0%9C%D0%BE%D0%B7%D0%B5%D1%80%D0%B0" title="Веретено Мозера">Веретено Мозера</a></li>
+<li><a href="/wiki/%D0%92%D0%B5%D1%80%D1%85%D1%83%D1%88%D0%B5%D1%87%D0%BD%D1%8B%D0%B9_%D0%B3%D1%80%D0%B0%D1%84" title="Верхушечный граф">Верхушечный граф</a></li>
+<li><a href="/wiki/%D0%92%D0%BD%D0%B5%D1%88%D0%BD%D0%B5%D0%BF%D0%BB%D0%B0%D0%BD%D0%B0%D1%80%D0%BD%D1%8B%D0%B9_%D0%B3%D1%80%D0%B0%D1%84" title="Внешнепланарный граф">Внешнепланарный граф</a></li>
+<li><a href="/wiki/%D0%93%D1%80%D0%B0%D1%84_%D0%90%D0%BF%D0%BE%D0%BB%D0%BB%D0%BE%D0%BD%D0%B8%D1%8F" title="Граф Аполлония">Граф Аполлония</a></li>
+<li><a href="/wiki/%D0%93%D1%80%D0%B0%D1%84_%D0%92%D0%B8%D0%BD%D0%B5%D1%80%D0%B0_%E2%80%94_%D0%90%D1%80%D0%B0%D0%B9%D0%B8" title="Граф Винера — Арайи">Граф Винера — Арайи</a></li>
+<li><a href="/wiki/%D0%93%D1%80%D0%B0%D1%84_%D0%B2%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%BD%D1%8B%D1%85_%D1%82%D1%80%D0%B5%D1%83%D0%B3%D0%BE%D0%BB%D1%8C%D0%BD%D0%B8%D0%BA%D0%BE%D0%B2" title="Граф вложенных треугольников">Граф вложенных треугольников</a></li>
+<li><a href="/wiki/%D0%93%D1%80%D0%B0%D1%84_%D0%93%D0%BE%D0%BB%D0%B4%D0%BD%D0%B5%D1%80%D0%B0_%E2%80%94_%D0%A5%D0%B0%D1%80%D0%B0%D1%80%D0%B8" title="Граф Голднера — Харари">Граф Голднера — Харари</a></li>
+<li><a href="/wiki/%D0%93%D1%80%D0%B0%D1%84_%D0%93%D0%BE%D0%BB%D0%BE%D0%BC%D0%B1%D0%B0" title="Граф Голомба">Граф Голомба</a></li>
+<li><a href="/wiki/%D0%93%D1%80%D0%B0%D1%84_%D0%93%D0%BE%D1%81%D1%81%D0%B5%D1%82%D0%B0" title="Граф Госсета">Граф Госсета</a></li>
+<li><a href="/wiki/%D0%93%D1%80%D0%B0%D1%84_%D0%B4%D1%80%D1%83%D0%B6%D0%B5%D1%81%D0%BA%D0%B8%D1%85_%D0%BE%D1%82%D0%BD%D0%BE%D1%88%D0%B5%D0%BD%D0%B8%D0%B9" title="Граф дружеских отношений">Граф дружеских отношений</a></li>
+<li><a href="/wiki/%D0%93%D1%80%D0%B0%D1%84_%D0%94%D1%8E%D1%80%D0%B5%D1%80%D0%B0" title="Граф Дюрера">Граф Дюрера</a></li>
+<li><a href="/wiki/%D0%93%D1%80%D0%B0%D1%84_%D0%9A%D0%B8%D1%82%D1%82%D0%B5%D0%BB%D0%BB%D1%8F" title="Граф Киттелля">Граф Киттелля</a></li>
+<li><a href="/wiki/%D0%93%D1%80%D0%B0%D1%84_%D0%BF%D1%80%D0%B8%D0%B7%D0%BC%D1%8B" title="Граф призмы">Граф призмы</a></li>
+<li><a href="/wiki/%D0%93%D1%80%D0%B0%D1%84_%D0%A2%D0%B0%D1%82%D1%82%D0%B0" title="Граф Татта">Граф Татта</a></li>
+<li><a href="/wiki/%D0%93%D1%80%D0%B0%D1%84_%D0%A4%D1%80%D0%B0%D0%BD%D0%BA%D0%BB%D0%B8%D0%BD%D0%B0" title="Граф Франклина">Граф Франклина</a></li>
+<li><a href="/wiki/%D0%93%D1%80%D0%B0%D1%84_%D0%A4%D1%80%D1%83%D1%85%D1%82%D0%B0" title="Граф Фрухта">Граф Фрухта</a></li>
+<li><a href="/wiki/%D0%93%D1%80%D0%B0%D1%84_%D0%A5%D0%B0%D0%BB%D0%B8%D0%BD%D0%B0" title="Граф Халина">Граф Халина</a></li>
+<li><a href="/wiki/%D0%93%D1%80%D0%B0%D1%84_%D0%A5%D0%B5%D1%80%D1%88%D0%B5%D0%BB%D1%8F" title="Граф Хершеля">Граф Хершеля</a></li>
+<li><a href="/wiki/%D0%93%D1%80%D0%B0%D1%84_%D0%A5%D0%BE%D1%84%D1%84%D0%BC%D0%B0%D0%BD%D0%B0" title="Граф Хоффмана">Граф Хоффмана</a></li>
+<li><a href="/wiki/%D0%93%D1%80%D0%B0%D1%84_%D0%A8%D1%80%D0%B8%D0%BA%D1%85%D0%B0%D0%BD%D0%B4%D0%B5" title="Граф Шрикханде">Граф Шрикханде</a></li>
+<li><a href="/wiki/%D0%93%D1%80%D0%B0%D1%84_%D0%AD%D1%80%D1%80%D0%B5%D1%80%D1%8B" title="Граф Эрреры">Граф Эрреры</a></li>
+<li><a href="/wiki/%D0%9F%D0%B0%D1%80%D0%B0%D0%BB%D0%BB%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE-%D0%BF%D0%BE%D1%81%D0%BB%D0%B5%D0%B4%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D0%B3%D1%80%D0%B0%D1%84" title="Параллельно-последовательный граф">Параллельно-последовательный граф</a></li>
+<li><a href="/wiki/%D0%9F%D0%BE%D0%B4%D0%B3%D0%B0%D0%BC%D0%B8%D0%BB%D1%8C%D1%82%D0%BE%D0%BD%D0%BE%D0%B2_%D0%B3%D1%80%D0%B0%D1%84" title="Подгамильтонов граф">Подгамильтонов граф</a></li>
+<li><a href="/wiki/%D0%9F%D0%BE%D0%BB%D0%B8%D1%8D%D0%B4%D1%80%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D0%B3%D1%80%D0%B0%D1%84" title="Полиэдральный граф">Полиэдральный граф</a></li>
+<li><a href="/wiki/%D0%9F%D1%80%D0%B0%D0%B2%D0%B8%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D0%B4%D0%BE%D0%B4%D0%B5%D0%BA%D0%B0%D1%8D%D0%B4%D1%80" title="Правильный додекаэдр">Правильный додекаэдр </a></li>
+<li><a href="/wiki/%D0%A0%D0%B0%D0%BC%D0%BE%D1%87%D0%BD%D1%8B%D0%B9_%D0%B3%D1%80%D0%B0%D1%84" title="Рамочный граф">Рамочный граф</a></li>
+<li><a href="/wiki/%D0%A1%D0%B6%D0%B0%D1%82%D1%8B%D0%B9_%D0%B3%D1%80%D0%B0%D1%84" title="Сжатый граф">Сжатый граф</a></li>
+<li><a href="/wiki/%D0%A1%D0%BF%D0%B8%D1%87%D0%B5%D1%87%D0%BD%D1%8B%D0%B9_%D0%B3%D1%80%D0%B0%D1%84" title="Спичечный граф">Спичечный граф</a></li>
+<li><a href="/wiki/%D0%A1%D1%80%D0%B5%D0%B4%D0%B8%D0%BD%D0%BD%D1%8B%D0%B9_%D0%B3%D1%80%D0%B0%D1%84" title="Срединный граф">Срединный граф</a></li></ul>
+</div></td></tr></tbody></table></div>
+<!-- 
+NewPP limit report
+Parsed by mw‐web.eqiad.main‐7cc97dcfbc‐82g6h
+Cached time: 20240219012225
+Cache expiry: 2592000
+Reduced expiry: false
+Complications: [vary‐revision‐sha1, show‐toc]
+CPU time usage: 0.230 seconds
+Real time usage: 0.317 seconds
+Preprocessor visited node count: 486/1000000
+Post‐expand include size: 11912/2097152 bytes
+Template argument size: 675/2097152 bytes
+Highest expansion depth: 9/100
+Expensive parser function count: 3/500
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 5296/5000000 bytes
+Lua time usage: 0.111/10.000 seconds
+Lua memory usage: 3122129/52428800 bytes
+Number of Wikibase entities loaded: 0/400
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  218.584      1 -total
+ 59.01%  128.979      1 Шаблон:Примечания
+ 54.29%  118.663      1 Шаблон:Citation
+ 14.98%   32.754      2 Шаблон:Main
+ 10.51%   22.965      1 Шаблон:Планарные_графы
+  9.38%   20.499      1 Шаблон:Навигационная_таблица
+  4.98%   10.879      1 Шаблон:Недоступная_ссылка
+  4.14%    9.051      5 Шаблон:Mvar
+  1.68%    3.683      2 Шаблон:Clear
+  1.41%    3.076      1 Шаблон:Основная_статья
+-->
+
+<!-- Saved in parser cache with key ruwiki:pcache:idhash:684207-0!canonical and timestamp 20240219012225 and revision id 136236049. Rendering was triggered because: diff-page
+ -->
+</div><!--esi <esi:include src="/esitest-fa8a495983347898/content" /> --><noscript><img src="https://login.wikimedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" width="1" height="1" style="border: none; position: absolute;"></noscript>
+<div class="printfooter" data-nosnippet="">Источник — <a dir="ltr" href="https://ru.wikipedia.org/w/index.php?title=Планарный_граф&amp;oldid=136236049">https://ru.wikipedia.org/w/index.php?title=Планарный_граф&amp;oldid=136236049</a></div></div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:%D0%9A%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D0%B8" title="Служебная:Категории">Категории</a>: <ul><li><a href="/wiki/%D0%9A%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F:%D0%A2%D0%B5%D0%BE%D1%80%D0%B8%D1%8F_%D0%B3%D1%80%D0%B0%D1%84%D0%BE%D0%B2" title="Категория:Теория графов">Теория графов</a></li><li><a href="/wiki/%D0%9A%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F:%D0%A1%D0%B5%D0%BC%D0%B5%D0%B9%D1%81%D1%82%D0%B2%D0%B0_%D0%B3%D1%80%D0%B0%D1%84%D0%BE%D0%B2" title="Категория:Семейства графов">Семейства графов</a></li><li><a href="/wiki/%D0%9A%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F:%D0%9F%D0%BB%D0%B0%D0%BD%D0%B0%D1%80%D0%BD%D1%8B%D0%B5_%D0%B3%D1%80%D0%B0%D1%84%D1%8B" title="Категория:Планарные графы">Планарные графы</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Скрытая категория: <ul><li><a href="/wiki/%D0%9A%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F:%D0%92%D0%B8%D0%BA%D0%B8%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F:%D0%A1%D1%82%D0%B0%D1%82%D1%8C%D0%B8_%D1%81_%D0%BD%D0%B5%D1%80%D0%B0%D0%B1%D0%BE%D1%87%D0%B8%D0%BC%D0%B8_%D1%81%D1%81%D1%8B%D0%BB%D0%BA%D0%B0%D0%BC%D0%B8" title="Категория:Википедия:Статьи с нерабочими ссылками">Википедия:Статьи с нерабочими ссылками</a></li></ul></div></div>
+	</div>
+</div>
+
+<div id="mw-navigation">
+	<h2>Навигация</h2>
+	<div id="mw-head">
+		
+<nav id="p-personal" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" aria-labelledby="p-personal-label" role="navigation"  >
+	<h3
+		id="p-personal-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Персональные инструменты</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="pt-anonuserpage" class="mw-list-item"><span title="Страница участника для моего IP">Вы не представились системе</span></li><li id="pt-anontalk" class="mw-list-item"><a href="/wiki/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:%D0%9C%D0%BE%D1%91_%D0%BE%D0%B1%D1%81%D1%83%D0%B6%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5" title="Страница обсуждений для моего IP [n]" accesskey="n"><span>Обсуждение</span></a></li><li id="pt-anoncontribs" class="mw-list-item"><a href="/wiki/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:%D0%9C%D0%BE%D0%B9_%D0%B2%D0%BA%D0%BB%D0%B0%D0%B4" title="Список правок, сделанных с этого IP-адреса [y]" accesskey="y"><span>Вклад</span></a></li><li id="pt-createaccount" class="mw-list-item"><a href="/w/index.php?title=%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:%D0%A1%D0%BE%D0%B7%D0%B4%D0%B0%D1%82%D1%8C_%D1%83%D1%87%D1%91%D1%82%D0%BD%D1%83%D1%8E_%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D1%8C&amp;returnto=%D0%9F%D0%BB%D0%B0%D0%BD%D0%B0%D1%80%D0%BD%D1%8B%D0%B9+%D0%B3%D1%80%D0%B0%D1%84" title="Мы предлагаем вам создать учётную запись и войти в систему, хотя это и не обязательно."><span>Создать учётную запись</span></a></li><li id="pt-login" class="mw-list-item"><a href="/w/index.php?title=%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:%D0%92%D1%85%D0%BE%D0%B4&amp;returnto=%D0%9F%D0%BB%D0%B0%D0%BD%D0%B0%D1%80%D0%BD%D1%8B%D0%B9+%D0%B3%D1%80%D0%B0%D1%84" title="Здесь можно зарегистрироваться в системе, но это необязательно. [o]" accesskey="o"><span>Войти</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+		<div id="left-navigation">
+			
+<nav id="p-namespaces" class="mw-portlet mw-portlet-namespaces vector-menu-tabs vector-menu-tabs-legacy vector-menu" aria-labelledby="p-namespaces-label" role="navigation"  >
+	<h3
+		id="p-namespaces-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Пространства имён</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="ca-nstab-main" class="selected mw-list-item"><a href="/wiki/%D0%9F%D0%BB%D0%B0%D0%BD%D0%B0%D1%80%D0%BD%D1%8B%D0%B9_%D0%B3%D1%80%D0%B0%D1%84" title="Просмотреть контентную страницу [c]" accesskey="c"><span>Статья</span></a></li><li id="ca-talk" class="mw-list-item"><a href="/wiki/%D0%9E%D0%B1%D1%81%D1%83%D0%B6%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5:%D0%9F%D0%BB%D0%B0%D0%BD%D0%B0%D1%80%D0%BD%D1%8B%D0%B9_%D0%B3%D1%80%D0%B0%D1%84" rel="discussion" title="Обсуждение основной страницы [t]" accesskey="t"><span>Обсуждение</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-variants" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown vector-menu" aria-labelledby="p-variants-label" role="navigation"  >
+	<input type="checkbox"
+		id="p-variants-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-variants"
+		class="vector-menu-checkbox"
+		aria-labelledby="p-variants-label"
+	>
+	<label
+		id="p-variants-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">русский</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</nav>
+
+		</div>
+		<div id="right-navigation">
+			
+<nav id="p-views" class="mw-portlet mw-portlet-views vector-menu-tabs vector-menu-tabs-legacy vector-menu" aria-labelledby="p-views-label" role="navigation"  >
+	<h3
+		id="p-views-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Просмотры</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="ca-view" class="selected mw-list-item"><a href="/wiki/%D0%9F%D0%BB%D0%B0%D0%BD%D0%B0%D1%80%D0%BD%D1%8B%D0%B9_%D0%B3%D1%80%D0%B0%D1%84"><span>Читать</span></a></li><li id="ca-ve-edit" class="mw-list-item"><a href="/w/index.php?title=%D0%9F%D0%BB%D0%B0%D0%BD%D0%B0%D1%80%D0%BD%D1%8B%D0%B9_%D0%B3%D1%80%D0%B0%D1%84&amp;veaction=edit" title="Редактировать данную страницу [v]" accesskey="v"><span>Править</span></a></li><li id="ca-edit" class="collapsible mw-list-item"><a href="/w/index.php?title=%D0%9F%D0%BB%D0%B0%D0%BD%D0%B0%D1%80%D0%BD%D1%8B%D0%B9_%D0%B3%D1%80%D0%B0%D1%84&amp;action=edit" title="Править исходный текст этой страницы [e]" accesskey="e"><span>Править код</span></a></li><li id="ca-history" class="mw-list-item"><a href="/w/index.php?title=%D0%9F%D0%BB%D0%B0%D0%BD%D0%B0%D1%80%D0%BD%D1%8B%D0%B9_%D0%B3%D1%80%D0%B0%D1%84&amp;action=history" title="Журнал изменений страницы [h]" accesskey="h"><span>История</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-cactions" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown vector-menu" aria-labelledby="p-cactions-label" role="navigation"  title="Больше возможностей" >
+	<input type="checkbox"
+		id="p-cactions-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-cactions"
+		class="vector-menu-checkbox"
+		aria-labelledby="p-cactions-label"
+	>
+	<label
+		id="p-cactions-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Ещё</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</nav>
+
+			
+<div id="p-search" role="search" class="vector-search-box-vue  vector-search-box-show-thumbnail vector-search-box-auto-expand-width vector-search-box">
+	<h3 >Поиск</h3>
+	<form action="/w/index.php" id="searchform" class="vector-search-box-form">
+		<div id="simpleSearch"
+			class="vector-search-box-inner"
+			 data-search-loc="header-navigation">
+			<input class="vector-search-box-input"
+				 type="search" name="search" placeholder="Искать в Википедии" aria-label="Искать в Википедии" autocapitalize="sentences" title="Искать в Википедии [f]" accesskey="f" id="searchInput"
+			>
+			<input type="hidden" name="title" value="Служебная:Поиск">
+			<input id="mw-searchButton"
+				 class="searchButton mw-fallbackSearchButton" type="submit" name="fulltext" title="Найти страницы, содержащие указанный текст" value="Найти">
+			<input id="searchButton"
+				 class="searchButton" type="submit" name="go" title="Перейти к странице, имеющей в точности такое название" value="Перейти">
+		</div>
+	</form>
+</div>
+
+		</div>
+	</div>
+	
+<div id="mw-panel" class="vector-legacy-sidebar">
+	<div id="p-logo" role="banner">
+		<a class="mw-wiki-logo" href="/wiki/%D0%97%D0%B0%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F_%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0"
+			title="Перейти на заглавную страницу"></a>
+	</div>
+	
+<nav id="p-navigation" class="mw-portlet mw-portlet-navigation vector-menu-portal portal vector-menu" aria-labelledby="p-navigation-label" role="navigation"  >
+	<h3
+		id="p-navigation-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Навигация</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="n-mainpage-description" class="mw-list-item"><a href="/wiki/%D0%97%D0%B0%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F_%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0" title="Перейти на заглавную страницу [z]" accesskey="z"><span>Заглавная страница</span></a></li><li id="n-content" class="mw-list-item"><a href="/wiki/%D0%92%D0%B8%D0%BA%D0%B8%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F:%D0%A1%D0%BE%D0%B4%D0%B5%D1%80%D0%B6%D0%B0%D0%BD%D0%B8%D0%B5"><span>Содержание</span></a></li><li id="n-featured" class="mw-list-item"><a href="/wiki/%D0%92%D0%B8%D0%BA%D0%B8%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F:%D0%98%D0%B7%D0%B1%D1%80%D0%B0%D0%BD%D0%BD%D1%8B%D0%B5_%D1%81%D1%82%D0%B0%D1%82%D1%8C%D0%B8" title="Статьи, считающиеся лучшими статьями проекта"><span>Избранные статьи</span></a></li><li id="n-randompage" class="mw-list-item"><a href="/wiki/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:%D0%A1%D0%BB%D1%83%D1%87%D0%B0%D0%B9%D0%BD%D0%B0%D1%8F_%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0" title="Посмотреть случайно выбранную страницу [x]" accesskey="x"><span>Случайная статья</span></a></li><li id="n-currentevents" class="mw-list-item"><a href="/wiki/%D0%9F%D0%BE%D1%80%D1%82%D0%B0%D0%BB:%D0%A2%D0%B5%D0%BA%D1%83%D1%89%D0%B8%D0%B5_%D1%81%D0%BE%D0%B1%D1%8B%D1%82%D0%B8%D1%8F" title="Статьи о текущих событиях в мире"><span>Текущие события</span></a></li><li id="n-sitesupport" class="mw-list-item"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_ru.wikipedia.org&amp;uselang=ru" title="Поддержите нас"><span>Пожертвовать</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+	
+<nav id="p-participation" class="mw-portlet mw-portlet-participation vector-menu-portal portal vector-menu" aria-labelledby="p-participation-label" role="navigation"  >
+	<h3
+		id="p-participation-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Участие</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="n-bug_in_article" class="mw-list-item"><a href="/wiki/%D0%92%D0%B8%D0%BA%D0%B8%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F:%D0%A1%D0%BE%D0%BE%D0%B1%D1%89%D0%B5%D0%BD%D0%B8%D1%8F_%D0%BE%D0%B1_%D0%BE%D1%88%D0%B8%D0%B1%D0%BA%D0%B0%D1%85" title="Сообщить об ошибке в этой статье"><span>Сообщить об ошибке</span></a></li><li id="n-introduction" class="mw-list-item"><a href="/wiki/%D0%A1%D0%BF%D1%80%D0%B0%D0%B2%D0%BA%D0%B0:%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5"><span>Как править статьи</span></a></li><li id="n-portal" class="mw-list-item"><a href="/wiki/%D0%92%D0%B8%D0%BA%D0%B8%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F:%D0%A1%D0%BE%D0%BE%D0%B1%D1%89%D0%B5%D1%81%D1%82%D0%B2%D0%BE" title="О проекте, о том, чем здесь можно заниматься, а также — где что находится"><span>Сообщество</span></a></li><li id="n-forum" class="mw-list-item"><a href="/wiki/%D0%92%D0%B8%D0%BA%D0%B8%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F:%D0%A4%D0%BE%D1%80%D1%83%D0%BC" title="Форум участников Википедии"><span>Форум</span></a></li><li id="n-recentchanges" class="mw-list-item"><a href="/wiki/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:%D0%A1%D0%B2%D0%B5%D0%B6%D0%B8%D0%B5_%D0%BF%D1%80%D0%B0%D0%B2%D0%BA%D0%B8" title="Список последних изменений [r]" accesskey="r"><span>Свежие правки</span></a></li><li id="n-newpages" class="mw-list-item"><a href="/wiki/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:%D0%9D%D0%BE%D0%B2%D1%8B%D0%B5_%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D1%8B" title="Список недавно созданных страниц"><span>Новые страницы</span></a></li><li id="n-help" class="mw-list-item"><a href="/wiki/%D0%92%D0%B8%D0%BA%D0%B8%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F:%D0%A1%D0%BF%D1%80%D0%B0%D0%B2%D0%BA%D0%B0" title="Место расположения Справки"><span>Справка</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+<nav id="p-tb" class="mw-portlet mw-portlet-tb vector-menu-portal portal vector-menu" aria-labelledby="p-tb-label" role="navigation"  >
+	<h3
+		id="p-tb-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Инструменты</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="t-whatlinkshere" class="mw-list-item"><a href="/wiki/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:%D0%A1%D1%81%D1%8B%D0%BB%D0%BA%D0%B8_%D1%81%D1%8E%D0%B4%D0%B0/%D0%9F%D0%BB%D0%B0%D0%BD%D0%B0%D1%80%D0%BD%D1%8B%D0%B9_%D0%B3%D1%80%D0%B0%D1%84" title="Список всех страниц, ссылающихся на данную [j]" accesskey="j"><span>Ссылки сюда</span></a></li><li id="t-recentchangeslinked" class="mw-list-item"><a href="/wiki/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:%D0%A1%D0%B2%D1%8F%D0%B7%D0%B0%D0%BD%D0%BD%D1%8B%D0%B5_%D0%BF%D1%80%D0%B0%D0%B2%D0%BA%D0%B8/%D0%9F%D0%BB%D0%B0%D0%BD%D0%B0%D1%80%D0%BD%D1%8B%D0%B9_%D0%B3%D1%80%D0%B0%D1%84" rel="nofollow" title="Последние изменения в страницах, на которые ссылается эта страница [k]" accesskey="k"><span>Связанные правки</span></a></li><li id="t-specialpages" class="mw-list-item"><a href="/wiki/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:%D0%A1%D0%BF%D0%B5%D1%86%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D1%8B" title="Список служебных страниц [q]" accesskey="q"><span>Служебные страницы</span></a></li><li id="t-permalink" class="mw-list-item"><a href="/w/index.php?title=%D0%9F%D0%BB%D0%B0%D0%BD%D0%B0%D1%80%D0%BD%D1%8B%D0%B9_%D0%B3%D1%80%D0%B0%D1%84&amp;oldid=136236049" title="Постоянная ссылка на эту версию страницы"><span>Постоянная ссылка</span></a></li><li id="t-info" class="mw-list-item"><a href="/w/index.php?title=%D0%9F%D0%BB%D0%B0%D0%BD%D0%B0%D1%80%D0%BD%D1%8B%D0%B9_%D0%B3%D1%80%D0%B0%D1%84&amp;action=info" title="Подробнее об этой странице"><span>Сведения о странице</span></a></li><li id="t-cite" class="mw-list-item"><a href="/w/index.php?title=%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:%D0%A6%D0%B8%D1%82%D0%B0%D1%82%D0%B0&amp;page=%D0%9F%D0%BB%D0%B0%D0%BD%D0%B0%D1%80%D0%BD%D1%8B%D0%B9_%D0%B3%D1%80%D0%B0%D1%84&amp;id=136236049&amp;wpFormIdentifier=titleform" title="Информация о том, как цитировать эту страницу"><span>Цитировать страницу</span></a></li><li id="t-urlshortener" class="mw-list-item"><a href="/w/index.php?title=%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:UrlShortener&amp;url=https%3A%2F%2Fru.wikipedia.org%2Fwiki%2F%25D0%259F%25D0%25BB%25D0%25B0%25D0%25BD%25D0%25B0%25D1%2580%25D0%25BD%25D1%258B%25D0%25B9_%25D0%25B3%25D1%2580%25D0%25B0%25D1%2584"><span>Получить короткий URL</span></a></li><li id="t-urlshortener-qrcode" class="mw-list-item"><a href="/w/index.php?title=%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:QrCode&amp;url=https%3A%2F%2Fru.wikipedia.org%2Fwiki%2F%25D0%259F%25D0%25BB%25D0%25B0%25D0%25BD%25D0%25B0%25D1%2580%25D0%25BD%25D1%258B%25D0%25B9_%25D0%25B3%25D1%2580%25D0%25B0%25D1%2584"><span>Скачать QR-код</span></a></li><li id="t-wikibase" class="mw-list-item"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q547823" title="Ссылка на связанный элемент репозитория данных [g]" accesskey="g"><span>Элемент Викиданных</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+<nav id="p-coll-print_export" class="mw-portlet mw-portlet-coll-print_export vector-menu-portal portal vector-menu" aria-labelledby="p-coll-print_export-label" role="navigation"  >
+	<h3
+		id="p-coll-print_export-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Печать/экспорт</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="coll-download-as-rl" class="mw-list-item"><a href="/w/index.php?title=%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:DownloadAsPdf&amp;page=%D0%9F%D0%BB%D0%B0%D0%BD%D0%B0%D1%80%D0%BD%D1%8B%D0%B9_%D0%B3%D1%80%D0%B0%D1%84&amp;action=show-download-screen" title="Скачать эту страницу как файл PDF"><span>Скачать как PDF</span></a></li><li id="t-print" class="mw-list-item"><a href="/w/index.php?title=%D0%9F%D0%BB%D0%B0%D0%BD%D0%B0%D1%80%D0%BD%D1%8B%D0%B9_%D0%B3%D1%80%D0%B0%D1%84&amp;printable=yes" title="Версия этой страницы для печати [p]" accesskey="p"><span>Версия для печати</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+<nav id="p-wikibase-otherprojects" class="mw-portlet mw-portlet-wikibase-otherprojects vector-menu-portal portal vector-menu" aria-labelledby="p-wikibase-otherprojects-label" role="navigation"  >
+	<h3
+		id="p-wikibase-otherprojects-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">В других проектах</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li class="wb-otherproject-link wb-otherproject-commons mw-list-item"><a href="https://commons.wikimedia.org/wiki/Category:Planar_graphs" hreflang="en"><span>Викисклад</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+	
+<nav id="p-lang" class="mw-portlet mw-portlet-lang vector-menu-portal portal vector-menu" aria-labelledby="p-lang-label" role="navigation"  >
+	<h3
+		id="p-lang-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">На других языках</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li class="interlanguage-link interwiki-ar mw-list-item"><a href="https://ar.wikipedia.org/wiki/%D9%85%D8%AE%D8%B7%D8%B7_%D9%85%D8%B3%D8%AA%D9%88" title="مخطط مستو — арабский" lang="ar" hreflang="ar" class="interlanguage-link-target"><span>العربية</span></a></li><li class="interlanguage-link interwiki-ca mw-list-item"><a href="https://ca.wikipedia.org/wiki/Graf_pla" title="Graf pla — каталанский" lang="ca" hreflang="ca" class="interlanguage-link-target"><span>Català</span></a></li><li class="interlanguage-link interwiki-cs mw-list-item"><a href="https://cs.wikipedia.org/wiki/Rovinn%C3%BD_graf" title="Rovinný graf — чешский" lang="cs" hreflang="cs" class="interlanguage-link-target"><span>Čeština</span></a></li><li class="interlanguage-link interwiki-de mw-list-item"><a href="https://de.wikipedia.org/wiki/Planarer_Graph" title="Planarer Graph — немецкий" lang="de" hreflang="de" class="interlanguage-link-target"><span>Deutsch</span></a></li><li class="interlanguage-link interwiki-en mw-list-item"><a href="https://en.wikipedia.org/wiki/Planar_graph" title="Planar graph — английский" lang="en" hreflang="en" class="interlanguage-link-target"><span>English</span></a></li><li class="interlanguage-link interwiki-es mw-list-item"><a href="https://es.wikipedia.org/wiki/Grafo_plano" title="Grafo plano — испанский" lang="es" hreflang="es" class="interlanguage-link-target"><span>Español</span></a></li><li class="interlanguage-link interwiki-et mw-list-item"><a href="https://et.wikipedia.org/wiki/Tasandiline_graaf" title="Tasandiline graaf — эстонский" lang="et" hreflang="et" class="interlanguage-link-target"><span>Eesti</span></a></li><li class="interlanguage-link interwiki-eu mw-list-item"><a href="https://eu.wikipedia.org/wiki/Grafo_lau" title="Grafo lau — баскский" lang="eu" hreflang="eu" class="interlanguage-link-target"><span>Euskara</span></a></li><li class="interlanguage-link interwiki-fa mw-list-item"><a href="https://fa.wikipedia.org/wiki/%DA%AF%D8%B1%D8%A7%D9%81_%D9%85%D8%B3%D8%B7%D8%AD" title="گراف مسطح — персидский" lang="fa" hreflang="fa" class="interlanguage-link-target"><span>فارسی</span></a></li><li class="interlanguage-link interwiki-fr mw-list-item"><a href="https://fr.wikipedia.org/wiki/Graphe_planaire" title="Graphe planaire — французский" lang="fr" hreflang="fr" class="interlanguage-link-target"><span>Français</span></a></li><li class="interlanguage-link interwiki-he mw-list-item"><a href="https://he.wikipedia.org/wiki/%D7%92%D7%A8%D7%A3_%D7%9E%D7%99%D7%A9%D7%95%D7%A8%D7%99" title="גרף מישורי — иврит" lang="he" hreflang="he" class="interlanguage-link-target"><span>עברית</span></a></li><li class="interlanguage-link interwiki-hr mw-list-item"><a href="https://hr.wikipedia.org/wiki/Ravninski_graf" title="Ravninski graf — хорватский" lang="hr" hreflang="hr" class="interlanguage-link-target"><span>Hrvatski</span></a></li><li class="interlanguage-link interwiki-hu mw-list-item"><a href="https://hu.wikipedia.org/wiki/S%C3%ADkbarajzolhat%C3%B3_gr%C3%A1f" title="Síkbarajzolható gráf — венгерский" lang="hu" hreflang="hu" class="interlanguage-link-target"><span>Magyar</span></a></li><li class="interlanguage-link interwiki-it mw-list-item"><a href="https://it.wikipedia.org/wiki/Grafo_planare" title="Grafo planare — итальянский" lang="it" hreflang="it" class="interlanguage-link-target"><span>Italiano</span></a></li><li class="interlanguage-link interwiki-ja mw-list-item"><a href="https://ja.wikipedia.org/wiki/%E5%B9%B3%E9%9D%A2%E3%82%B0%E3%83%A9%E3%83%95" title="平面グラフ — японский" lang="ja" hreflang="ja" class="interlanguage-link-target"><span>日本語</span></a></li><li class="interlanguage-link interwiki-ko mw-list-item"><a href="https://ko.wikipedia.org/wiki/%ED%8F%89%EB%A9%B4_%EA%B7%B8%EB%9E%98%ED%94%84" title="평면 그래프 — корейский" lang="ko" hreflang="ko" class="interlanguage-link-target"><span>한국어</span></a></li><li class="interlanguage-link interwiki-lt mw-list-item"><a href="https://lt.wikipedia.org/wiki/Plok%C5%A1%C4%8Diasis_grafas" title="Plokščiasis grafas — литовский" lang="lt" hreflang="lt" class="interlanguage-link-target"><span>Lietuvių</span></a></li><li class="interlanguage-link interwiki-lv mw-list-item"><a href="https://lv.wikipedia.org/wiki/Plan%C4%81rs_grafs" title="Planārs grafs — латышский" lang="lv" hreflang="lv" class="interlanguage-link-target"><span>Latviešu</span></a></li><li class="interlanguage-link interwiki-nn mw-list-item"><a href="https://nn.wikipedia.org/wiki/Planar_graf" title="Planar graf — нюнорск" lang="nn" hreflang="nn" class="interlanguage-link-target"><span>Norsk nynorsk</span></a></li><li class="interlanguage-link interwiki-pl mw-list-item"><a href="https://pl.wikipedia.org/wiki/Graf_planarny" title="Graf planarny — польский" lang="pl" hreflang="pl" class="interlanguage-link-target"><span>Polski</span></a></li><li class="interlanguage-link interwiki-pt mw-list-item"><a href="https://pt.wikipedia.org/wiki/Grafo_planar" title="Grafo planar — португальский" lang="pt" hreflang="pt" class="interlanguage-link-target"><span>Português</span></a></li><li class="interlanguage-link interwiki-ro mw-list-item"><a href="https://ro.wikipedia.org/wiki/Graf_planar" title="Graf planar — румынский" lang="ro" hreflang="ro" class="interlanguage-link-target"><span>Română</span></a></li><li class="interlanguage-link interwiki-simple mw-list-item"><a href="https://simple.wikipedia.org/wiki/Planar_graph" title="Planar graph — Simple English" lang="en-simple" hreflang="en-simple" class="interlanguage-link-target"><span>Simple English</span></a></li><li class="interlanguage-link interwiki-sk mw-list-item"><a href="https://sk.wikipedia.org/wiki/Rovinn%C3%BD_graf" title="Rovinný graf — словацкий" lang="sk" hreflang="sk" class="interlanguage-link-target"><span>Slovenčina</span></a></li><li class="interlanguage-link interwiki-sl mw-list-item"><a href="https://sl.wikipedia.org/wiki/Ravninski_graf" title="Ravninski graf — словенский" lang="sl" hreflang="sl" class="interlanguage-link-target"><span>Slovenščina</span></a></li><li class="interlanguage-link interwiki-sr mw-list-item"><a href="https://sr.wikipedia.org/wiki/Planarni_grafovi" title="Planarni grafovi — сербский" lang="sr" hreflang="sr" class="interlanguage-link-target"><span>Српски / srpski</span></a></li><li class="interlanguage-link interwiki-sv mw-list-item"><a href="https://sv.wikipedia.org/wiki/Plan%C3%A4r_graf" title="Planär graf — шведский" lang="sv" hreflang="sv" class="interlanguage-link-target"><span>Svenska</span></a></li><li class="interlanguage-link interwiki-th mw-list-item"><a href="https://th.wikipedia.org/wiki/%E0%B8%81%E0%B8%A3%E0%B8%B2%E0%B8%9F%E0%B9%80%E0%B8%8A%E0%B8%B4%E0%B8%87%E0%B8%A3%E0%B8%B0%E0%B8%99%E0%B8%B2%E0%B8%9A" title="กราฟเชิงระนาบ — тайский" lang="th" hreflang="th" class="interlanguage-link-target"><span>ไทย</span></a></li><li class="interlanguage-link interwiki-uk mw-list-item"><a href="https://uk.wikipedia.org/wiki/%D0%9F%D0%BB%D0%B0%D0%BD%D0%B0%D1%80%D0%BD%D0%B8%D0%B9_%D0%B3%D1%80%D0%B0%D1%84" title="Планарний граф — украинский" lang="uk" hreflang="uk" class="interlanguage-link-target"><span>Українська</span></a></li><li class="interlanguage-link interwiki-ur mw-list-item"><a href="https://ur.wikipedia.org/wiki/%D9%85%D8%B3%D8%B7%D8%AD_%DA%AF%D8%B1%D8%A7%D9%81" title="مسطح گراف — урду" lang="ur" hreflang="ur" class="interlanguage-link-target"><span>اردو</span></a></li><li class="interlanguage-link interwiki-vi mw-list-item"><a href="https://vi.wikipedia.org/wiki/%C4%90%E1%BB%93_th%E1%BB%8B_ph%E1%BA%B3ng" title="Đồ thị phẳng — вьетнамский" lang="vi" hreflang="vi" class="interlanguage-link-target"><span>Tiếng Việt</span></a></li><li class="interlanguage-link interwiki-zh mw-list-item"><a href="https://zh.wikipedia.org/wiki/%E5%B9%B3%E9%9D%A2%E5%9B%BE_(%E5%9B%BE%E8%AE%BA)" title="平面图 (图论) — китайский" lang="zh" hreflang="zh" class="interlanguage-link-target"><span>中文</span></a></li>
+		</ul>
+		<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q547823#sitelinks-wikipedia" title="Править ссылки на другие языки" class="wbc-editpage">Править ссылки</a></span></div>
+	</div>
+</nav>
+
+</div>
+
+</div>
+
+<footer id="footer" class="mw-footer" role="contentinfo" >
+	<ul id="footer-info">
+	<li id="footer-info-lastmod"> Эта страница в последний раз была отредактирована 19 февраля 2024 в 01:18.</li>
+	<li id="footer-info-copyright">Текст доступен по <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.ru">лицензии Creative Commons «С указанием авторства — С сохранением условий» (CC BY-SA)</a><a rel="license" href="//creativecommons.org/licenses/by-sa/4.0/" style="display:none;"></a>; в отдельных случаях могут действовать дополнительные условия.
+<span class="noprint">Подробнее см. <a href="//foundation.wikimedia.org/wiki/Terms_of_Use/ru">Условия использования</a>.</span><br>
+Wikipedia® — зарегистрированный товарный знак некоммерческой организации <a href="//wikimediafoundation.org/ru/">Фонд Викимедиа (Wikimedia Foundation, Inc.)</a></li>
+</ul>
+
+	<ul id="footer-places">
+	<li id="footer-places-privacy"><a href="https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Privacy_policy/ru">Политика конфиденциальности</a></li>
+	<li id="footer-places-about"><a href="/wiki/%D0%92%D0%B8%D0%BA%D0%B8%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F:%D0%9E%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5">Описание Википедии</a></li>
+	<li id="footer-places-disclaimers"><a href="/wiki/%D0%92%D0%B8%D0%BA%D0%B8%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F:%D0%9E%D1%82%D0%BA%D0%B0%D0%B7_%D0%BE%D1%82_%D0%BE%D1%82%D0%B2%D0%B5%D1%82%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D0%BE%D1%81%D1%82%D0%B8">Отказ от ответственности</a></li>
+	<li id="footer-places-contact"><a href="//ru.wikipedia.org/wiki/Википедия:Контакты">Свяжитесь с нами</a></li>
+	<li id="footer-places-wm-codeofconduct"><a href="https://foundation.wikimedia.org/wiki/Policy:Universal_Code_of_Conduct/ru">Кодекс поведения</a></li>
+	<li id="footer-places-developers"><a href="https://developer.wikimedia.org">Разработчики</a></li>
+	<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/#/ru.wikipedia.org">Статистика</a></li>
+	<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Cookie_statement">Заявление о куки</a></li>
+	<li id="footer-places-mobileview"><a href="//ru.m.wikipedia.org/w/index.php?title=%D0%9F%D0%BB%D0%B0%D0%BD%D0%B0%D1%80%D0%BD%D1%8B%D0%B9_%D0%B3%D1%80%D0%B0%D1%84&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Мобильная версия</a></li>
+</ul>
+
+	<ul id="footer-icons" class="noprint">
+	<li id="footer-copyrightico"><a href="https://wikimediafoundation.org/"><img src="/static/images/footer/wikimedia-button.png" srcset="/static/images/footer/wikimedia-button-1.5x.png 1.5x, /static/images/footer/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation" loading="lazy" /></a></li>
+	<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="/static/images/footer/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/footer/poweredby_mediawiki_132x47.png 1.5x, /static/images/footer/poweredby_mediawiki_176x62.png 2x" width="88" height="31" loading="lazy"></a></li>
+</ul>
+
+</footer>
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgHostname":"mw1371","wgBackendResponseTime":135,"wgPageParseReport":{"limitreport":{"cputime":"0.230","walltime":"0.317","ppvisitednodes":{"value":486,"limit":1000000},"postexpandincludesize":{"value":11912,"limit":2097152},"templateargumentsize":{"value":675,"limit":2097152},"expansiondepth":{"value":9,"limit":100},"expensivefunctioncount":{"value":3,"limit":500},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":5296,"limit":5000000},"entityaccesscount":{"value":0,"limit":400},"timingprofile":["100.00%  218.584      1 -total"," 59.01%  128.979      1 Шаблон:Примечания"," 54.29%  118.663      1 Шаблон:Citation"," 14.98%   32.754      2 Шаблон:Main"," 10.51%   22.965      1 Шаблон:Планарные_графы","  9.38%   20.499      1 Шаблон:Навигационная_таблица","  4.98%   10.879      1 Шаблон:Недоступная_ссылка","  4.14%    9.051      5 Шаблон:Mvar","  1.68%    3.683      2 Шаблон:Clear","  1.41%    3.076      1 Шаблон:Основная_статья"]},"scribunto":{"limitreport-timeusage":{"value":"0.111","limit":"10.000"},"limitreport-memusage":{"value":3122129,"limit":52428800}},"cachereport":{"origin":"mw-web.eqiad.main-7cc97dcfbc-82g6h","timestamp":"20240219012225","ttl":2592000,"transientcontent":false}}});});</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"\u041f\u043b\u0430\u043d\u0430\u0440\u043d\u044b\u0439 \u0433\u0440\u0430\u0444","url":"https:\/\/ru.wikipedia.org\/wiki\/%D0%9F%D0%BB%D0%B0%D0%BD%D0%B0%D1%80%D0%BD%D1%8B%D0%B9_%D0%B3%D1%80%D0%B0%D1%84","sameAs":"http:\/\/www.wikidata.org\/entity\/Q547823","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q547823","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"\u0424\u043e\u043d\u0434 \u0412\u0438\u043a\u0438\u043c\u0435\u0434\u0438\u0430","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2007-06-04T03:44:15Z","dateModified":"2024-02-19T01:18:38Z","headline":"\u0433\u0440\u0430\u0444, \u043a\u043e\u0442\u043e\u0440\u044b\u0439 \u043c\u043e\u0436\u0435\u0442 \u0431\u044b\u0442\u044c \u0438\u0437\u043e\u0431\u0440\u0430\u0436\u0451\u043d \u043d\u0430 \u043f\u043b\u043e\u0441\u043a\u043e\u0441\u0442\u0438 \u0431\u0435\u0437 \u043f\u0435\u0440\u0435\u0441\u0435\u0447\u0435\u043d\u0438\u044f \u0440\u0451\u0431\u0435\u0440"}</script>
+</body>
+</html>

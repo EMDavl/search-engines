@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="ru" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<title>Обход дерева — Википедия</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":[",\t."," \t,"],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","январь","февраль","март","апрель","май","июнь","июль","август","сентябрь","октябрь","ноябрь","декабрь"],"wgRequestId":"67baa7cc-12cb-4015-8105-dd25db4049eb","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Обход_дерева","wgTitle":"Обход дерева","wgCurRevisionId":133722860,"wgRevisionId":133722860,"wgArticleId":7464372,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Википедия:Cite web (не указан язык)","Википедия:Плохой перевод","Википедия:Стилистически некорректные статьи",
+"Википедия:Статьи с шаблонами недостатков по алфавиту","Статьи с примерами кода Haskell","Статьи с примерами кода Java","Деревья (структуры данных)","Статьи с примерами псевдокода","Алгоритмы на графах","Рекурсия","Итерации в программировании"],"wgPageViewLanguage":"ru","wgPageContentLanguage":"ru","wgPageContentModel":"wikitext","wgRelevantPageName":"Обход_дерева","wgRelevantArticleId":7464372,"wgIsProbablyEditable":true,"wgRelevantPageIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgNoticeProject":"wikipedia","wgFlaggedRevsParams":{"tags":{"accuracy":{"levels":1}}},"wgStableRevisionId":124200629,"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgPopupsFlags":6,"wgVisualEditor":{"pageLanguageCode":"ru","pageLanguageDir":"ltr","pageVariantFallbacks":
+"ru"},"wgMFDisplayWikibaseDescriptions":{"search":true,"watchlist":true,"tagline":false,"nearby":true},"wgWMESchemaEditAttemptStepOversample":false,"wgWMEPageLength":30000,"wgULSCurrentAutonym":"русский","wgCentralAuthMobileDomain":false,"wgEditSubmitButtonLabelPublish":true,"wgULSPosition":"interlanguage","wgULSisCompactLinksEnabled":true,"wgVector2022LanguageInHeader":false,"wgULSisLanguageSelectorEmpty":false,"wgWikibaseItemId":"Q1210082","wgCheckUserClientHintsHeadersJsApi":["architecture","bitness","brands","fullVersionList","mobile","model","platform","platformVersion"],"GEHomepageSuggestedEditsEnableTopics":true,"wgGETopicsMatchModeEnabled":false,"wgGEStructuredTaskRejectionReasonTextInputEnabled":false,"wgGELevelingUpEnabledForUser":false};RLSTATE={"ext.globalCssJs.user.styles":"ready","site.styles":"ready","user.styles":"ready","ext.globalCssJs.user":"ready","user":"ready","user.options":"loading","ext.flaggedRevs.icons":"ready","oojs-ui-core.styles":"ready",
+"oojs-ui.styles.indicators":"ready","mediawiki.widgets.styles":"ready","oojs-ui-core.icons":"ready","ext.cite.styles":"ready","ext.pygments":"ready","skins.vector.styles.legacy":"ready","ext.flaggedRevs.basic":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","codex-search-styles":"ready","ext.uls.interlanguage":"ready","wikibase.client.init":"ready","ext.wikimediaBadges":"ready"};RLPAGEMODULES=["ext.cite.ux-enhancements","mediawiki.page.media","mediawiki.toggleAllCollapsibles","site","mediawiki.page.ready","mediawiki.toc","skins.vector.legacy.js","ext.centralNotice.geoIP","ext.centralNotice.startUp","ext.flaggedRevs.advanced","ext.gadget.collapserefs","ext.gadget.directLinkToCommons","ext.gadget.referenceTooltips","ext.gadget.logo","ext.gadget.edittop","ext.gadget.blpEditNotice","ext.gadget.wikibugs","ext.gadget.sidebarRelated","ext.gadget.navboxDefaultGadgets","ext.urlShortener.toolbar","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart",
+"ext.popups","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.echo.centralauth","ext.eventLogging","ext.wikimediaEvents","ext.navigationTiming","ext.uls.compactlinks","ext.uls.interface","ext.cx.eventlogging.campaigns","ext.checkUser.clientHints","ext.quicksurveys.init","ext.growthExperiments.SuggestedEditSession","oojs-ui.styles.icons-media","oojs-ui-core.icons"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="/w/load.php?lang=ru&amp;modules=codex-search-styles%7Cext.cite.styles%7Cext.flaggedRevs.basic%2Cicons%7Cext.pygments%2CwikimediaBadges%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cmediawiki.widgets.styles%7Coojs-ui-core.icons%2Cstyles%7Coojs-ui.styles.indicators%7Cskins.vector.styles.legacy%7Cwikibase.client.init&amp;only=styles&amp;skin=vector">
+<script async="" src="/w/load.php?lang=ru&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content="">
+<link rel="stylesheet" href="/w/load.php?lang=ru&amp;modules=site.styles&amp;only=styles&amp;skin=vector">
+<noscript><link rel="stylesheet" href="/w/load.php?lang=ru&amp;modules=noscript&amp;only=styles&amp;skin=vector"></noscript>
+<meta name="generator" content="MediaWiki 1.42.0-wmf.18">
+<meta name="referrer" content="origin">
+<meta name="referrer" content="origin-when-cross-origin">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=1000">
+<meta property="og:title" content="Обход дерева — Википедия">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="//upload.wikimedia.org">
+<link rel="alternate" media="only screen and (max-width: 720px)" href="//ru.m.wikipedia.org/wiki/%D0%9E%D0%B1%D1%85%D0%BE%D0%B4_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%B0">
+<link rel="alternate" type="application/x-wiki" title="Править" href="/w/index.php?title=%D0%9E%D0%B1%D1%85%D0%BE%D0%B4_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%B0&amp;action=edit">
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png">
+<link rel="icon" href="/static/favicon/wikipedia.ico">
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Википедия (ru)">
+<link rel="EditURI" type="application/rsd+xml" href="//ru.wikipedia.org/w/api.php?action=rsd">
+<link rel="canonical" href="https://ru.wikipedia.org/wiki/%D0%9E%D0%B1%D1%85%D0%BE%D0%B4_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%B0">
+<link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.ru">
+<link rel="alternate" type="application/atom+xml" title="Википедия — Atom-лента" href="/w/index.php?title=%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:%D0%A1%D0%B2%D0%B5%D0%B6%D0%B8%D0%B5_%D0%BF%D1%80%D0%B0%D0%B2%D0%BA%D0%B8&amp;feed=atom">
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+<link rel="dns-prefetch" href="//login.wikimedia.org">
+</head>
+<body class="skin-vector-legacy mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Обход_дерева rootpage-Обход_дерева skin-vector action-view"><div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice"><!-- CentralNotice --></div>
+	<div class="mw-indicators">
+	</div>
+	<h1 id="firstHeading" class="firstHeading mw-first-heading"><span class="mw-page-title-main">Обход дерева</span></h1>
+	<div id="bodyContent" class="vector-body">
+		<div id="siteSub" class="noprint">Материал из Википедии — свободной энциклопедии</div>
+		<div id="contentSub"><div id="mw-content-subtitle"><div id='mw-fr-reviewnotice' class='plainlinks flaggedrevs_preview'>Текущая версия страницы пока <a href="/wiki/%D0%92%D0%B8%D0%BA%D0%B8%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F:%D0%9F%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D0%B0_%D1%81%D1%82%D0%B0%D1%82%D0%B5%D0%B9/%D0%9F%D0%BE%D1%8F%D1%81%D0%BD%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B4%D0%BB%D1%8F_%D1%87%D0%B8%D1%82%D0%B0%D1%82%D0%B5%D0%BB%D0%B5%D0%B9" title="Википедия:Проверка статей/Пояснение для читателей">не проверялась</a> опытными участниками и может значительно отличаться от <a class="external text" href="https://ru.wikipedia.org/w/index.php?title=%D0%9E%D0%B1%D1%85%D0%BE%D0%B4_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%B0&amp;stable=1">версии</a>, проверенной 24 августа 2023 года; проверки требуют <a class="external text" href="https://ru.wikipedia.org/w/index.php?title=%D0%9E%D0%B1%D1%85%D0%BE%D0%B4_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%B0&amp;oldid=124200629&amp;diff=cur&amp;diffonly=0">3 правки</a>.</div><div id="mw-fr-revisiontag" class="flaggedrevs_short flaggedrevs_draft_notsynced plainlinks noprint"><div class="flaggedrevs_short_basic"><span title='Текущая версия' class='flaggedrevs-icon oo-ui-widget oo-ui-widget-enabled oo-ui-iconElement-icon oo-ui-icon-block oo-ui-iconElement oo-ui-labelElement-invisible oo-ui-iconWidget'></span><span id='mw-fr-revisiontoggle' title='показать/скрыть подробности' class='fr-toggle-arrow oo-ui-widget oo-ui-widget-enabled oo-ui-indicatorElement-indicator oo-ui-indicator-down oo-ui-indicatorElement oo-ui-labelElement-invisible oo-ui-indicatorWidget'></span></div>
+<div id="mw-fr-revisiondetails-wrapper" style="position:relative;"><div id="mw-fr-revisiondetails" class="flaggedrevs_short_details" style="display:none">Текущая версия страницы пока <a href="/wiki/%D0%92%D0%B8%D0%BA%D0%B8%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F:%D0%9F%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D0%B0_%D1%81%D1%82%D0%B0%D1%82%D0%B5%D0%B9/%D0%9F%D0%BE%D1%8F%D1%81%D0%BD%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B4%D0%BB%D1%8F_%D1%87%D0%B8%D1%82%D0%B0%D1%82%D0%B5%D0%BB%D0%B5%D0%B9" title="Википедия:Проверка статей/Пояснение для читателей">не проверялась</a> опытными участниками и может значительно отличаться от <a class="external text" href="https://ru.wikipedia.org/w/index.php?title=%D0%9E%D0%B1%D1%85%D0%BE%D0%B4_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%B0&amp;stable=1">версии</a>, проверенной 24 августа 2023 года; проверки требуют <a class="external text" href="https://ru.wikipedia.org/w/index.php?title=%D0%9E%D0%B1%D1%85%D0%BE%D0%B4_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%B0&amp;oldid=124200629&amp;diff=cur&amp;diffonly=0">3 правки</a>.</div>
+</div>
+</div>
+</div></div>
+		<div id="contentSub2"></div>
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Перейти к навигации</a>
+		<a class="mw-jump-link" href="#searchInput">Перейти к поиску</a>
+		<div id="mw-content-text" class="mw-body-content"><div class="mw-content-ltr mw-parser-output" lang="ru" dir="ltr"><p><b>Обход дерева</b> (известный также как <b>поиск по дереву</b>)&#160;— вид <span data-interwiki-lang="en" data-interwiki-article="graph traversal"><a href="/w/index.php?title=%D0%9E%D0%B1%D1%85%D0%BE%D0%B4_%D0%B3%D1%80%D0%B0%D1%84%D0%B0&amp;action=edit&amp;redlink=1" class="new" title="Обход графа (страница отсутствует)">обхода графа</a></span><span class="noprint" style="font-style:normal; font-weight:normal;"><sup><a href="https://en.wikipedia.org/wiki/graph_traversal" class="extiw" title="en:graph traversal"><span title="graph traversal — версия статьи «Обход графа» на английском языке">[en]</span></a></sup></span>, обусловливающий процесс посещения (проверки и/или обновления) каждого узла <a href="/wiki/%D0%94%D0%B5%D1%80%D0%B5%D0%B2%D0%BE_(%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%82%D1%83%D1%80%D0%B0_%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85)" title="Дерево (структура данных)">структуры дерева данных</a> ровно один раз. Такие обходы классифицируются по порядку, в котором узлы посещаются. Алгоритмы в статье относятся к <a href="/wiki/%D0%94%D0%B2%D0%BE%D0%B8%D1%87%D0%BD%D0%BE%D0%B5_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%BE" title="Двоичное дерево">двоичным деревьям</a>, но могут быть обобщены и для других деревьев.
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="ru" dir="ltr"><h2 id="mw-toc-heading">Содержание</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Типы"><span class="tocnumber">1</span> <span class="toctext">Типы</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Структуры_данных_для_обхода_дерева"><span class="tocnumber">1.1</span> <span class="toctext">Структуры данных для обхода дерева</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Поиск_в_глубину"><span class="tocnumber">1.2</span> <span class="toctext">Поиск в глубину</span></a>
+<ul>
+<li class="toclevel-3 tocsection-4"><a href="#Прямой_обход_(NLR)"><span class="tocnumber">1.2.1</span> <span class="toctext">Прямой обход (NLR)</span></a></li>
+<li class="toclevel-3 tocsection-5"><a href="#Центрированный_обход_(LNR)"><span class="tocnumber">1.2.2</span> <span class="toctext">Центрированный обход (LNR)</span></a></li>
+<li class="toclevel-3 tocsection-6"><a href="#Обратный_обход_(LRN)"><span class="tocnumber">1.2.3</span> <span class="toctext">Обратный обход (LRN)</span></a></li>
+<li class="toclevel-3 tocsection-7"><a href="#Дерево_общего_вида"><span class="tocnumber">1.2.4</span> <span class="toctext">Дерево общего вида</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-8"><a href="#Поиск_в_ширину"><span class="tocnumber">1.3</span> <span class="toctext">Поиск в ширину</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Другие_виды"><span class="tocnumber">1.4</span> <span class="toctext">Другие виды</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-10"><a href="#Приложения"><span class="tocnumber">2</span> <span class="toctext">Приложения</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#Реализация"><span class="tocnumber">3</span> <span class="toctext">Реализация</span></a>
+<ul>
+<li class="toclevel-2 tocsection-12"><a href="#Поиск_в_глубину_2"><span class="tocnumber">3.1</span> <span class="toctext">Поиск в глубину</span></a>
+<ul>
+<li class="toclevel-3 tocsection-13"><a href="#Прямой_обход"><span class="tocnumber">3.1.1</span> <span class="toctext">Прямой обход</span></a></li>
+<li class="toclevel-3 tocsection-14"><a href="#Центрированный_обход"><span class="tocnumber">3.1.2</span> <span class="toctext">Центрированный обход</span></a></li>
+<li class="toclevel-3 tocsection-15"><a href="#Обратный_обход"><span class="tocnumber">3.1.3</span> <span class="toctext">Обратный обход</span></a></li>
+<li class="toclevel-3 tocsection-16"><a href="#Центрированный_обход_Морриса_с_помощью_прошивки"><span class="tocnumber">3.1.4</span> <span class="toctext">Центрированный обход Морриса с помощью прошивки</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-17"><a href="#Поиск_в_ширину_2"><span class="tocnumber">3.2</span> <span class="toctext">Поиск в ширину</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-18"><a href="#Бесконечные_деревья"><span class="tocnumber">4</span> <span class="toctext">Бесконечные деревья</span></a></li>
+<li class="toclevel-1 tocsection-19"><a href="#Примечания"><span class="tocnumber">5</span> <span class="toctext">Примечания</span></a></li>
+<li class="toclevel-1 tocsection-20"><a href="#Литература"><span class="tocnumber">6</span> <span class="toctext">Литература</span></a></li>
+<li class="toclevel-1 tocsection-21"><a href="#Ссылки"><span class="tocnumber">7</span> <span class="toctext">Ссылки</span></a></li>
+</ul>
+</div>
+
+<h2><span id=".D0.A2.D0.B8.D0.BF.D1.8B"></span><span class="mw-headline" id="Типы">Типы</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%D0%9E%D0%B1%D1%85%D0%BE%D0%B4_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%B0&amp;veaction=edit&amp;section=1" title="Редактировать раздел «Типы»" class="mw-editsection-visualeditor"><span>править</span></a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=%D0%9E%D0%B1%D1%85%D0%BE%D0%B4_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%B0&amp;action=edit&amp;section=1" title="Редактировать код раздела «Типы»"><span>править код</span></a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>В отличие от <a href="/wiki/%D0%A1%D0%B2%D1%8F%D0%B7%D0%BD%D1%8B%D0%B9_%D1%81%D0%BF%D0%B8%D1%81%D0%BE%D0%BA" title="Связный список">связных списков</a>, одномерных <a href="/wiki/%D0%9C%D0%B0%D1%81%D1%81%D0%B8%D0%B2_(%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5)" class="mw-redirect" title="Массив (программирование)">массивов</a> и других <a href="/wiki/%D0%9F%D1%80%D0%BE%D0%B5%D0%BA%D1%82:%D0%98%D0%BD%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%86%D0%B8%D0%BE%D0%BD%D0%BD%D1%8B%D0%B5_%D1%82%D0%B5%D1%85%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D0%B8/%D0%A1%D0%BF%D0%B8%D1%81%D0%BA%D0%B8/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA_%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%82%D1%83%D1%80_%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85#Линейные_структуры_данных_(Linear_data_structures)" class="mw-redirect" title="Проект:Информационные технологии/Списки/Список структур данных">линейных структур данных</a>, которые канонически обходятся в линейном порядке, деревья можно обходить различными путями. Деревья можно обходить «в глубину» или «в ширину». Существует три основных способа обхода «в глубину»
+</p>
+<ul><li>прямой (pre-order)</li>
+<li>центрированный (in-order)</li>
+<li>обратный (post-order)<sup id="cite_ref-holtenotes_1-0" class="reference"><a href="#cite_note-holtenotes-1">&#91;1&#93;</a></sup>. Кроме этих трёх основных схем, возможны более сложные гибридные схемы, такие как <span data-interwiki-lang="en" data-interwiki-article="depth-limited search"><a href="/w/index.php?title=%D0%9F%D0%BE%D0%B8%D1%81%D0%BA_%D1%81_%D0%BE%D0%B3%D1%80%D0%B0%D0%BD%D0%B8%D1%87%D0%B5%D0%BD%D0%BD%D0%BE%D0%B9_%D0%B3%D0%BB%D1%83%D0%B1%D0%B8%D0%BD%D0%BE%D0%B9&amp;action=edit&amp;redlink=1" class="new" title="Поиск с ограниченной глубиной (страница отсутствует)">алгоритмы поиска с ограниченной глубиной</a></span><span class="noprint" style="font-style:normal; font-weight:normal;"><sup><a href="https://en.wikipedia.org/wiki/depth-limited_search" class="extiw" title="en:depth-limited search"><span title="depth-limited search — версия статьи «Поиск с ограниченной глубиной» на английском языке">[en]</span></a></sup></span>, подобные <span data-interwiki-lang="en" data-interwiki-article="iterative deepening depth-first search"><a href="/w/index.php?title=%D0%9F%D0%BE%D0%B8%D1%81%D0%BA_%D0%B2_%D0%B3%D0%BB%D1%83%D0%B1%D0%B8%D0%BD%D1%83_%D1%81_%D0%B8%D1%82%D0%B5%D1%80%D0%B0%D1%82%D0%B8%D0%B2%D0%BD%D1%8B%D0%BC_%D1%83%D0%B3%D0%BB%D1%83%D0%B1%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5%D0%BC&amp;action=edit&amp;redlink=1" class="new" title="Поиск в глубину с итеративным углублением (страница отсутствует)">поиску в глубину с итеративным углублением</a></span><span class="noprint" style="font-style:normal; font-weight:normal;"><sup><a href="https://en.wikipedia.org/wiki/iterative_deepening_depth-first_search" class="extiw" title="en:iterative deepening depth-first search"><span title="iterative deepening depth-first search — версия статьи «Поиск в глубину с итеративным углублением» на английском языке">[en]</span></a></sup></span>.</li></ul>
+<h3><span id=".D0.A1.D1.82.D1.80.D1.83.D0.BA.D1.82.D1.83.D1.80.D1.8B_.D0.B4.D0.B0.D0.BD.D0.BD.D1.8B.D1.85_.D0.B4.D0.BB.D1.8F_.D0.BE.D0.B1.D1.85.D0.BE.D0.B4.D0.B0_.D0.B4.D0.B5.D1.80.D0.B5.D0.B2.D0.B0"></span><span class="mw-headline" id="Структуры_данных_для_обхода_дерева">Структуры данных для обхода дерева</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%D0%9E%D0%B1%D1%85%D0%BE%D0%B4_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%B0&amp;veaction=edit&amp;section=2" title="Редактировать раздел «Структуры данных для обхода дерева»" class="mw-editsection-visualeditor"><span>править</span></a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=%D0%9E%D0%B1%D1%85%D0%BE%D0%B4_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%B0&amp;action=edit&amp;section=2" title="Редактировать код раздела «Структуры данных для обхода дерева»"><span>править код</span></a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Обход дерева итеративно проходит по всем узлам согласно некоторому алгоритму. Поскольку из данного узла имеется более одного следующего узла (это не линейная структура данных), то, в предположении последовательных вычислений (а не параллельных), некоторые узлы должны быть отложены, то есть запомнены некоторым способом для дальнейшего посещения. Часто это делается с помощью <a href="/wiki/%D0%A1%D1%82%D0%B5%D0%BA" title="Стек">стека</a> (LIFO = последний вошёл&#160;— первый вышел) или <a href="/wiki/%D0%9E%D1%87%D0%B5%D1%80%D0%B5%D0%B4%D1%8C_(%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5)" title="Очередь (программирование)">очереди</a> (FIFO = первый вошёл&#160;— первым вышел). Так как дерево самореферентная (ссылающаяся на себя, определённая рекурсивно) структура данных, обход может быть определён <a href="/wiki/%D0%A0%D0%B5%D0%BA%D1%83%D1%80%D1%81%D0%B8%D1%8F" title="Рекурсия">рекурсией</a> или, более тонко, <a href="/wiki/%D0%9A%D0%BE%D1%80%D0%B5%D0%BA%D1%83%D1%80%D1%81%D0%B8%D1%8F" title="Корекурсия">корекурсией</a> естественным и ясным образом. В этих случаях отложенные узлы запоминаются либо явно в обычном <a href="/wiki/%D0%A1%D1%82%D0%B5%D0%BA" title="Стек">стеке</a>, либо неявно в <a href="/wiki/%D0%A1%D1%82%D0%B5%D0%BA_%D0%B2%D1%8B%D0%B7%D0%BE%D0%B2%D0%BE%D0%B2" title="Стек вызовов">стеке вызовов</a>, либо явно в <a href="/wiki/%D0%9E%D1%87%D0%B5%D1%80%D0%B5%D0%B4%D1%8C_(%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5)" title="Очередь (программирование)">очереди</a>.
+</p><p>Поиск в глубину легко имплементируется через стек, включая имплементацию через рекурсию (стек вызовов), в то время как поиск в ширину легко имплементируется через очередь, включая имплементацию через корекурсию.
+</p>
+<h3><span id=".D0.9F.D0.BE.D0.B8.D1.81.D0.BA_.D0.B2_.D0.B3.D0.BB.D1.83.D0.B1.D0.B8.D0.BD.D1.83"></span><span class="mw-headline" id="Поиск_в_глубину">Поиск в глубину</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%D0%9E%D0%B1%D1%85%D0%BE%D0%B4_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%B0&amp;veaction=edit&amp;section=3" title="Редактировать раздел «Поиск в глубину»" class="mw-editsection-visualeditor"><span>править</span></a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=%D0%9E%D0%B1%D1%85%D0%BE%D0%B4_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%B0&amp;action=edit&amp;section=3" title="Редактировать код раздела «Поиск в глубину»"><span>править код</span></a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="hatnote navigation-not-searchable">Основная статья: <b><a href="/wiki/%D0%9F%D0%BE%D0%B8%D1%81%D0%BA_%D0%B2_%D0%B3%D0%BB%D1%83%D0%B1%D0%B8%D0%BD%D1%83" title="Поиск в глубину">Поиск в глубину</a></b></div>
+<p>Эти поиски называются <i>поиском в глубину</i> ввиду того, что дерево поиска проходится вниз насколько это можно на каждом потомке прежде чем переходить к следующей родственной ветке. Для двоичного дерева они определяются как операции обработки вершины рекурсивно в каждом узле, начиная с корня. Алгоритм обхода следующий<sup id="cite_ref-2" class="reference"><a href="#cite_note-2">&#91;2&#93;</a></sup>
+<sup id="cite_ref-3" class="reference"><a href="#cite_note-3">&#91;3&#93;</a></sup>
+</p><p>Основной рекурсивный подход для обхода (непустого) бинарного дерева: Начиная с узла N делаем следующее:
+</p><p>(L) Рекурсивно обходим левое поддерево. Этот шаг завершается при попадании опять в узел N.
+</p><p>(R) Рекурсивно обходим правое поддерево. Этот шаг завершается при попадании опять в узел N.
+</p><p>(N) Обрабатываем сам узел N.
+</p><p>Эти шаги могут быть проделаны <i><u>в любом порядке</u></i>. Если (L) осуществляется перед (R), процесс называется обходом слева направо, в противном случае&#160;— обходом справа налево. Следующие методы показывают обходы слева направо:
+</p>
+<h4><span id=".D0.9F.D1.80.D1.8F.D0.BC.D0.BE.D0.B9_.D0.BE.D0.B1.D1.85.D0.BE.D0.B4_.28NLR.29"></span><span class="mw-headline" id="Прямой_обход_(NLR)">Прямой обход (NLR)</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%D0%9E%D0%B1%D1%85%D0%BE%D0%B4_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%B0&amp;veaction=edit&amp;section=4" title="Редактировать раздел «Прямой обход (NLR)»" class="mw-editsection-visualeditor"><span>править</span></a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=%D0%9E%D0%B1%D1%85%D0%BE%D0%B4_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%B0&amp;action=edit&amp;section=4" title="Редактировать код раздела «Прямой обход (NLR)»"><span>править код</span></a><span class="mw-editsection-bracket">]</span></span></h4>
+<figure class="mw-default-size" typeof="mw:File/Thumb"><a href="/wiki/%D0%A4%D0%B0%D0%B9%D0%BB:Sorted_binary_tree_preorder.svg" class="mw-file-description"><img src="//upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Sorted_binary_tree_preorder.svg/220px-Sorted_binary_tree_preorder.svg.png" decoding="async" width="220" height="188" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Sorted_binary_tree_preorder.svg/330px-Sorted_binary_tree_preorder.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Sorted_binary_tree_preorder.svg/440px-Sorted_binary_tree_preorder.svg.png 2x" data-file-width="336" data-file-height="287" /></a><figcaption>Прямой обход: F, B, A, D, C, E, G, I, H.</figcaption></figure>
+<ol><li>Проверяем, не является ли текущий узел пустым или null.</li>
+<li>Показываем поле данных корня (или текущего узла).</li>
+<li>Обходим левое поддерево рекурсивно, вызвав функцию прямого обхода.</li>
+<li>Обходим правое поддерево рекурсивно, вызвав функцию прямого обхода.</li></ol>
+<div style="clear:both;"></div>
+<h4><span id=".D0.A6.D0.B5.D0.BD.D1.82.D1.80.D0.B8.D1.80.D0.BE.D0.B2.D0.B0.D0.BD.D0.BD.D1.8B.D0.B9_.D0.BE.D0.B1.D1.85.D0.BE.D0.B4_.28LNR.29"></span><span class="mw-headline" id="Центрированный_обход_(LNR)">Центрированный обход (LNR)</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%D0%9E%D0%B1%D1%85%D0%BE%D0%B4_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%B0&amp;veaction=edit&amp;section=5" title="Редактировать раздел «Центрированный обход (LNR)»" class="mw-editsection-visualeditor"><span>править</span></a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=%D0%9E%D0%B1%D1%85%D0%BE%D0%B4_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%B0&amp;action=edit&amp;section=5" title="Редактировать код раздела «Центрированный обход (LNR)»"><span>править код</span></a><span class="mw-editsection-bracket">]</span></span></h4>
+<figure class="mw-default-size" typeof="mw:File/Thumb"><a href="/wiki/%D0%A4%D0%B0%D0%B9%D0%BB:Sorted_binary_tree_inorder.svg" class="mw-file-description"><img src="//upload.wikimedia.org/wikipedia/commons/thumb/7/77/Sorted_binary_tree_inorder.svg/220px-Sorted_binary_tree_inorder.svg.png" decoding="async" width="220" height="188" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/7/77/Sorted_binary_tree_inorder.svg/330px-Sorted_binary_tree_inorder.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/7/77/Sorted_binary_tree_inorder.svg/440px-Sorted_binary_tree_inorder.svg.png 2x" data-file-width="336" data-file-height="287" /></a><figcaption>Центрированный обход: A, B, C, D, E, F, G, H, I.</figcaption></figure>
+<ol><li>Проверяем, не является ли текущий узел пустым или null.</li>
+<li>Обходим левое поддерево рекурсивно, вызвав функцию центрированного обхода.</li>
+<li>Показываем поле данных корня (или текущего узла).</li>
+<li>Обходим правое поддерево рекурсивно, вызвав функцию центрированного обхода.</li></ol>
+<p><br />
+В <a href="/wiki/%D0%94%D0%B2%D0%BE%D0%B8%D1%87%D0%BD%D0%BE%D0%B5_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%BE_%D0%BF%D0%BE%D0%B8%D1%81%D0%BA%D0%B0" title="Двоичное дерево поиска">двоичном дереве поиска</a> центрированный обход извлекает данные в отсортированном порядке.<sup id="cite_ref-4" class="reference"><a href="#cite_note-4">&#91;4&#93;</a></sup>.
+</p>
+<div style="clear:both;"></div>
+<h4><span id=".D0.9E.D0.B1.D1.80.D0.B0.D1.82.D0.BD.D1.8B.D0.B9_.D0.BE.D0.B1.D1.85.D0.BE.D0.B4_.28LRN.29"></span><span class="mw-headline" id="Обратный_обход_(LRN)">Обратный обход (LRN)</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%D0%9E%D0%B1%D1%85%D0%BE%D0%B4_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%B0&amp;veaction=edit&amp;section=6" title="Редактировать раздел «Обратный обход (LRN)»" class="mw-editsection-visualeditor"><span>править</span></a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=%D0%9E%D0%B1%D1%85%D0%BE%D0%B4_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%B0&amp;action=edit&amp;section=6" title="Редактировать код раздела «Обратный обход (LRN)»"><span>править код</span></a><span class="mw-editsection-bracket">]</span></span></h4>
+<figure class="mw-default-size" typeof="mw:File/Thumb"><a href="/wiki/%D0%A4%D0%B0%D0%B9%D0%BB:Sorted_binary_tree_postorder.svg" class="mw-file-description"><img src="//upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Sorted_binary_tree_postorder.svg/220px-Sorted_binary_tree_postorder.svg.png" decoding="async" width="220" height="188" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Sorted_binary_tree_postorder.svg/330px-Sorted_binary_tree_postorder.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Sorted_binary_tree_postorder.svg/440px-Sorted_binary_tree_postorder.svg.png 2x" data-file-width="336" data-file-height="287" /></a><figcaption>Обратный порядок: A, C, E, D, B, H, I, G, F.</figcaption></figure>
+<ol><li>Проверяем, не является ли текущий узел пустым или null.</li>
+<li>Обходим левое поддерево рекурсивно, вызвав функцию обратного обхода.</li>
+<li>Обходим правое поддерево рекурсивно, вызвав функцию обратного обхода.</li>
+<li>Показываем поле данных корня (или текущего узла).</li></ol>
+<p>Последовательность обхода называется секвенциализацией дерева. Последовательность обхода&#160;— это список всех посещённых узлов. Ни одна из секвенциализаций согласно прямому, обратному или центрированному порядку не описывает дерево однозначно. Если задано дерево с различными элементами, прямой или обратный обход вместе с центрированным обходом достаточны для описания дерева однозначно. Однако прямой обход вместе с обратным оставляет некоторую неоднозначность в структуре дерева<sup id="cite_ref-5" class="reference"><a href="#cite_note-5">&#91;5&#93;</a></sup>.
+</p>
+<div style="clear:both;"></div>
+<h4><span id=".D0.94.D0.B5.D1.80.D0.B5.D0.B2.D0.BE_.D0.BE.D0.B1.D1.89.D0.B5.D0.B3.D0.BE_.D0.B2.D0.B8.D0.B4.D0.B0"></span><span class="mw-headline" id="Дерево_общего_вида">Дерево общего вида</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%D0%9E%D0%B1%D1%85%D0%BE%D0%B4_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%B0&amp;veaction=edit&amp;section=7" title="Редактировать раздел «Дерево общего вида»" class="mw-editsection-visualeditor"><span>править</span></a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=%D0%9E%D0%B1%D1%85%D0%BE%D0%B4_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%B0&amp;action=edit&amp;section=7" title="Редактировать код раздела «Дерево общего вида»"><span>править код</span></a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Чтобы обойти любое дерево поиском в глубину, осуществляются рекурсивно следующие операции для каждого узла:
+</p>
+<ol><li>Выполняется операция прямого обхода.</li>
+<li>Для каждого <i>i</i> от 1 до числа детей выполняем:
+<ol><li>Посещаем <i>i</i>-ого потомка, если он есть.</li>
+<li>Выполняем центрированную операцию.</li></ol></li>
+<li>Выполняем операцию обратного обхода.</li></ol>
+<p>В зависимости от текущей задачи операции прямого, обратного или центрированного обхода могут быть пустыми, или вы можете хотеть лишь посетить конкретного потомка, так что эти операции опциональны. На практике может потребоваться более чем одна операция прямого, обратного или центрированного обхода. Например, когда осуществляется вставка в троичное дерево, операция прямого обхода выполняется путём сравнения элементов. Операция обратного обхода может потребоваться после этого для балансировки дерева.
+</p>
+<h3><span id=".D0.9F.D0.BE.D0.B8.D1.81.D0.BA_.D0.B2_.D1.88.D0.B8.D1.80.D0.B8.D0.BD.D1.83"></span><span class="mw-headline" id="Поиск_в_ширину">Поиск в ширину</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%D0%9E%D0%B1%D1%85%D0%BE%D0%B4_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%B0&amp;veaction=edit&amp;section=8" title="Редактировать раздел «Поиск в ширину»" class="mw-editsection-visualeditor"><span>править</span></a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=%D0%9E%D0%B1%D1%85%D0%BE%D0%B4_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%B0&amp;action=edit&amp;section=8" title="Редактировать код раздела «Поиск в ширину»"><span>править код</span></a><span class="mw-editsection-bracket">]</span></span></h3>
+<figure class="mw-default-size" typeof="mw:File/Thumb"><a href="/wiki/%D0%A4%D0%B0%D0%B9%D0%BB:Sorted_binary_tree_breadth-first_traversal.svg" class="mw-file-description"><img src="//upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Sorted_binary_tree_breadth-first_traversal.svg/220px-Sorted_binary_tree_breadth-first_traversal.svg.png" decoding="async" width="220" height="175" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Sorted_binary_tree_breadth-first_traversal.svg/330px-Sorted_binary_tree_breadth-first_traversal.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Sorted_binary_tree_breadth-first_traversal.svg/440px-Sorted_binary_tree_breadth-first_traversal.svg.png 2x" data-file-width="266" data-file-height="212" /></a><figcaption>Уровневый порядок: F, B, G, A, D, I, C, E, H.</figcaption></figure>
+<p>Деревья можно обходить также в <i>порядке уровней</i>, где мы посещаем каждый узел на уровне прежде чем перейти на следующий уровень. Такой поиск называется <i>поиском в ширину</i> (breadth-first search, BFS).
+</p>
+<h3><span id=".D0.94.D1.80.D1.83.D0.B3.D0.B8.D0.B5_.D0.B2.D0.B8.D0.B4.D1.8B"></span><span class="mw-headline" id="Другие_виды">Другие виды</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%D0%9E%D0%B1%D1%85%D0%BE%D0%B4_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%B0&amp;veaction=edit&amp;section=9" title="Редактировать раздел «Другие виды»" class="mw-editsection-visualeditor"><span>править</span></a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=%D0%9E%D0%B1%D1%85%D0%BE%D0%B4_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%B0&amp;action=edit&amp;section=9" title="Редактировать код раздела «Другие виды»"><span>править код</span></a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Существуют также алгоритмы обхода, которые не классифицируются ни как поиск в глубину, ни как поиск в ширину. Один из таких алгоритмов&#160;— <span data-interwiki-lang="en" data-interwiki-article="Monte Carlo tree search"><a href="/w/index.php?title=%D0%9C%D0%B5%D1%82%D0%BE%D0%B4_%D0%9C%D0%BE%D0%BD%D1%82%D0%B5-%D0%9A%D0%B0%D1%80%D0%BB%D0%BE_%D0%B4%D0%BB%D1%8F_%D0%BF%D0%BE%D0%B8%D1%81%D0%BA%D0%B0_%D0%B2_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%B5&amp;action=edit&amp;redlink=1" class="new" title="Метод Монте-Карло для поиска в дереве (страница отсутствует)">метод Монте-Карло</a></span><span class="noprint" style="font-style:normal; font-weight:normal;"><sup><a href="https://en.wikipedia.org/wiki/Monte_Carlo_tree_search" class="extiw" title="en:Monte Carlo tree search"><span title="Monte Carlo tree search — версия статьи «Метод Монте-Карло для поиска в дереве» на английском языке">[en]</span></a></sup></span>, который сосредотачивается на анализе наиболее обещающих ходов, основываясь на расширении <a href="/wiki/%D0%94%D0%B5%D1%80%D0%B5%D0%B2%D0%BE_%D0%BF%D0%BE%D0%B8%D1%81%D0%BA%D0%B0" class="mw-redirect" title="Дерево поиска">дерева поиска</a> при <a href="/wiki/%D0%9C%D0%B5%D1%82%D0%BE%D0%B4_%D0%9C%D0%BE%D0%BD%D1%82%D0%B5-%D0%9A%D0%B0%D1%80%D0%BB%D0%BE" title="Метод Монте-Карло">случайном выборе</a> пространства поиска.
+</p>
+<h2><span id=".D0.9F.D1.80.D0.B8.D0.BB.D0.BE.D0.B6.D0.B5.D0.BD.D0.B8.D1.8F"></span><span class="mw-headline" id="Приложения">Приложения</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%D0%9E%D0%B1%D1%85%D0%BE%D0%B4_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%B0&amp;veaction=edit&amp;section=10" title="Редактировать раздел «Приложения»" class="mw-editsection-visualeditor"><span>править</span></a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=%D0%9E%D0%B1%D1%85%D0%BE%D0%B4_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%B0&amp;action=edit&amp;section=10" title="Редактировать код раздела «Приложения»"><span>править код</span></a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Прямой обход при дублировании узлов и рёбер может сделать полный дубликат <a href="/wiki/%D0%94%D0%B2%D0%BE%D0%B8%D1%87%D0%BD%D0%BE%D0%B5_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%BE" title="Двоичное дерево">двоичного дерева</a>. Это можно использовать для создания префиксного выражения (<a href="/wiki/%D0%9F%D0%BE%D0%BB%D1%8C%D1%81%D0%BA%D0%B0%D1%8F_%D0%BD%D0%BE%D1%82%D0%B0%D1%86%D0%B8%D1%8F" class="mw-redirect" title="Польская нотация">польской нотации</a>) из <span data-interwiki-lang="en" data-interwiki-article="Parse tree"><a href="/w/index.php?title=%D0%94%D0%B5%D1%80%D0%B5%D0%B2%D0%BE_%D1%81%D0%B8%D0%BD%D1%82%D0%B0%D0%BA%D1%81%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_%D1%80%D0%B0%D0%B7%D0%B1%D0%BE%D1%80%D0%B0&amp;action=edit&amp;redlink=1" class="new" title="Дерево синтаксического разбора (страница отсутствует)">деревья выражений</a></span><span class="noprint" style="font-style:normal; font-weight:normal;"><sup><a href="https://en.wikipedia.org/wiki/Parse_tree" class="extiw" title="en:Parse tree"><span title="Parse tree — версия статьи «Дерево синтаксического разбора» на английском языке">[en]</span></a></sup></span>, для чего обходим выражение в прямом порядке.
+</p><p>Центрированный обход наиболее часто используется в <a href="/wiki/%D0%94%D0%B2%D0%BE%D0%B8%D1%87%D0%BD%D0%BE%D0%B5_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%BE_%D0%BF%D0%BE%D0%B8%D1%81%D0%BA%D0%B0" title="Двоичное дерево поиска">двоичных деревьев поиска</a>, поскольку он возвращает значения из низлежащего множества в порядке, определяемом функцией сравнения, которая определяет двоичное дерево поиска.
+</p><p>Обратный обход при удалении или освобождении узлов может удалить или освободить всё бинарное дерево. Обход также образует <a href="/wiki/%D0%9E%D0%B1%D1%80%D0%B0%D1%82%D0%BD%D0%B0%D1%8F_%D0%BF%D0%BE%D0%BB%D1%8C%D1%81%D0%BA%D0%B0%D1%8F_%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D1%8C" title="Обратная польская запись">постфиксное</a> представление бинарного дерева.
+</p>
+<h2><span id=".D0.A0.D0.B5.D0.B0.D0.BB.D0.B8.D0.B7.D0.B0.D1.86.D0.B8.D1.8F"></span><span class="mw-headline" id="Реализация">Реализация</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%D0%9E%D0%B1%D1%85%D0%BE%D0%B4_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%B0&amp;veaction=edit&amp;section=11" title="Редактировать раздел «Реализация»" class="mw-editsection-visualeditor"><span>править</span></a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=%D0%9E%D0%B1%D1%85%D0%BE%D0%B4_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%B0&amp;action=edit&amp;section=11" title="Редактировать код раздела «Реализация»"><span>править код</span></a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span id=".D0.9F.D0.BE.D0.B8.D1.81.D0.BA_.D0.B2_.D0.B3.D0.BB.D1.83.D0.B1.D0.B8.D0.BD.D1.83_2"></span><span class="mw-headline" id="Поиск_в_глубину_2">Поиск в глубину</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%D0%9E%D0%B1%D1%85%D0%BE%D0%B4_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%B0&amp;veaction=edit&amp;section=12" title="Редактировать раздел «Поиск в глубину»" class="mw-editsection-visualeditor"><span>править</span></a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=%D0%9E%D0%B1%D1%85%D0%BE%D0%B4_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%B0&amp;action=edit&amp;section=12" title="Редактировать код раздела «Поиск в глубину»"><span>править код</span></a><span class="mw-editsection-bracket">]</span></span></h3>
+<h4><span id=".D0.9F.D1.80.D1.8F.D0.BC.D0.BE.D0.B9_.D0.BE.D0.B1.D1.85.D0.BE.D0.B4"></span><span class="mw-headline" id="Прямой_обход">Прямой обход</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%D0%9E%D0%B1%D1%85%D0%BE%D0%B4_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%B0&amp;veaction=edit&amp;section=13" title="Редактировать раздел «Прямой обход»" class="mw-editsection-visualeditor"><span>править</span></a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=%D0%9E%D0%B1%D1%85%D0%BE%D0%B4_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%B0&amp;action=edit&amp;section=13" title="Редактировать код раздела «Прямой обход»"><span>править код</span></a><span class="mw-editsection-bracket">]</span></span></h4>
+<table>
+
+<tbody><tr valign="top">
+<td>
+<pre><b>preorder</b>(node)
+  <b>if</b> (node = <b>null</b>)
+    <b>return</b>
+  visit(node)
+  preorder(node.left)
+  preorder(node.right)
+</pre>
+</td>
+<td>
+<pre><b>iterativePreorder</b>(node)
+  <b>if</b> (node = <b>null</b>)
+    <b>return</b>
+  s ← <b>empty stack</b>
+  s.push(node)
+  <b>while</b> (<b>not</b> s.isEmpty())
+    node ← s.pop()
+    visit(node)
+    //правый потомок заносится первым, так что левый потомок обрабатывается первым
+    <b>if</b> (node.right ≠ <b>null</b>)
+      s.push(node.right)
+    <b>if</b> (node.left ≠ <b>null</b>)
+      s.push(node.left)
+</pre>
+</td></tr></tbody></table>
+<h4><span id=".D0.A6.D0.B5.D0.BD.D1.82.D1.80.D0.B8.D1.80.D0.BE.D0.B2.D0.B0.D0.BD.D0.BD.D1.8B.D0.B9_.D0.BE.D0.B1.D1.85.D0.BE.D0.B4"></span><span class="mw-headline" id="Центрированный_обход">Центрированный обход</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%D0%9E%D0%B1%D1%85%D0%BE%D0%B4_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%B0&amp;veaction=edit&amp;section=14" title="Редактировать раздел «Центрированный обход»" class="mw-editsection-visualeditor"><span>править</span></a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=%D0%9E%D0%B1%D1%85%D0%BE%D0%B4_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%B0&amp;action=edit&amp;section=14" title="Редактировать код раздела «Центрированный обход»"><span>править код</span></a><span class="mw-editsection-bracket">]</span></span></h4>
+<table>
+
+<tbody><tr valign="top">
+<td>
+<pre><b>inorder</b>(node)
+  <b>if</b> (node = <b>null</b>)
+    <b>return</b>
+  inorder(node.left)
+  visit(node)
+  inorder(node.right)
+</pre>
+</td>
+<td>
+<pre><b>iterativeInorder</b>(node)
+  s ← <b>empty stack</b>
+  <b>while</b> (<b>not</b> s.isEmpty() <b>or</b> node ≠ <b>null</b>)
+    <b>if</b> (node ≠ <b>null</b>)
+      s.push(node)
+      node ← node.left
+    <b>else</b>
+      node ← s.pop()
+      visit(node)
+      node ← node.right
+</pre>
+</td></tr></tbody></table>
+<h4><span id=".D0.9E.D0.B1.D1.80.D0.B0.D1.82.D0.BD.D1.8B.D0.B9_.D0.BE.D0.B1.D1.85.D0.BE.D0.B4"></span><span class="mw-headline" id="Обратный_обход">Обратный обход</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%D0%9E%D0%B1%D1%85%D0%BE%D0%B4_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%B0&amp;veaction=edit&amp;section=15" title="Редактировать раздел «Обратный обход»" class="mw-editsection-visualeditor"><span>править</span></a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=%D0%9E%D0%B1%D1%85%D0%BE%D0%B4_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%B0&amp;action=edit&amp;section=15" title="Редактировать код раздела «Обратный обход»"><span>править код</span></a><span class="mw-editsection-bracket">]</span></span></h4>
+<table>
+
+<tbody><tr style="vertical-align:top">
+<td>
+<pre><b>postorder</b>(node)
+  <b>if</b> (node = <b>null</b>)
+    <b>return</b>
+  postorder(node.left)
+  postorder(node.right)
+  visit(node)
+</pre>
+</td>
+<td>
+<pre><b>iterativePostorder</b>(node)
+  s ← <b>empty stack</b>
+  lastNodeVisited ← <b>null</b>
+  <b>while</b> (<b>not</b> s.isEmpty() <b>or</b> node ≠ <b>null</b>)
+    <b>if</b> (node ≠ <b>null</b>)
+      s.push(node)
+      node ← node.left
+    <b>else</b>
+      peekNode ← s.peek()
+      // если правый потомок существует и обход пришёл из левого потомка, двигаемся вправо
+      <b>if</b> (peekNode.right ≠ <b>null</b> <b>and</b> lastNodeVisited ≠ peekNode.right)
+        node ← peekNode.right
+      <b>else</b>
+        visit(peekNode)
+        lastNodeVisited ← s.pop()
+</pre>
+</td></tr></tbody></table>
+<p>Все приведённые имплементации требуют стек, пропорциональный высоте дерева, который является <a href="/wiki/%D0%A1%D1%82%D0%B5%D0%BA_%D0%B2%D1%8B%D0%B7%D0%BE%D0%B2%D0%BE%D0%B2" title="Стек вызовов">стеком вызовов</a> для рекурсивной имплементации и стеком родителей для итеративной. В плохо сбалансированном дереве этот стек может быть значительным. В итеративной имплементации мы можем избавиться от стека путём сохранения для каждого узла его родителя или с помощью <a href="#Центрированный_обход_Морриса_с_помощью_прошивки">прошивки дерева</a> (следующий раздел).
+</p>
+<h4><span id=".D0.A6.D0.B5.D0.BD.D1.82.D1.80.D0.B8.D1.80.D0.BE.D0.B2.D0.B0.D0.BD.D0.BD.D1.8B.D0.B9_.D0.BE.D0.B1.D1.85.D0.BE.D0.B4_.D0.9C.D0.BE.D1.80.D1.80.D0.B8.D1.81.D0.B0_.D1.81_.D0.BF.D0.BE.D0.BC.D0.BE.D1.89.D1.8C.D1.8E_.D0.BF.D1.80.D0.BE.D1.88.D0.B8.D0.B2.D0.BA.D0.B8"></span><span class="mw-headline" id="Центрированный_обход_Морриса_с_помощью_прошивки">Центрированный обход Морриса с помощью прошивки</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%D0%9E%D0%B1%D1%85%D0%BE%D0%B4_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%B0&amp;veaction=edit&amp;section=16" title="Редактировать раздел «Центрированный обход Морриса с помощью прошивки»" class="mw-editsection-visualeditor"><span>править</span></a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=%D0%9E%D0%B1%D1%85%D0%BE%D0%B4_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%B0&amp;action=edit&amp;section=16" title="Редактировать код раздела «Центрированный обход Морриса с помощью прошивки»"><span>править код</span></a><span class="mw-editsection-bracket">]</span></span></h4>
+<div class="hatnote navigation-not-searchable">Основная статья: <b><a href="/wiki/%D0%9F%D1%80%D0%BE%D1%88%D0%B8%D1%82%D0%BE%D0%B5_%D0%B4%D0%B2%D0%BE%D0%B8%D1%87%D0%BD%D0%BE%D0%B5_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%BE" title="Прошитое двоичное дерево">Прошитое двоичное дерево</a></b></div>
+<p>Двоичное дерево прошивается путём присвоения каждому левому указателю потомка (который в противном случае всегда пуст = null) указателя на предшественника узла в центрированном порядке (если таковой существует), а каждому правому указателю потомка (который в противном случае всегда пуст) указателя на следующий узел в центрированном порядке (если таковой существует).
+</p><p>Преимущества:
+</p>
+<ol><li>Избегаем рекурсии, которая использует стек вызовов и расходует память и время.</li>
+<li>Узел хранит запись своего родителя.</li></ol>
+<p>Недостатки:
+</p>
+<ol><li>Дерево более сложно.</li>
+<li>Мы можем сделать только один шаг обхода в один момент времени.</li>
+<li>Больше возможность ошибок, когда оба потомка отсутствуют и оба указателя узла указывают на предков.</li></ol>
+<p>Обход Морриса является имплементацией центрированного обхода, использующей прошивку<sup id="cite_ref-_edc8c93bd11d5bbf_6-0" class="reference"><a href="#cite_note-_edc8c93bd11d5bbf-6">&#91;6&#93;</a></sup>:
+</p>
+<ol><li>Создаются ссылки на потомков в центрированном порядке.</li>
+<li>Печатаются данные согласно этим ссылкам.</li>
+<li>Отменяются изменения для возвращения к исходному дереву.</li></ol>
+<h3><span id=".D0.9F.D0.BE.D0.B8.D1.81.D0.BA_.D0.B2_.D1.88.D0.B8.D1.80.D0.B8.D0.BD.D1.83_2"></span><span class="mw-headline" id="Поиск_в_ширину_2">Поиск в ширину</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%D0%9E%D0%B1%D1%85%D0%BE%D0%B4_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%B0&amp;veaction=edit&amp;section=17" title="Редактировать раздел «Поиск в ширину»" class="mw-editsection-visualeditor"><span>править</span></a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=%D0%9E%D0%B1%D1%85%D0%BE%D0%B4_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%B0&amp;action=edit&amp;section=17" title="Редактировать код раздела «Поиск в ширину»"><span>править код</span></a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="hatnote navigation-not-searchable">Основная статья: <b><a href="/wiki/%D0%9F%D0%BE%D0%B8%D1%81%D0%BA_%D0%B2_%D1%88%D0%B8%D1%80%D0%B8%D0%BD%D1%83" title="Поиск в ширину">Поиск в ширину</a></b></div>
+<p>Ниже приведён псевдокод для простого, основывающегося на <a href="/wiki/%D0%9E%D1%87%D0%B5%D1%80%D0%B5%D0%B4%D1%8C_(%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5)" title="Очередь (программирование)">очереди</a>, поуровневого обхода. Алгоритм требует пространство, пропорциональное максимальному числу узлов на уровнях. Эта величина может достигать половины всех узлов. Более эффективный по памяти подход для этого типа обхода может быть имплементирован с помощью <span data-interwiki-lang="en" data-interwiki-article="iterative deepening depth-first search"><a href="/w/index.php?title=%D0%9F%D0%BE%D0%B8%D1%81%D0%BA_%D0%B2_%D0%B3%D0%BB%D1%83%D0%B1%D0%B8%D0%BD%D1%83_%D1%81_%D0%B8%D1%82%D0%B5%D1%80%D0%B0%D1%82%D0%B8%D0%B2%D0%BD%D1%8B%D0%BC_%D1%83%D0%B3%D0%BB%D1%83%D0%B1%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5%D0%BC&amp;action=edit&amp;redlink=1" class="new" title="Поиск в глубину с итеративным углублением (страница отсутствует)">поиска в глубину с итеративным углублением</a></span><span class="noprint" style="font-style:normal; font-weight:normal;"><sup><a href="https://en.wikipedia.org/wiki/iterative_deepening_depth-first_search" class="extiw" title="en:iterative deepening depth-first search"><span title="iterative deepening depth-first search — версия статьи «Поиск в глубину с итеративным углублением» на английском языке">[en]</span></a></sup></span>.
+</p>
+<pre><b>levelorder</b>(root)
+  q ← <b>empty queue</b>
+  q.enqueue(root)
+  <b>while</b> (<b>not</b> q.isEmpty())
+    node ← q.dequeue()
+    visit(node)
+    <b>if</b> (node.left ≠ <b>null</b>)
+      q.enqueue(node.left)
+    <b>if</b> (node.right ≠ <b>null</b>)
+      q.enqueue(node.right)
+</pre>
+<div class="mw-highlight mw-highlight-lang-c++ mw-content-ltr mw-highlight-lines" dir="ltr"><pre><span></span><span class="linenos" data-line="1"></span><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">wide</span><span class="p">(</span><span class="n">TreeNode</span><span class="o">*</span><span class="w"> </span><span class="n">root</span><span class="p">){</span>
+<span class="linenos" data-line="2"></span><span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">queue</span><span class="o">&lt;</span><span class="n">TreeNode</span><span class="o">*&gt;</span><span class="w"> </span><span class="n">q</span><span class="p">;</span>
+<span class="linenos" data-line="3"></span><span class="w">        </span><span class="n">q</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">root</span><span class="p">);</span>
+<span class="linenos" data-line="4"></span><span class="w">        </span><span class="n">TreeNode</span><span class="o">*</span><span class="w"> </span><span class="n">node</span><span class="p">;</span>
+<span class="linenos" data-line="5"></span><span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">q</span><span class="p">.</span><span class="n">empty</span><span class="p">()){</span>
+<span class="linenos" data-line="6"></span><span class="w">            </span><span class="n">node</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">q</span><span class="p">.</span><span class="n">front</span><span class="p">();</span>
+<span class="linenos" data-line="7"></span><span class="w">            </span><span class="n">q</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
+<span class="linenos" data-line="8"></span><span class="w">            </span><span class="n">visit</span><span class="p">(</span><span class="n">node</span><span class="p">);</span>
+<span class="linenos" data-line="9"></span><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">node</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">)</span>
+<span class="linenos" data-line="10"></span><span class="w">                </span><span class="n">q</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">node</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">);</span>
+<span class="linenos" data-line="11"></span><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">node</span><span class="o">-&gt;</span><span class="n">right</span><span class="p">)</span>
+<span class="linenos" data-line="12"></span><span class="w">                </span><span class="n">q</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">node</span><span class="o">-&gt;</span><span class="n">right</span><span class="p">);</span>
+<span class="linenos" data-line="13"></span><span class="w">        </span><span class="p">}</span>
+<span class="linenos" data-line="14"></span><span class="w">    </span><span class="p">}</span>
+</pre></div>
+<h2><span id=".D0.91.D0.B5.D1.81.D0.BA.D0.BE.D0.BD.D0.B5.D1.87.D0.BD.D1.8B.D0.B5_.D0.B4.D0.B5.D1.80.D0.B5.D0.B2.D1.8C.D1.8F"></span><span class="mw-headline" id="Бесконечные_деревья">Бесконечные деревья</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%D0%9E%D0%B1%D1%85%D0%BE%D0%B4_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%B0&amp;veaction=edit&amp;section=18" title="Редактировать раздел «Бесконечные деревья»" class="mw-editsection-visualeditor"><span>править</span></a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=%D0%9E%D0%B1%D1%85%D0%BE%D0%B4_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%B0&amp;action=edit&amp;section=18" title="Редактировать код раздела «Бесконечные деревья»"><span>править код</span></a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Обход обычно осуществляется для деревьев с конечным числом узлов (а следовательно, с конечной глубиной и конечным <a href="/wiki/%D0%9A%D0%BE%D1%8D%D1%84%D1%84%D0%B8%D1%86%D0%B8%D0%B5%D0%BD%D1%82_%D0%B2%D0%B5%D1%82%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F" class="mw-disambig" title="Коэффициент ветвления">коэффициентом ветвления</a>), но также он может быть осуществлён для бесконечных деревьев. Такой обход представляет интерес, в частности, в <a href="/wiki/%D0%A4%D1%83%D0%BD%D0%BA%D1%86%D0%B8%D0%BE%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5" title="Функциональное программирование">функциональном программировании</a> (для <a href="/wiki/%D0%9B%D0%B5%D0%BD%D0%B8%D0%B2%D1%8B%D0%B5_%D0%B2%D1%8B%D1%87%D0%B8%D1%81%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F" title="Ленивые вычисления">отложенных вычислений</a>), так как бесконечные структуры данных можно часто легко определить и работать с ними, хотя они не могут быть (строго) вычислены, так как потребовалось бы бесконечное время. Некоторые конечные деревья слишком велики, чтобы представить их явно, такие как <span data-interwiki-lang="en" data-interwiki-article="game tree"><a href="/w/index.php?title=%D0%94%D0%B5%D1%80%D0%B5%D0%B2%D0%BE_%D0%B8%D0%B3%D1%80%D1%8B&amp;action=edit&amp;redlink=1" class="new" title="Дерево игры (страница отсутствует)">дерево игры</a></span><span class="noprint" style="font-style:normal; font-weight:normal;"><sup><a href="https://en.wikipedia.org/wiki/game_tree" class="extiw" title="en:game tree"><span title="game tree — версия статьи «Дерево игры» на английском языке">[en]</span></a></sup></span> <a href="/wiki/%D0%A8%D0%B0%D1%85%D0%BC%D0%B0%D1%82%D1%8B" title="Шахматы">шахмат</a> или <a href="/wiki/%D0%93%D0%BE" title="Го">го</a>, так что имеет смысл работать с ними как с бесконечными.
+</p><p>Главное требование обхода&#160;— посетить все узлы. Для бесконечных деревьев простые алгоритмы это осуществить не могут. Например, если имеется двоичное дерево бесконечной глубины, поиск в глубину будет двигаться вдоль одной стороны (обычно&#160;— по левой стороне) дерева, никогда не посетив остальные вершины, и более того, центрированный или обратный обход никогда не посетит <i>никакой</i> узел, так как никогда не достигнет листа. Для контраста, обход в ширину (поуровневый) обходит двоичное дерево бесконечной глубины без проблем и более того, обходит любое дерево с ограниченным коэффициентом ветвления.
+</p><p>С другой стороны, если дано дерево глубины 2, в котором корень имеет бесконечное число детей, а каждый узел-ребёнок имеет двух детей, поиск в глубину посетит все узлы, так как он, обойдя внуков (детей второго уровня), передвигается к следующему узлу (в предположении, что это не обратный обход, при котором никогда не достигается корень). Для контраста, поиск в ширину никогда не доберётся до внуков, поскольку он должен перебрать сначала всех детей (1-го уровня).
+</p><p>Более сложный анализ времени работы может быть дан с помощью бесконечных <a href="/wiki/%D0%9F%D0%BE%D1%80%D1%8F%D0%B4%D0%BA%D0%BE%D0%B2%D0%BE%D0%B5_%D1%87%D0%B8%D1%81%D0%BB%D0%BE" title="Порядковое число">порядковых чисел</a>. Например, поиск в ширину в дереве глубины 2 (как выше) будет занимать <a href="/wiki/%D0%9F%D0%BE%D1%80%D1%8F%D0%B4%D0%BA%D0%BE%D0%B2%D0%BE%D0%B5_%D1%87%D0%B8%D1%81%D0%BB%D0%BE#Порядковые_числа_как_расширение_множества_натуральных_чисел" title="Порядковое число">ω</a>·2 шагов&#160;— <a href="/wiki/%D0%9F%D0%BE%D1%80%D1%8F%D0%B4%D0%BA%D0%BE%D0%B2%D0%BE%D0%B5_%D1%87%D0%B8%D1%81%D0%BB%D0%BE#Порядковые_числа_как_расширение_множества_натуральных_чисел" title="Порядковое число">ω</a> для первого уровня и другие <a href="/wiki/%D0%9F%D0%BE%D1%80%D1%8F%D0%B4%D0%BA%D0%BE%D0%B2%D0%BE%D0%B5_%D1%87%D0%B8%D1%81%D0%BB%D0%BE#Порядковые_числа_как_расширение_множества_натуральных_чисел" title="Порядковое число">ω</a> для второго уровня.
+</p><p>Таким образом, простые поиски в глубину и в ширину не обходят любое бесконечное дерево и неэффективны на очень больших деревьях. Однако гибридные методы могут обходить любое (счётное) бесконечное дерево, главным образом через <span data-interwiki-lang="en" data-interwiki-article="Diagonal argument (disambiguation)"><a href="/w/index.php?title=%D0%94%D0%B8%D0%B0%D0%B3%D0%BE%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D0%B0%D1%80%D0%B3%D1%83%D0%BC%D0%B5%D0%BD%D1%82_%D0%9A%D0%B0%D0%BD%D1%82%D0%BE%D1%80%D0%B0&amp;action=edit&amp;redlink=1" class="new" title="Диагональный аргумент Кантора (страница отсутствует)">диагональный аргумент</a></span><span class="noprint" style="font-style:normal; font-weight:normal;"><sup><a href="https://en.wikipedia.org/wiki/Diagonal_argument_(disambiguation)" class="extiw" title="en:Diagonal argument (disambiguation)"><span title="Diagonal argument (disambiguation) — версия статьи «Диагональный аргумент Кантора» на английском языке">[en]</span></a></sup></span> («диагональ», комбинация вертикали и горизонтали, соответствует комбинации поиска в глубину и в ширину).
+</p><p>Конкретно, если дано бесконечно ветвящееся дерево бесконечной глубины, помечаем корень (), детей корня (1), (2), …, внуков (1, 1), (1, 2), …, (2, 1), (2, 2), …, и так далее. Узлы тогда находятся в <a href="/wiki/%D0%91%D0%B8%D0%B5%D0%BA%D1%86%D0%B8%D1%8F" title="Биекция">один-к-одному</a> соответствии с конечными (возможно пустыми) последовательностями положительных чисел, множество которых счётно и может быть упорядочено сначала по сумме элементов, а затем по <a href="/wiki/%D0%9B%D0%B5%D0%BA%D1%81%D0%B8%D0%BA%D0%BE%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D0%BF%D0%BE%D1%80%D1%8F%D0%B4%D0%BE%D0%BA" title="Лексикографический порядок">лексикографическому порядку</a> внутри последовательностей с данной суммой (только конечное число последовательностей даёт заданную сумму, так что все узлы достигаются; формально говоря, существует конечное число <a href="/wiki/%D0%9A%D0%BE%D0%BC%D0%BF%D0%BE%D0%B7%D0%B8%D1%86%D0%B8%D1%8F_%D1%87%D0%B8%D1%81%D0%BB%D0%B0" title="Композиция числа">композиций</a> заданного натурального числа, а именно 2<sup><i>n</i>−1</sup> композиций). Этот порядок задаёт обход дерева. Конкретно:
+</p>
+<pre>0: ()
+1: (1)
+2: (1, 1) (2)
+3: (1, 1, 1) (1, 2) (2, 1) (3)
+4: (1, 1, 1, 1) (1, 1, 2) (1, 2, 1) (1, 3) (2, 1, 1) (2, 2) (3, 1) (4)
+</pre>
+<p>и&#160;т.&#160;д..
+</p><p>Это может быть проинтерпретировано как отображение бесконечно глубокого двоичного дерева в такого вида дерево и применение поиска в ширину&#160;— заменяем рёбра «вниз», соединяющие родительский узел со вторым и далее потомками, с «правыми» рёбрами от первого потомка ко второму, от второго к третьему и&#160;т.&#160;д.. Тогда на каждом шаге мы двигаемся либо вниз (добавляется (, 1) в конец) или идём вправо (добавляем единицу к последнему числу) (за исключением корня, от которого можно идти только вниз), что показывает связь между бесконечным бинарным деревом и приведённой выше нумерацией. Сумма входов (без единицы) соответствует расстоянию от корня, что согласуется с 2<sup><i>n</i>−1</sup> узлов и глубиной <span class="nowrap"><i>n</i> − 1</span> в бесконечном двоичном дереве (2 соответствует бинарности дерева).
+</p>
+<h2><span id=".D0.9F.D1.80.D0.B8.D0.BC.D0.B5.D1.87.D0.B0.D0.BD.D0.B8.D1.8F"></span><span class="mw-headline" id="Примечания">Примечания</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%D0%9E%D0%B1%D1%85%D0%BE%D0%B4_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%B0&amp;veaction=edit&amp;section=19" title="Редактировать раздел «Примечания»" class="mw-editsection-visualeditor"><span>править</span></a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=%D0%9E%D0%B1%D1%85%D0%BE%D0%B4_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%B0&amp;action=edit&amp;section=19" title="Редактировать код раздела «Примечания»"><span>править код</span></a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist columns" style="list-style-type: decimal;">
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-holtenotes-1"><span class="mw-cite-backlink"><a href="#cite_ref-holtenotes_1-0">↑</a></span> <span class="reference-text"><span class="citation"><span lang="und"><a rel="nofollow" class="external text" href="http://webdocs.cs.ualberta.ca/~holte/T26/tree-traversal.html">Lecture 8, Tree Traversal</a></span><span class="hidden-ref" style="display:none;">&#160;&#160;<small class="ref-info" style="cursor:help;" title="на неопределённом языке">(неопр.)</small></span>.&#32;Дата обращения: 2 мая 2015.&#32;<a rel="nofollow" class="external text" href="https://web.archive.org/web/20180805002532/http://webdocs.cs.ualberta.ca/~holte/T26/tree-traversal.html">Архивировано</a> 5 августа 2018 года.</span></span>
+</li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><a href="#cite_ref-2">↑</a></span> <span class="reference-text"><span class="citation"><span lang="und"><a rel="nofollow" class="external text" href="http://www.cise.ufl.edu/~sahni/cop3530/slides/lec216.pdf">Архивированная копия</a></span><span class="hidden-ref" style="display:none;">&#160;&#160;<small class="ref-info" style="cursor:help;" title="на неопределённом языке">(неопр.)</small></span>.&#32;Дата обращения: 29 мая 2018.&#32;<a rel="nofollow" class="external text" href="https://web.archive.org/web/20170828233302/https://www.cise.ufl.edu/~sahni/cop3530/slides/lec216.pdf">Архивировано</a> 28 августа 2017 года.</span></span>
+</li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><a href="#cite_ref-3">↑</a></span> <span class="reference-text"><span class="citation"><span lang="und"><a rel="nofollow" class="external text" href="http://www.programmerinterview.com/index.php/data-structures/preorder-traversal-algorithm/">Preorder Traversal Algorithm</a></span><span class="hidden-ref" style="display:none;">&#160;&#160;<small class="ref-info" style="cursor:help;" title="на неопределённом языке">(неопр.)</small></span>.&#32;Дата обращения: 2 мая 2015.&#32;<a rel="nofollow" class="external text" href="https://web.archive.org/web/20190411204028/https://www.programmerinterview.com/index.php/data-structures/preorder-traversal-algorithm/">Архивировано</a> 11 апреля 2019 года.</span></span>
+</li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><a href="#cite_ref-4">↑</a></span> <span class="reference-text"><span class="citation"><i>Wittman, Todd</i>&#32;<span lang="und"><a rel="nofollow" class="external text" href="https://web.archive.org/web/20150213195803/http://www.math.ucla.edu/~wittman/10b.1.10w/Lectures/Lec18.pdf">Tree Traversal</a></span><span class="hidden-ref" style="display:none;">&#160;&#160;<small class="ref-info" style="cursor:help;" title="на неопределённом языке">(неопр.)</small></span>&#32;(PDF).&#32;<i><a href="/wiki/%D0%9A%D0%B0%D0%BB%D0%B8%D1%84%D0%BE%D1%80%D0%BD%D0%B8%D0%B9%D1%81%D0%BA%D0%B8%D0%B9_%D1%83%D0%BD%D0%B8%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%82%D0%B5%D1%82_%D0%B2_%D0%9B%D0%BE%D1%81-%D0%90%D0%BD%D0%B4%D0%B6%D0%B5%D0%BB%D0%B5%D1%81%D0%B5" title="Калифорнийский университет в Лос-Анджелесе">UCLA</a> Math</i>.&#32;Дата обращения: 2 января 2016.&#32;Архивировано из <a rel="nofollow" class="external text" href="http://www.math.ucla.edu/~wittman/10b.1.10w/Lectures/Lec18.pdf">оригинала</a> 13 февраля 2015 года.</span></span>
+</li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><a href="#cite_ref-5">↑</a></span> <span class="reference-text"><span class="citation"><span lang="und"><a rel="nofollow" class="external text" href="http://cs.stackexchange.com/questions/439/which-combinations-of-pre-post-and-in-order-sequentialisation-are-unique">Algorithms, Which combinations of pre-, post- and in-order sequentialisation are unique?, Computer Science Stack Exchange</a></span><span class="hidden-ref" style="display:none;">&#160;&#160;<small class="ref-info" style="cursor:help;" title="на неопределённом языке">(неопр.)</small></span>.&#32;Дата обращения: 2 мая 2015.&#32;<a rel="nofollow" class="external text" href="https://web.archive.org/web/20150212044608/http://cs.stackexchange.com/questions/439/which-combinations-of-pre-post-and-in-order-sequentialisation-are-unique">Архивировано</a> 12 февраля 2015 года.</span></span>
+</li>
+<li id="cite_note-_edc8c93bd11d5bbf-6"><span class="mw-cite-backlink"><a href="#cite_ref-_edc8c93bd11d5bbf_6-0">↑</a></span> <span class="reference-text"><a href="#CITEREFMorris1979">Morris, 1979</a>.</span>
+</li>
+</ol></div></div>
+<h2><span id=".D0.9B.D0.B8.D1.82.D0.B5.D1.80.D0.B0.D1.82.D1.83.D1.80.D0.B0"></span><span class="mw-headline" id="Литература">Литература</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%D0%9E%D0%B1%D1%85%D0%BE%D0%B4_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%B0&amp;veaction=edit&amp;section=20" title="Редактировать раздел «Литература»" class="mw-editsection-visualeditor"><span>править</span></a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=%D0%9E%D0%B1%D1%85%D0%BE%D0%B4_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%B0&amp;action=edit&amp;section=20" title="Редактировать код раздела «Литература»"><span>править код</span></a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="columns reflist not-references" style=";column-count:1; column-width: 30em;">
+<ul><li><span class="citation" id="CITEREFMorris1979"><i>Joseph M. Morris.</i>&#32;Traversing binary trees simply and cheaply&#160;// <a href="/w/index.php?title=Information_Processing_Letters&amp;action=edit&amp;redlink=1" class="new" title="Information Processing Letters (страница отсутствует)">Information Processing Letters</a>.&#160;— 1979.&#160;— <span class="nowrap">Т. 9</span>, <span class="nowrap">вып. 5</span>.&#160;— <a href="/wiki/Doi" class="mw-redirect" title="Doi">doi</a>:<a rel="nofollow" class="external text" href="https://dx.doi.org/10.1016%2F0020-0190%2879%2990068-1">10.1016/0020-0190(79)90068-1</a>.</span></li></ul>
+<ul><li><style data-mw-deduplicate="TemplateStyles:r134784925">.mw-parser-output cite.citation{font-style:inherit;word-wrap:break-word}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .citation:target{background-color:rgba(0,127,255,0.133)}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{background:url("//upload.wikimedia.org/wikipedia/commons/6/65/Lock-green.svg")right 0.1em center/9px no-repeat}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{background:url("//upload.wikimedia.org/wikipedia/commons/d/d6/Lock-gray-alt-2.svg")right 0.1em center/9px no-repeat}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{background:url("//upload.wikimedia.org/wikipedia/commons/a/aa/Lock-red-alt-2.svg")right 0.1em center/9px no-repeat}.mw-parser-output .cs1-ws-icon a{background:url("//upload.wikimedia.org/wikipedia/commons/4/4c/Wikisource-logo.svg")right 0.1em center/12px no-repeat}.mw-parser-output .cs1-code{color:inherit;background:inherit;border:none;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;color:#d33}.mw-parser-output .cs1-visible-error{color:#d33}.mw-parser-output .cs1-maint{display:none;color:#3a3;margin-left:0.3em}.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right{padding-right:0.2em}.mw-parser-output .citation .mw-selflink{font-weight:inherit}</style><span class="citation no-wikidata" data-wikidata-property-id="P1343" id="CITEREFDale,_Lilly1995"><i>Nell Dale, Susan D. Lilly.</i>&#32;Pascal Plus Data Structures.&#160;— Fourth Edition.&#160;— Lexington, MA: D. C. Heath and Company, 1995.</span></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r134784925"><span class="citation no-wikidata" data-wikidata-property-id="P1343" id="CITEREFDrozdek2001"><i>Adam Drozdek.</i>&#32;Data Structures and Algorithms in C++.&#160;— Second edition.&#160;— Brook/Cole. Pacific Grove, CA, 2001.</span></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r134784925"><span class="citation no-wikidata" data-wikidata-property-id="P1343"><i>Кормен, Лейзерсон, Ривест, Штайн.</i>&#32;<span data-wikidata-qualifier-id="P248">Глава 12. Бинарные деревья поиска</span>&#32;&#47;&#47;&#32;<a href="/wiki/%D0%90%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC%D1%8B:_%D0%BF%D0%BE%D1%81%D1%82%D1%80%D0%BE%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B8_%D0%B0%D0%BD%D0%B0%D0%BB%D0%B8%D0%B7" title="Алгоритмы: построение и анализ">Алгоритмы: построение и анализ</a>.&#160;— 3-е.&#160;— <abbr title="Санкт-Петербург">СПб.</abbr>: Диалектика, 2020.&#160;— С.&#160;319—322.&#160;— 1328&#160;с.</span></li></ul>
+</div>
+<h2><span id=".D0.A1.D1.81.D1.8B.D0.BB.D0.BA.D0.B8"></span><span class="mw-headline" id="Ссылки">Ссылки</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%D0%9E%D0%B1%D1%85%D0%BE%D0%B4_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%B0&amp;veaction=edit&amp;section=21" title="Редактировать раздел «Ссылки»" class="mw-editsection-visualeditor"><span>править</span></a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=%D0%9E%D0%B1%D1%85%D0%BE%D0%B4_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%B0&amp;action=edit&amp;section=21" title="Редактировать код раздела «Ссылки»"><span>править код</span></a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a rel="nofollow" class="external free" href="http://www.math.northwestern.edu/~mlerma/courses/cs310-05s/notes/dm-treetran">http://www.math.northwestern.edu/~mlerma/courses/cs310-05s/notes/dm-treetran</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.sitepoint.com/hierarchical-data-database/">Storing Hierarchical Data in a Database</a> with traversal examples in PHP</li>
+<li><a rel="nofollow" class="external text" href="https://web.archive.org/web/20110606032941/http://dev.mysql.com/tech-resources/articles/hierarchical-data.html">Managing Hierarchical Data in MySQL</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.artfulsoftware.com/mysqlbook/sampler/mysqled1ch20.html">Working with Graphs in MySQL</a></li>
+<li><a rel="nofollow" class="external text" href="https://code.google.com/p/treetraversal/">Sample code for recursive and iterative tree traversal implemented in C.</a></li>
+<li><a rel="nofollow" class="external text" href="http://arachnode.net/blogs/programming_challenges/archive/2009/09/25/recursive-tree-traversal-orders.aspx">Sample code for recursive tree traversal in C#.</a> <a rel="nofollow" class="external text" href="https://web.archive.org/web/20090930091007/http://arachnode.net/blogs/programming_challenges/archive/2009/09/25/recursive-tree-traversal-orders.aspx">Архивная копия</a> от 30 сентября 2009 на <a href="/wiki/Wayback_Machine" title="Wayback Machine">Wayback Machine</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.perlmonks.org/?node_id=600456">Tree traversal without recursion</a></li>
+<li><a rel="nofollow" class="external text" href="http://rosettacode.org/wiki/Tree_traversal">Tree traversal — Rosetta Code</a> <span data-interwiki-lang="en" data-interwiki-article="Rosetta Code"><a href="/w/index.php?title=Rosetta_Code&amp;action=edit&amp;redlink=1" class="new" title="Rosetta Code (страница отсутствует)">Rosetta Code</a></span><span class="noprint" style="font-style:normal; font-weight:normal;"><sup><a href="https://en.wikipedia.org/wiki/Rosetta_Code" class="extiw" title="en:Rosetta Code"><span title="Rosetta Code — версия статьи «Rosetta Code» на английском языке">[en]</span></a></sup></span>&#160;<small class="ref-info" style="cursor:help;" title="на английском языке">(англ.)</small></li>
+<li><a rel="nofollow" class="external text" href="https://www.cs.cmu.edu/~adamchik/15-121/lectures/Trees/trees.html">Binary Trees</a>&#160;<small class="ref-info" style="cursor:help;" title="на английском языке">(англ.)</small></li>
+<li><a rel="nofollow" class="external text" href="http://pco.iis.nsk.su/ICP/Practice/dd8-3/node6.html">4.5 Обходы ордерева в глубину и в ширину</a>&#160;<small class="ref-info" style="cursor:help;" title="на русском языке">(рус.)</small></li>
+<li><a rel="nofollow" class="external text" href="http://webdocs.cs.ualberta.ca/~holte/T26/tree-traversal.html">Lecture 8 — Tree Traversal</a>&#160;<small class="ref-info" style="cursor:help;" title="на английском языке">(англ.)</small></li>
+<li><a rel="nofollow" class="external text" href="http://www.cs.sfu.ca/~ggbaker/zju/math/traversal.html">Tree Traversal</a>&#160;<small class="ref-info" style="cursor:help;" title="на английском языке">(англ.)</small></li></ul>
+<div role="navigation" class="navbox" aria-labelledby="Алгоритмы_поиска_на_графах" data-name="Алгоритмы поиска на графах"><table class="nowraplinks collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th scope="colgroup" class="navbox-title" colspan="3"><span class="navbox-gear" style="float:left;text-align:left;width:5em;margin-right:0.5em"><span class="noprint" typeof="mw:File"><a href="/wiki/%D0%A8%D0%B0%D0%B1%D0%BB%D0%BE%D0%BD:%D0%90%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC%D1%8B_%D0%BF%D0%BE%D0%B8%D1%81%D0%BA%D0%B0_%D0%BD%D0%B0_%D0%B3%D1%80%D0%B0%D1%84%D0%B0%D1%85" title="Перейти к шаблону «Алгоритмы поиска на графах»"><img alt="Перейти к шаблону «Алгоритмы поиска на графах»" src="//upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Wikipedia_interwiki_section_gear_icon.svg/14px-Wikipedia_interwiki_section_gear_icon.svg.png" decoding="async" width="14" height="14" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Wikipedia_interwiki_section_gear_icon.svg/21px-Wikipedia_interwiki_section_gear_icon.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Wikipedia_interwiki_section_gear_icon.svg/28px-Wikipedia_interwiki_section_gear_icon.svg.png 2x" data-file-width="14" data-file-height="14" /></a></span>&#160;</span><div id="Алгоритмы_поиска_на_графах" style="font-size:114%;margin:0 5em"><a href="/wiki/%D0%9A%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F:%D0%90%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC%D1%8B_%D0%BF%D0%BE%D0%B8%D1%81%D0%BA%D0%B0_%D0%BD%D0%B0_%D0%B3%D1%80%D0%B0%D1%84%D0%B0%D1%85" title="Категория:Алгоритмы поиска на графах"> Алгоритмы поиска на графах</a></div></th></tr><tr><th scope="row" class="navbox-group" style="width:1px"><a href="/wiki/%D0%9D%D0%B5%D0%B8%D0%BD%D1%84%D0%BE%D1%80%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D1%8B%D0%B9_%D0%BC%D0%B5%D1%82%D0%BE%D0%B4_%D0%BF%D0%BE%D0%B8%D1%81%D0%BA%D0%B0" title="Неинформированный метод поиска">Неинформированные методы</a></th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%D0%90%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC_%D0%91%D1%80%D0%BE%D0%BD%D0%B0_%E2%80%94_%D0%9A%D0%B5%D1%80%D0%B1%D0%BE%D1%88%D0%B0" title="Алгоритм Брона — Кербоша">Алгоритм Брона — Кербоша</a></li>
+<li><a href="/wiki/%D0%94%D0%B2%D1%83%D0%BD%D0%B0%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9_%D0%BF%D0%BE%D0%B8%D1%81%D0%BA" title="Двунаправленный поиск">Двунаправленный поиск</a></li>
+<li><a href="/wiki/%D0%9B%D1%83%D1%87%D0%B5%D0%B2%D0%BE%D0%B9_%D0%BF%D0%BE%D0%B8%D1%81%D0%BA" title="Лучевой поиск">Лучевой поиск</a></li>
+<li><a href="/wiki/%D0%9B%D0%B5%D0%BA%D1%81%D0%B8%D0%BA%D0%BE%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D0%BF%D0%BE%D0%B8%D1%81%D0%BA_%D0%B2_%D1%88%D0%B8%D1%80%D0%B8%D0%BD%D1%83" title="Лексикографический поиск в ширину">Лексикографический поиск в ширину</a></li>
+<li><a href="/wiki/%D0%9F%D0%BE%D0%B8%D1%81%D0%BA_%D0%B2_%D1%88%D0%B8%D1%80%D0%B8%D0%BD%D1%83" title="Поиск в ширину">Поиск в ширину</a></li>
+<li><a href="/wiki/%D0%9F%D0%BE%D0%B8%D1%81%D0%BA_%D0%BF%D0%BE_%D0%BA%D1%80%D0%B8%D1%82%D0%B5%D1%80%D0%B8%D1%8E_%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D0%B8" class="mw-redirect" title="Поиск по критерию стоимости">Поиск по критерию стоимости</a></li>
+<li><a href="/wiki/%D0%9F%D0%BE%D0%B8%D1%81%D0%BA_%D0%B2_%D0%B3%D0%BB%D1%83%D0%B1%D0%B8%D0%BD%D1%83" title="Поиск в глубину">Поиск в глубину</a></li>
+<li><a href="/wiki/%D0%9F%D0%BE%D0%B8%D1%81%D0%BA_%D1%81_%D0%B2%D0%BE%D0%B7%D0%B2%D1%80%D0%B0%D1%82%D0%BE%D0%BC" title="Поиск с возвратом">Поиск с возвратом</a></li>
+<li><a href="/wiki/%D0%9F%D0%BE%D0%B8%D1%81%D0%BA_%D0%B2%D0%BE%D1%81%D1%85%D0%BE%D0%B6%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5%D0%BC_%D0%BA_%D0%B2%D0%B5%D1%80%D1%88%D0%B8%D0%BD%D0%B5" title="Поиск восхождением к вершине">Поиск восхождением к вершине</a></li>
+<li><a href="/wiki/%D0%9F%D0%BE%D0%B8%D1%81%D0%BA_%D1%81_%D0%BE%D0%B3%D1%80%D0%B0%D0%BD%D0%B8%D1%87%D0%B5%D0%BD%D0%B8%D0%B5%D0%BC_%D0%B3%D0%BB%D1%83%D0%B1%D0%B8%D0%BD%D1%8B" class="mw-redirect" title="Поиск с ограничением глубины">Поиск с ограничением глубины</a></li>
+<li><a href="/wiki/IDDFS" class="mw-redirect" title="IDDFS">Поиск в глубину с итеративным углублением</a></li></ul>
+</div></td><td class="navbox-image" rowspan="5" style="width:1px;padding:0px 0px 0px 7px"><div><span typeof="mw:File"><a href="/wiki/%D0%A4%D0%B0%D0%B9%D0%BB:Breadth-First-Search-Algorithm.gif" class="mw-file-description" title="Breadth-First-Search-Algorithm"><img alt="Breadth-First-Search-Algorithm" src="//upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Breadth-First-Search-Algorithm.gif/150px-Breadth-First-Search-Algorithm.gif" decoding="async" width="150" height="150" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Breadth-First-Search-Algorithm.gif/225px-Breadth-First-Search-Algorithm.gif 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Breadth-First-Search-Algorithm.gif/300px-Breadth-First-Search-Algorithm.gif 2x" data-file-width="500" data-file-height="500" /></a></span></div></td></tr><tr><th scope="row" class="navbox-group" style="width:1px"><a href="/wiki/%D0%98%D0%BD%D1%84%D0%BE%D1%80%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D1%8B%D0%B9_%D0%BC%D0%B5%D1%82%D0%BE%D0%B4_%D0%BF%D0%BE%D0%B8%D1%81%D0%BA%D0%B0" title="Информированный метод поиска">Информированные методы</a></th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%D0%90%D0%BB%D1%8C%D1%84%D0%B0-%D0%B1%D0%B5%D1%82%D0%B0-%D0%BE%D1%82%D1%81%D0%B5%D1%87%D0%B5%D0%BD%D0%B8%D0%B5" title="Альфа-бета-отсечение">Альфа-бета-отсечение</a></li>
+<li><a href="/wiki/%D0%9C%D0%B5%D1%82%D0%BE%D0%B4_%D0%B2%D0%B5%D1%82%D0%B2%D0%B5%D0%B9_%D0%B8_%D0%B3%D1%80%D0%B0%D0%BD%D0%B8%D1%86" title="Метод ветвей и границ">Метод ветвей и границ</a></li>
+<li><a href="/wiki/%D0%9F%D0%BE%D0%B8%D1%81%D0%BA_%D0%BF%D0%BE_%D0%BF%D0%B5%D1%80%D0%B2%D0%BE%D0%BC%D1%83_%D0%BD%D0%B0%D0%B8%D0%BB%D1%83%D1%87%D1%88%D0%B5%D0%BC%D1%83_%D1%81%D0%BE%D0%B2%D0%BF%D0%B0%D0%B4%D0%B5%D0%BD%D0%B8%D1%8E" title="Поиск по первому наилучшему совпадению">Поиск по первому наилучшему совпадению</a></li>
+<li><a href="/wiki/A*" title="A*">A*</a></li>
+<li><a href="/wiki/%D0%90%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC_%D0%BF%D0%BE%D0%B8%D1%81%D0%BA%D0%B0_B*" title="Алгоритм поиска B*">B*</a></li>
+<li><a href="/wiki/%D0%90%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC_%D0%BF%D0%BE%D0%B8%D1%81%D0%BA%D0%B0_D*" title="Алгоритм поиска D*">D*</a></li>
+<li><a href="/wiki/%D0%9F%D0%BE%D0%B8%D1%81%D0%BA_%D1%82%D0%BE%D1%87%D0%BA%D0%B8_%D0%BF%D0%B5%D1%80%D0%B5%D1%85%D0%BE%D0%B4%D0%B0" title="Поиск точки перехода">Поиск точки перехода</a></li>
+<li><a href="/wiki/IDA*" class="mw-redirect" title="IDA*">IDA*</a></li>
+<li><a href="/wiki/%D0%A0%D0%B5%D0%BA%D1%83%D1%80%D1%81%D0%B8%D0%B2%D0%BD%D1%8B%D0%B9_%D0%BF%D0%BE%D0%B8%D1%81%D0%BA_%D0%BF%D0%BE_%D0%BF%D0%B5%D1%80%D0%B2%D0%BE%D0%BC%D1%83_%D0%BD%D0%B0%D0%B8%D0%BB%D1%83%D1%87%D1%88%D0%B5%D0%BC%D1%83_%D1%81%D0%BE%D0%B2%D0%BF%D0%B0%D0%B4%D0%B5%D0%BD%D0%B8%D1%8E" title="Рекурсивный поиск по первому наилучшему совпадению">Рекурсивный поиск по первому наилучшему совпадению</a></li>
+<li><a href="/wiki/SMA*" title="SMA*">SMA*</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1px"><a href="/wiki/%D0%97%D0%B0%D0%B4%D0%B0%D1%87%D0%B0_%D0%BE_%D0%BA%D1%80%D0%B0%D1%82%D1%87%D0%B0%D0%B9%D1%88%D0%B5%D0%BC_%D0%BF%D1%83%D1%82%D0%B8" title="Задача о кратчайшем пути">Кратчайшие пути</a></th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%D0%90%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC_%D0%9B%D0%B8" title="Алгоритм Ли">Волновой алгоритм</a></li>
+<li><a href="/wiki/%D0%90%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC_%D0%91%D0%B5%D0%BB%D0%BB%D0%BC%D0%B0%D0%BD%D0%B0_%E2%80%94_%D0%A4%D0%BE%D1%80%D0%B4%D0%B0" title="Алгоритм Беллмана — Форда">Алгоритм Беллмана — Форда</a></li>
+<li><a href="/wiki/%D0%90%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC_%D0%94%D0%B5%D0%B9%D0%BA%D1%81%D1%82%D1%80%D1%8B" title="Алгоритм Дейкстры">Алгоритм Дейкстры</a></li>
+<li><a href="/wiki/%D0%90%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC_%D0%94%D0%B6%D0%BE%D0%BD%D1%81%D0%BE%D0%BD%D0%B0" title="Алгоритм Джонсона">Алгоритм Джонсона</a></li>
+<li><a href="/wiki/%D0%90%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC_%D0%9B%D0%B5%D0%B2%D0%B8%D1%82%D0%B0" title="Алгоритм Левита">Алгоритм Левита</a></li>
+<li><a href="/wiki/%D0%90%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC_%D0%A4%D0%BB%D0%BE%D0%B9%D0%B4%D0%B0_%E2%80%94_%D0%A3%D0%BE%D1%80%D1%88%D0%B5%D0%BB%D0%BB%D0%B0" title="Алгоритм Флойда — Уоршелла">Алгоритм Флойда — Уоршелла</a></li>
+<li><a href="/wiki/%D0%9F%D0%BE%D0%B8%D1%81%D0%BA_%D0%BF%D0%BE_%D0%BA%D1%80%D0%B0%D1%8F%D0%BC" title="Поиск по краям">Поиск по краям</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1px"><a href="/wiki/%D0%9C%D0%B8%D0%BD%D0%B8%D0%BC%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5_%D0%BE%D1%81%D1%82%D0%BE%D0%B2%D0%BD%D0%BE%D0%B5_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%BE" title="Минимальное остовное дерево">Минимальное остовное дерево</a></th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%D0%90%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC_%D0%91%D0%BE%D1%80%D1%83%D0%B2%D0%BA%D0%B8" title="Алгоритм Борувки">Алгоритм Борувки</a></li>
+<li><a href="/wiki/%D0%90%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC_%D0%9F%D1%80%D0%B8%D0%BC%D0%B0" title="Алгоритм Прима">Алгоритм Прима</a></li>
+<li><a href="/wiki/%D0%90%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC_%D0%9A%D1%80%D0%B0%D1%81%D0%BA%D0%B0%D0%BB%D0%B0" title="Алгоритм Краскала">Алгоритм Краскала</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1px">Другое</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%D0%90%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC_%D0%91%D1%80%D0%B8%D1%82%D0%B0%D0%BD%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_%D0%BC%D1%83%D0%B7%D0%B5%D1%8F" title="Алгоритм Британского музея">Алгоритм Британского музея</a></li>
+<li><a href="/wiki/%D0%90%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC_%D0%AD%D0%B4%D0%BC%D0%BE%D0%BD%D0%B4%D1%81%D0%B0_%E2%80%94_%D0%9A%D0%B0%D1%80%D0%BF%D0%B0" title="Алгоритм Эдмондса — Карпа">Алгоритм Эдмондса</a></li>
+<li><a class="mw-selflink selflink">Обход дерева</a></li>
+<li><a href="/wiki/%D0%90%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC_%D0%B1%D0%BB%D0%B8%D0%B6%D0%B0%D0%B9%D1%88%D0%B5%D0%B3%D0%BE_%D1%81%D0%BE%D1%81%D0%B5%D0%B4%D0%B0_%D0%B2_%D0%B7%D0%B0%D0%B4%D0%B0%D1%87%D0%B5_%D0%BA%D0%BE%D0%BC%D0%BC%D0%B8%D0%B2%D0%BE%D1%8F%D0%B6%D1%91%D1%80%D0%B0" title="Алгоритм ближайшего соседа в задаче коммивояжёра">Алгоритм ближайшего соседа в задаче коммивояжёра</a></li></ul>
+</div></td></tr></tbody></table></div>
+<div role="navigation" class="navbox" aria-labelledby="Дерево_(структура_данных)" data-name="Деревья (структуры данных)"><table class="nowraplinks collapsible collapsed navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th scope="colgroup" class="navbox-title" colspan="2"><span class="navbox-gear" style="float:left;text-align:left;width:5em;margin-right:0.5em"><span class="noprint" typeof="mw:File"><a href="/wiki/%D0%A8%D0%B0%D0%B1%D0%BB%D0%BE%D0%BD:%D0%94%D0%B5%D1%80%D0%B5%D0%B2%D1%8C%D1%8F_(%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%82%D1%83%D1%80%D1%8B_%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85)" title="Перейти к шаблону «Деревья (структуры данных)»"><img alt="Перейти к шаблону «Деревья (структуры данных)»" src="//upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Wikipedia_interwiki_section_gear_icon.svg/14px-Wikipedia_interwiki_section_gear_icon.svg.png" decoding="async" width="14" height="14" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Wikipedia_interwiki_section_gear_icon.svg/21px-Wikipedia_interwiki_section_gear_icon.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Wikipedia_interwiki_section_gear_icon.svg/28px-Wikipedia_interwiki_section_gear_icon.svg.png 2x" data-file-width="14" data-file-height="14" /></a></span>&#160;</span><div id="Дерево_(структура_данных)" style="font-size:114%;margin:0 5em"><a href="/wiki/%D0%94%D0%B5%D1%80%D0%B5%D0%B2%D0%BE_(%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%82%D1%83%D1%80%D0%B0_%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85)" title="Дерево (структура данных)">Дерево (структура данных)</a></div></th></tr><tr><td class="navbox-abovebelow hlist" colspan="2"><div>
+<ul><li><a href="/wiki/%D0%94%D0%B2%D0%BE%D0%B8%D1%87%D0%BD%D0%BE%D0%B5_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%BE_%D0%BF%D0%BE%D0%B8%D1%81%D0%BA%D0%B0" title="Двоичное дерево поиска">Двоичное дерево поиска</a></li>
+<li><a href="/wiki/%D0%94%D0%B5%D1%80%D0%B5%D0%B2%D0%BE_(%D1%82%D0%B5%D0%BE%D1%80%D0%B8%D1%8F_%D0%B3%D1%80%D0%B0%D1%84%D0%BE%D0%B2)" title="Дерево (теория графов)">Дерево (теория графов)</a></li>
+<li><a href="/wiki/%D0%94%D1%80%D0%B5%D0%B2%D0%BE%D0%B2%D0%B8%D0%B4%D0%BD%D0%B0%D1%8F_%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%82%D1%83%D1%80%D0%B0" title="Древовидная структура">Древовидная структура</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1px"><a href="/wiki/%D0%94%D0%B2%D0%BE%D0%B8%D1%87%D0%BD%D0%BE%D0%B5_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%BE" title="Двоичное дерево">Двоичные деревья</a></th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%D0%94%D0%B2%D0%BE%D0%B8%D1%87%D0%BD%D0%BE%D0%B5_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%BE" title="Двоичное дерево">Двоичное дерево</a></li>
+<li><a href="/wiki/T-%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%BE" title="T-дерево">T-дерево</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1px"><a href="/w/index.php?title=Self-balancing_binary_search_tree&amp;action=edit&amp;redlink=1" class="new" title="Self-balancing binary search tree (страница отсутствует)">Самобалансирующиеся<br /> двоичные деревья</a></th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/w/index.php?title=%D0%90%D0%90-%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%BE&amp;action=edit&amp;redlink=1" class="new" title="АА-дерево (страница отсутствует)">АА-дерево</a></li>
+<li><a href="/wiki/%D0%90%D0%92%D0%9B-%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%BE" title="АВЛ-дерево">АВЛ-дерево</a></li>
+<li><a href="/wiki/%D0%9A%D1%80%D0%B0%D1%81%D0%BD%D0%BE-%D1%87%D1%91%D1%80%D0%BD%D0%BE%D0%B5_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%BE" title="Красно-чёрное дерево">Красно-чёрное дерево</a></li>
+<li><a href="/wiki/Splay-%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%BE" title="Splay-дерево">Splay-дерево</a></li>
+<li><a href="/w/index.php?title=%D0%94%D0%B5%D1%80%D0%B5%D0%B2%D0%BE_%D1%81%D0%BE_%D1%88%D1%82%D1%80%D0%B0%D1%84%D0%B0%D0%BC%D0%B8&amp;action=edit&amp;redlink=1" class="new" title="Дерево со штрафами (страница отсутствует)">Дерево со штрафами</a></li>
+<li><a href="/wiki/%D0%94%D0%B5%D0%BA%D0%B0%D1%80%D1%82%D0%BE%D0%B2%D0%BE_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%BE" title="Декартово дерево">Декартово дерево</a></li>
+<li><a href="/wiki/%D0%94%D0%B5%D1%80%D0%B5%D0%B2%D0%BE_%D0%A4%D0%B8%D0%B1%D0%BE%D0%BD%D0%B0%D1%87%D1%87%D0%B8" title="Дерево Фибоначчи">Дерево Фибоначчи</a></li>
+<li><a href="/wiki/B-%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%BE" title="B-дерево">B-дерево</a></li>
+<li><a href="/wiki/T-%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%BE" title="T-дерево">T-дерево</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1px"><a href="/wiki/B-%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%BE" title="B-дерево">B-деревья</a></th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/2-3-%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%BE" title="2-3-дерево">2-3-дерево</a></li>
+<li><a href="/wiki/B%E2%81%BA-%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%BE" title="B⁺-дерево">B⁺-дерево</a></li>
+<li><a href="/wiki/B*-%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%BE" title="B*-дерево">B*-дерево</a></li>
+<li><a href="/wiki/Bx-%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%BE" title="Bx-дерево">B<sup>x</sup>-дерево</a></li>
+<li><a href="/wiki/UB-%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%BE" title="UB-дерево">UB-дерево</a></li>
+<li><a href="/w/index.php?title=2-3-4_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%BE&amp;action=edit&amp;redlink=1" class="new" title="2-3-4 дерево (страница отсутствует)">2-3-4 дерево</a></li>
+<li><a href="/w/index.php?title=(a,b)-%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%BE&amp;action=edit&amp;redlink=1" class="new" title="(a,b)-дерево (страница отсутствует)">(a,b)-дерево</a></li>
+<li><a href="/wiki/%D0%A2%D0%B0%D0%BD%D1%86%D1%83%D1%8E%D1%89%D0%B5%D0%B5_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%BE" title="Танцующее дерево">Танцующее дерево</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1px"><a href="/wiki/%D0%9F%D1%80%D0%B5%D1%84%D0%B8%D0%BA%D1%81%D0%BD%D0%BE%D0%B5_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%BE" title="Префиксное дерево">Префиксные деревья</a></th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%D0%A1%D1%83%D1%84%D1%84%D0%B8%D0%BA%D1%81%D0%BD%D0%BE%D0%B5_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%BE" title="Суффиксное дерево">Суффиксное дерево</a></li>
+<li><a href="/wiki/%D0%A1%D0%B6%D0%B0%D1%82%D0%BE%D0%B5_%D0%BF%D1%80%D0%B5%D1%84%D0%B8%D0%BA%D1%81%D0%BD%D0%BE%D0%B5_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%BE" title="Сжатое префиксное дерево">Сжатое префиксное дерево</a></li>
+<li><a href="/w/index.php?title=Ternary_search_tree&amp;action=edit&amp;redlink=1" class="new" title="Ternary search tree (страница отсутствует)">Ternary search tree</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1px"><a href="/wiki/%D0%94%D0%B2%D0%BE%D0%B8%D1%87%D0%BD%D0%BE%D0%B5_%D1%80%D0%B0%D0%B7%D0%B1%D0%B8%D0%B5%D0%BD%D0%B8%D0%B5_%D0%BF%D1%80%D0%BE%D1%81%D1%82%D1%80%D0%B0%D0%BD%D1%81%D1%82%D0%B2%D0%B0" title="Двоичное разбиение пространства">Двоичное разбиение<br /> пространства</a></th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/K-%D0%BC%D0%B5%D1%80%D0%BD%D0%BE%D0%B5_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%BE" class="mw-redirect" title="K-мерное дерево">k-мерное дерево</a></li>
+<li><a href="/wiki/VP-%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%BE" title="VP-дерево">VP-дерево</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1px">Недвоичные деревья</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%D0%94%D0%B5%D1%80%D0%B5%D0%B2%D0%BE_%D0%BA%D0%B2%D0%B0%D0%B4%D1%80%D0%B0%D0%BD%D1%82%D0%BE%D0%B2" title="Дерево квадрантов">Дерево квадрантов</a></li>
+<li><a href="/wiki/%D0%9E%D0%BA%D1%82%D0%BE%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%BE" title="Октодерево">Октодерево</a></li>
+<li><a href="/wiki/Sparse_Voxel_Octree" title="Sparse Voxel Octree">Sparse Voxel Octree</a></li>
+<li><a href="/w/index.php?title=%D0%AD%D0%BA%D1%81%D0%BF%D0%BE%D0%BD%D0%B5%D0%BD%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%BE&amp;action=edit&amp;redlink=1" class="new" title="Экспоненциальное дерево (страница отсутствует)">Экспоненциальное дерево</a></li>
+<li><a href="/wiki/PQ-%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%BE" title="PQ-дерево">PQ-дерево</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1px">Разбиение пространства</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/R-%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%BE_(%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%82%D1%83%D1%80%D0%B0_%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85)" title="R-дерево (структура данных)">R-дерево</a></li>
+<li><a href="/wiki/R-%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%BE_%D0%93%D0%B8%D0%BB%D1%8C%D0%B1%D0%B5%D1%80%D1%82%D0%B0" title="R-дерево Гильберта">R-дерево Гильберта</a></li>
+<li><a href="/w/index.php?title=R%2B-%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%BE&amp;action=edit&amp;redlink=1" class="new" title="R+-дерево (страница отсутствует)">R+-дерево</a></li>
+<li><a href="/wiki/R*-%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%BE" title="R*-дерево">R*-дерево</a></li>
+<li><a href="/w/index.php?title=X-%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%BE&amp;action=edit&amp;redlink=1" class="new" title="X-дерево (страница отсутствует)">X-дерево</a></li>
+<li><a href="/w/index.php?title=M-%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%BE&amp;action=edit&amp;redlink=1" class="new" title="M-дерево (страница отсутствует)">M-дерево</a></li>
+<li><a href="/wiki/%D0%94%D0%B5%D1%80%D0%B5%D0%B2%D0%BE_%D0%A4%D0%B5%D0%BD%D0%B2%D0%B8%D0%BA%D0%B0" title="Дерево Фенвика">Дерево Фенвика</a></li>
+<li><a href="/wiki/%D0%94%D0%B5%D1%80%D0%B5%D0%B2%D0%BE_%D0%BE%D1%82%D1%80%D0%B5%D0%B7%D0%BA%D0%BE%D0%B2" title="Дерево отрезков">Дерево отрезков</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1px">Другие деревья</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%D0%9A%D1%83%D1%87%D0%B0_(%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%82%D1%83%D1%80%D0%B0_%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85)" title="Куча (структура данных)">Куча</a></li>
+<li><a href="/wiki/%D0%94%D0%B5%D1%80%D0%B5%D0%B2%D0%BE_%D1%85%D0%B5%D1%88%D0%B5%D0%B9" title="Дерево хешей">Дерево хешей</a></li>
+<li><a href="/w/index.php?title=Finger_tree&amp;action=edit&amp;redlink=1" class="new" title="Finger tree (страница отсутствует)">Finger tree</a></li>
+<li><a href="/w/index.php?title=Metric_tree&amp;action=edit&amp;redlink=1" class="new" title="Metric tree (страница отсутствует)">Metric tree</a></li>
+<li><a href="/wiki/%D0%94%D0%B5%D1%80%D0%B5%D0%B2%D0%BE_%D0%BF%D0%BE%D0%BA%D1%80%D1%8B%D1%82%D0%B8%D0%B9" title="Дерево покрытий">Дерево покрытий</a></li>
+<li><a href="/w/index.php?title=BK-tree&amp;action=edit&amp;redlink=1" class="new" title="BK-tree (страница отсутствует)">BK-tree</a></li>
+<li><a href="/w/index.php?title=Doubly-chained_tree&amp;action=edit&amp;redlink=1" class="new" title="Doubly-chained tree (страница отсутствует)">Doubly-chained tree</a></li>
+<li><a href="/w/index.php?title=IDistance&amp;action=edit&amp;redlink=1" class="new" title="IDistance (страница отсутствует)">iDistance</a></li>
+<li><a href="/w/index.php?title=Link-cut_tree&amp;action=edit&amp;redlink=1" class="new" title="Link-cut tree (страница отсутствует)">Link-cut tree</a></li>
+<li><a href="/wiki/LSM-%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%BE" title="LSM-дерево">LSM-дерево</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1px">Алгоритмы</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/%D0%9F%D0%BE%D0%B8%D1%81%D0%BA_%D0%B2_%D1%88%D0%B8%D1%80%D0%B8%D0%BD%D1%83" title="Поиск в ширину">Поиск в ширину</a></li>
+<li><a href="/wiki/%D0%9F%D0%BE%D0%B8%D1%81%D0%BA_%D0%B2_%D0%B3%D0%BB%D1%83%D0%B1%D0%B8%D0%BD%D1%83" title="Поиск в глубину">Поиск в глубину</a></li>
+<li><a href="/w/index.php?title=DSW-%D0%B0%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC&amp;action=edit&amp;redlink=1" class="new" title="DSW-алгоритм (страница отсутствует)">DSW-алгоритм</a></li>
+<li><a href="/wiki/%D0%9F%D1%80%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%BB_%D0%BE%D1%81%D1%82%D0%BE%D0%B2%D0%BD%D0%BE%D0%B3%D0%BE_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%B0" class="mw-redirect" title="Протокол остовного дерева">Протокол остовного дерева</a></li></ul>
+</div></td></tr></tbody></table></div>
+<table class="plainlinks metadata ambox ambox-style" role="presentation"><tbody><tr><td class="mbox-image"><div style="width:52px"><span typeof="mw:File"><a href="/wiki/%D0%92%D0%B8%D0%BA%D0%B8%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F:%D0%9A%D0%B0%D0%BA_%D0%BF%D1%80%D0%B0%D0%B2%D0%B8%D1%82%D1%8C_%D1%81%D1%82%D0%B0%D1%82%D1%8C%D0%B8" title="Улучшение статьи"><img alt="Улучшение статьи" src="//upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Wiki_letter_w.svg/40px-Wiki_letter_w.svg.png" decoding="async" width="40" height="40" class="mw-file-element" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Wiki_letter_w.svg/60px-Wiki_letter_w.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Wiki_letter_w.svg/80px-Wiki_letter_w.svg.png 2x" data-file-width="44" data-file-height="44" /></a></span></div></td><td class="mbox-text"><div class="mbox-text-div"><b>Для улучшения этой статьи <a href="/wiki/%D0%A8%D0%B0%D0%B1%D0%BB%D0%BE%D0%BD:Rq/%D0%9F%D0%BE%D1%8F%D1%81%D0%BD%D0%B5%D0%BD%D0%B8%D1%8F" title="Шаблон:Rq/Пояснения">желательно</a>:</b><ul style="margin-top: 0;">
+<li>Проверить <a href="/wiki/%D0%92%D0%B8%D0%BA%D0%B8%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F:%D0%9F%D0%B5%D1%80%D0%B5%D0%B2%D0%BE%D0%B4_%D1%81%D1%82%D0%B0%D1%82%D0%B5%D0%B9" title="Википедия:Перевод статей">качество перевода</a> с иностранного языка.</li><li>Исправить статью согласно <a href="/wiki/%D0%92%D0%B8%D0%BA%D0%B8%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F:%D0%AF%D0%B7%D1%8B%D0%BA_%D0%B8_%D1%81%D1%82%D0%B8%D0%BB%D1%8C" title="Википедия:Язык и стиль">стилистическим правилам Википедии</a>.</li></ul></div><div class="mbox-textsmall-div hide-when-compact" style="font-size:85%">После исправления проблемы исключите её из списка. Удалите шаблон, если устранены все недостатки.</div></td></tr></tbody></table>
+<!-- 
+NewPP limit report
+Parsed by mw‐web.codfw.main‐7db646ff48‐wwtdr
+Cached time: 20240218052143
+Cache expiry: 2592000
+Reduced expiry: false
+Complications: [show‐toc]
+CPU time usage: 0.262 seconds
+Real time usage: 0.343 seconds
+Preprocessor visited node count: 3689/1000000
+Post‐expand include size: 64745/2097152 bytes
+Template argument size: 3227/2097152 bytes
+Highest expansion depth: 14/100
+Expensive parser function count: 14/500
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 13483/5000000 bytes
+Lua time usage: 0.071/10.000 seconds
+Lua memory usage: 3097111/52428800 bytes
+Number of Wikibase entities loaded: 0/400
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  263.895      1 -total
+ 15.84%   41.810      1 Шаблон:Статья
+ 15.66%   41.327      1 Шаблон:Rq
+ 14.96%   39.489      3 Шаблон:Книга
+ 14.82%   39.114      1 Шаблон:Ambox
+ 13.82%   36.479      8 Шаблон:Не_переведено_5
+ 12.80%   33.771      1 Шаблон:Примечания
+ 11.48%   30.287      2 Шаблон:Бсокр
+  9.78%   25.818      5 Шаблон:Cite_web
+  6.68%   17.638      2 Шаблон:Навигационная_таблица
+-->
+
+<!-- Saved in parser cache with key ruwiki:pcache:idhash:7464372-0!canonical and timestamp 20240218052143 and revision id 133722860. Rendering was triggered because: page-view
+ -->
+</div><!--esi <esi:include src="/esitest-fa8a495983347898/content" /> --><noscript><img src="https://login.wikimedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" width="1" height="1" style="border: none; position: absolute;"></noscript>
+<div class="printfooter" data-nosnippet="">Источник — <a dir="ltr" href="https://ru.wikipedia.org/w/index.php?title=Обход_дерева&amp;oldid=133722860">https://ru.wikipedia.org/w/index.php?title=Обход_дерева&amp;oldid=133722860</a></div></div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:%D0%9A%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D0%B8" title="Служебная:Категории">Категории</a>: <ul><li><a href="/wiki/%D0%9A%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F:%D0%94%D0%B5%D1%80%D0%B5%D0%B2%D1%8C%D1%8F_(%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%82%D1%83%D1%80%D1%8B_%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85)" title="Категория:Деревья (структуры данных)">Деревья (структуры данных)</a></li><li><a href="/w/index.php?title=%D0%9A%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F:%D0%A1%D1%82%D0%B0%D1%82%D1%8C%D0%B8_%D1%81_%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%80%D0%B0%D0%BC%D0%B8_%D0%BF%D1%81%D0%B5%D0%B2%D0%B4%D0%BE%D0%BA%D0%BE%D0%B4%D0%B0&amp;action=edit&amp;redlink=1" class="new" title="Категория:Статьи с примерами псевдокода (страница отсутствует)">Статьи с примерами псевдокода</a></li><li><a href="/wiki/%D0%9A%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F:%D0%90%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC%D1%8B_%D0%BD%D0%B0_%D0%B3%D1%80%D0%B0%D1%84%D0%B0%D1%85" title="Категория:Алгоритмы на графах">Алгоритмы на графах</a></li><li><a href="/wiki/%D0%9A%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F:%D0%A0%D0%B5%D0%BA%D1%83%D1%80%D1%81%D0%B8%D1%8F" title="Категория:Рекурсия">Рекурсия</a></li><li><a href="/w/index.php?title=%D0%9A%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F:%D0%98%D1%82%D0%B5%D1%80%D0%B0%D1%86%D0%B8%D0%B8_%D0%B2_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B8&amp;action=edit&amp;redlink=1" class="new" title="Категория:Итерации в программировании (страница отсутствует)">Итерации в программировании</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Скрытые категории: <ul><li><a href="/wiki/%D0%9A%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F:%D0%92%D0%B8%D0%BA%D0%B8%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F:Cite_web_(%D0%BD%D0%B5_%D1%83%D0%BA%D0%B0%D0%B7%D0%B0%D0%BD_%D1%8F%D0%B7%D1%8B%D0%BA)" title="Категория:Википедия:Cite web (не указан язык)">Википедия:Cite web (не указан язык)</a></li><li><a href="/wiki/%D0%9A%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F:%D0%92%D0%B8%D0%BA%D0%B8%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F:%D0%9F%D0%BB%D0%BE%D1%85%D0%BE%D0%B9_%D0%BF%D0%B5%D1%80%D0%B5%D0%B2%D0%BE%D0%B4" title="Категория:Википедия:Плохой перевод">Википедия:Плохой перевод</a></li><li><a href="/wiki/%D0%9A%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F:%D0%92%D0%B8%D0%BA%D0%B8%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F:%D0%A1%D1%82%D0%B8%D0%BB%D0%B8%D1%81%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8_%D0%BD%D0%B5%D0%BA%D0%BE%D1%80%D1%80%D0%B5%D0%BA%D1%82%D0%BD%D1%8B%D0%B5_%D1%81%D1%82%D0%B0%D1%82%D1%8C%D0%B8" title="Категория:Википедия:Стилистически некорректные статьи">Википедия:Стилистически некорректные статьи</a></li><li><a href="/wiki/%D0%9A%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F:%D0%92%D0%B8%D0%BA%D0%B8%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F:%D0%A1%D1%82%D0%B0%D1%82%D1%8C%D0%B8_%D1%81_%D1%88%D0%B0%D0%B1%D0%BB%D0%BE%D0%BD%D0%B0%D0%BC%D0%B8_%D0%BD%D0%B5%D0%B4%D0%BE%D1%81%D1%82%D0%B0%D1%82%D0%BA%D0%BE%D0%B2_%D0%BF%D0%BE_%D0%B0%D0%BB%D1%84%D0%B0%D0%B2%D0%B8%D1%82%D1%83" title="Категория:Википедия:Статьи с шаблонами недостатков по алфавиту">Википедия:Статьи с шаблонами недостатков по алфавиту</a></li><li><a href="/wiki/%D0%9A%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F:%D0%A1%D1%82%D0%B0%D1%82%D1%8C%D0%B8_%D1%81_%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%80%D0%B0%D0%BC%D0%B8_%D0%BA%D0%BE%D0%B4%D0%B0_Haskell" title="Категория:Статьи с примерами кода Haskell">Статьи с примерами кода Haskell</a></li><li><a href="/wiki/%D0%9A%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F:%D0%A1%D1%82%D0%B0%D1%82%D1%8C%D0%B8_%D1%81_%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%80%D0%B0%D0%BC%D0%B8_%D0%BA%D0%BE%D0%B4%D0%B0_Java" title="Категория:Статьи с примерами кода Java">Статьи с примерами кода Java</a></li></ul></div></div>
+	</div>
+</div>
+
+<div id="mw-navigation">
+	<h2>Навигация</h2>
+	<div id="mw-head">
+		
+<nav id="p-personal" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" aria-labelledby="p-personal-label" role="navigation"  >
+	<h3
+		id="p-personal-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Персональные инструменты</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="pt-anonuserpage" class="mw-list-item"><span title="Страница участника для моего IP">Вы не представились системе</span></li><li id="pt-anontalk" class="mw-list-item"><a href="/wiki/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:%D0%9C%D0%BE%D1%91_%D0%BE%D0%B1%D1%81%D1%83%D0%B6%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5" title="Страница обсуждений для моего IP [n]" accesskey="n"><span>Обсуждение</span></a></li><li id="pt-anoncontribs" class="mw-list-item"><a href="/wiki/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:%D0%9C%D0%BE%D0%B9_%D0%B2%D0%BA%D0%BB%D0%B0%D0%B4" title="Список правок, сделанных с этого IP-адреса [y]" accesskey="y"><span>Вклад</span></a></li><li id="pt-createaccount" class="mw-list-item"><a href="/w/index.php?title=%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:%D0%A1%D0%BE%D0%B7%D0%B4%D0%B0%D1%82%D1%8C_%D1%83%D1%87%D1%91%D1%82%D0%BD%D1%83%D1%8E_%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D1%8C&amp;returnto=%D0%9E%D0%B1%D1%85%D0%BE%D0%B4+%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%B0" title="Мы предлагаем вам создать учётную запись и войти в систему, хотя это и не обязательно."><span>Создать учётную запись</span></a></li><li id="pt-login" class="mw-list-item"><a href="/w/index.php?title=%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:%D0%92%D1%85%D0%BE%D0%B4&amp;returnto=%D0%9E%D0%B1%D1%85%D0%BE%D0%B4+%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%B0" title="Здесь можно зарегистрироваться в системе, но это необязательно. [o]" accesskey="o"><span>Войти</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+		<div id="left-navigation">
+			
+<nav id="p-namespaces" class="mw-portlet mw-portlet-namespaces vector-menu-tabs vector-menu-tabs-legacy vector-menu" aria-labelledby="p-namespaces-label" role="navigation"  >
+	<h3
+		id="p-namespaces-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Пространства имён</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="ca-nstab-main" class="selected mw-list-item"><a href="/wiki/%D0%9E%D0%B1%D1%85%D0%BE%D0%B4_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%B0" title="Просмотреть контентную страницу [c]" accesskey="c"><span>Статья</span></a></li><li id="ca-talk" class="mw-list-item"><a href="/wiki/%D0%9E%D0%B1%D1%81%D1%83%D0%B6%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5:%D0%9E%D0%B1%D1%85%D0%BE%D0%B4_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%B0" rel="discussion" title="Обсуждение основной страницы [t]" accesskey="t"><span>Обсуждение</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-variants" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown vector-menu" aria-labelledby="p-variants-label" role="navigation"  >
+	<input type="checkbox"
+		id="p-variants-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-variants"
+		class="vector-menu-checkbox"
+		aria-labelledby="p-variants-label"
+	>
+	<label
+		id="p-variants-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">русский</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</nav>
+
+		</div>
+		<div id="right-navigation">
+			
+<nav id="p-views" class="mw-portlet mw-portlet-views vector-menu-tabs vector-menu-tabs-legacy vector-menu" aria-labelledby="p-views-label" role="navigation"  >
+	<h3
+		id="p-views-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Просмотры</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="ca-view" class="mw-list-item"><a href="/w/index.php?title=%D0%9E%D0%B1%D1%85%D0%BE%D0%B4_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%B0&amp;stable=1"><span>Читать</span></a></li><li id="ca-current" class="collapsible selected mw-list-item"><a href="/w/index.php?title=%D0%9E%D0%B1%D1%85%D0%BE%D0%B4_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%B0&amp;stable=0&amp;redirect=no" title="Показать текущую версию этой страницы [v]" accesskey="v"><span>Текущая версия</span></a></li><li id="ca-ve-edit" class="mw-list-item"><a href="/w/index.php?title=%D0%9E%D0%B1%D1%85%D0%BE%D0%B4_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%B0&amp;veaction=edit" title="Редактировать данную страницу [v]" accesskey="v"><span>Править</span></a></li><li id="ca-edit" class="collapsible mw-list-item"><a href="/w/index.php?title=%D0%9E%D0%B1%D1%85%D0%BE%D0%B4_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%B0&amp;action=edit" title="Править исходный текст этой страницы [e]" accesskey="e"><span>Править код</span></a></li><li id="ca-history" class="mw-list-item"><a href="/w/index.php?title=%D0%9E%D0%B1%D1%85%D0%BE%D0%B4_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%B0&amp;action=history" title="Журнал изменений страницы [h]" accesskey="h"><span>История</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-cactions" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown vector-menu" aria-labelledby="p-cactions-label" role="navigation"  title="Больше возможностей" >
+	<input type="checkbox"
+		id="p-cactions-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-cactions"
+		class="vector-menu-checkbox"
+		aria-labelledby="p-cactions-label"
+	>
+	<label
+		id="p-cactions-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Ещё</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</nav>
+
+			
+<div id="p-search" role="search" class="vector-search-box-vue  vector-search-box-show-thumbnail vector-search-box-auto-expand-width vector-search-box">
+	<h3 >Поиск</h3>
+	<form action="/w/index.php" id="searchform" class="vector-search-box-form">
+		<div id="simpleSearch"
+			class="vector-search-box-inner"
+			 data-search-loc="header-navigation">
+			<input class="vector-search-box-input"
+				 type="search" name="search" placeholder="Искать в Википедии" aria-label="Искать в Википедии" autocapitalize="sentences" title="Искать в Википедии [f]" accesskey="f" id="searchInput"
+			>
+			<input type="hidden" name="title" value="Служебная:Поиск">
+			<input id="mw-searchButton"
+				 class="searchButton mw-fallbackSearchButton" type="submit" name="fulltext" title="Найти страницы, содержащие указанный текст" value="Найти">
+			<input id="searchButton"
+				 class="searchButton" type="submit" name="go" title="Перейти к странице, имеющей в точности такое название" value="Перейти">
+		</div>
+	</form>
+</div>
+
+		</div>
+	</div>
+	
+<div id="mw-panel" class="vector-legacy-sidebar">
+	<div id="p-logo" role="banner">
+		<a class="mw-wiki-logo" href="/wiki/%D0%97%D0%B0%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F_%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0"
+			title="Перейти на заглавную страницу"></a>
+	</div>
+	
+<nav id="p-navigation" class="mw-portlet mw-portlet-navigation vector-menu-portal portal vector-menu" aria-labelledby="p-navigation-label" role="navigation"  >
+	<h3
+		id="p-navigation-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Навигация</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="n-mainpage-description" class="mw-list-item"><a href="/wiki/%D0%97%D0%B0%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F_%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0" title="Перейти на заглавную страницу [z]" accesskey="z"><span>Заглавная страница</span></a></li><li id="n-content" class="mw-list-item"><a href="/wiki/%D0%92%D0%B8%D0%BA%D0%B8%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F:%D0%A1%D0%BE%D0%B4%D0%B5%D1%80%D0%B6%D0%B0%D0%BD%D0%B8%D0%B5"><span>Содержание</span></a></li><li id="n-featured" class="mw-list-item"><a href="/wiki/%D0%92%D0%B8%D0%BA%D0%B8%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F:%D0%98%D0%B7%D0%B1%D1%80%D0%B0%D0%BD%D0%BD%D1%8B%D0%B5_%D1%81%D1%82%D0%B0%D1%82%D1%8C%D0%B8" title="Статьи, считающиеся лучшими статьями проекта"><span>Избранные статьи</span></a></li><li id="n-randompage" class="mw-list-item"><a href="/wiki/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:%D0%A1%D0%BB%D1%83%D1%87%D0%B0%D0%B9%D0%BD%D0%B0%D1%8F_%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0" title="Посмотреть случайно выбранную страницу [x]" accesskey="x"><span>Случайная статья</span></a></li><li id="n-currentevents" class="mw-list-item"><a href="/wiki/%D0%9F%D0%BE%D1%80%D1%82%D0%B0%D0%BB:%D0%A2%D0%B5%D0%BA%D1%83%D1%89%D0%B8%D0%B5_%D1%81%D0%BE%D0%B1%D1%8B%D1%82%D0%B8%D1%8F" title="Статьи о текущих событиях в мире"><span>Текущие события</span></a></li><li id="n-sitesupport" class="mw-list-item"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_ru.wikipedia.org&amp;uselang=ru" title="Поддержите нас"><span>Пожертвовать</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+	
+<nav id="p-participation" class="mw-portlet mw-portlet-participation vector-menu-portal portal vector-menu" aria-labelledby="p-participation-label" role="navigation"  >
+	<h3
+		id="p-participation-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Участие</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="n-bug_in_article" class="mw-list-item"><a href="/wiki/%D0%92%D0%B8%D0%BA%D0%B8%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F:%D0%A1%D0%BE%D0%BE%D0%B1%D1%89%D0%B5%D0%BD%D0%B8%D1%8F_%D0%BE%D0%B1_%D0%BE%D1%88%D0%B8%D0%B1%D0%BA%D0%B0%D1%85" title="Сообщить об ошибке в этой статье"><span>Сообщить об ошибке</span></a></li><li id="n-introduction" class="mw-list-item"><a href="/wiki/%D0%A1%D0%BF%D1%80%D0%B0%D0%B2%D0%BA%D0%B0:%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5"><span>Как править статьи</span></a></li><li id="n-portal" class="mw-list-item"><a href="/wiki/%D0%92%D0%B8%D0%BA%D0%B8%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F:%D0%A1%D0%BE%D0%BE%D0%B1%D1%89%D0%B5%D1%81%D1%82%D0%B2%D0%BE" title="О проекте, о том, чем здесь можно заниматься, а также — где что находится"><span>Сообщество</span></a></li><li id="n-forum" class="mw-list-item"><a href="/wiki/%D0%92%D0%B8%D0%BA%D0%B8%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F:%D0%A4%D0%BE%D1%80%D1%83%D0%BC" title="Форум участников Википедии"><span>Форум</span></a></li><li id="n-recentchanges" class="mw-list-item"><a href="/wiki/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:%D0%A1%D0%B2%D0%B5%D0%B6%D0%B8%D0%B5_%D0%BF%D1%80%D0%B0%D0%B2%D0%BA%D0%B8" title="Список последних изменений [r]" accesskey="r"><span>Свежие правки</span></a></li><li id="n-newpages" class="mw-list-item"><a href="/wiki/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:%D0%9D%D0%BE%D0%B2%D1%8B%D0%B5_%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D1%8B" title="Список недавно созданных страниц"><span>Новые страницы</span></a></li><li id="n-help" class="mw-list-item"><a href="/wiki/%D0%92%D0%B8%D0%BA%D0%B8%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F:%D0%A1%D0%BF%D1%80%D0%B0%D0%B2%D0%BA%D0%B0" title="Место расположения Справки"><span>Справка</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+<nav id="p-tb" class="mw-portlet mw-portlet-tb vector-menu-portal portal vector-menu" aria-labelledby="p-tb-label" role="navigation"  >
+	<h3
+		id="p-tb-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Инструменты</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="t-whatlinkshere" class="mw-list-item"><a href="/wiki/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:%D0%A1%D1%81%D1%8B%D0%BB%D0%BA%D0%B8_%D1%81%D1%8E%D0%B4%D0%B0/%D0%9E%D0%B1%D1%85%D0%BE%D0%B4_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%B0" title="Список всех страниц, ссылающихся на данную [j]" accesskey="j"><span>Ссылки сюда</span></a></li><li id="t-recentchangeslinked" class="mw-list-item"><a href="/wiki/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:%D0%A1%D0%B2%D1%8F%D0%B7%D0%B0%D0%BD%D0%BD%D1%8B%D0%B5_%D0%BF%D1%80%D0%B0%D0%B2%D0%BA%D0%B8/%D0%9E%D0%B1%D1%85%D0%BE%D0%B4_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%B0" rel="nofollow" title="Последние изменения в страницах, на которые ссылается эта страница [k]" accesskey="k"><span>Связанные правки</span></a></li><li id="t-specialpages" class="mw-list-item"><a href="/wiki/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:%D0%A1%D0%BF%D0%B5%D1%86%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D1%8B" title="Список служебных страниц [q]" accesskey="q"><span>Служебные страницы</span></a></li><li id="t-permalink" class="mw-list-item"><a href="/w/index.php?title=%D0%9E%D0%B1%D1%85%D0%BE%D0%B4_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%B0&amp;oldid=133722860" title="Постоянная ссылка на эту версию страницы"><span>Постоянная ссылка</span></a></li><li id="t-info" class="mw-list-item"><a href="/w/index.php?title=%D0%9E%D0%B1%D1%85%D0%BE%D0%B4_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%B0&amp;action=info" title="Подробнее об этой странице"><span>Сведения о странице</span></a></li><li id="t-cite" class="mw-list-item"><a href="/w/index.php?title=%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:%D0%A6%D0%B8%D1%82%D0%B0%D1%82%D0%B0&amp;page=%D0%9E%D0%B1%D1%85%D0%BE%D0%B4_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%B0&amp;id=133722860&amp;wpFormIdentifier=titleform" title="Информация о том, как цитировать эту страницу"><span>Цитировать страницу</span></a></li><li id="t-urlshortener" class="mw-list-item"><a href="/w/index.php?title=%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:UrlShortener&amp;url=https%3A%2F%2Fru.wikipedia.org%2Fwiki%2F%25D0%259E%25D0%25B1%25D1%2585%25D0%25BE%25D0%25B4_%25D0%25B4%25D0%25B5%25D1%2580%25D0%25B5%25D0%25B2%25D0%25B0"><span>Получить короткий URL</span></a></li><li id="t-urlshortener-qrcode" class="mw-list-item"><a href="/w/index.php?title=%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:QrCode&amp;url=https%3A%2F%2Fru.wikipedia.org%2Fwiki%2F%25D0%259E%25D0%25B1%25D1%2585%25D0%25BE%25D0%25B4_%25D0%25B4%25D0%25B5%25D1%2580%25D0%25B5%25D0%25B2%25D0%25B0"><span>Скачать QR-код</span></a></li><li id="t-wikibase" class="mw-list-item"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q1210082" title="Ссылка на связанный элемент репозитория данных [g]" accesskey="g"><span>Элемент Викиданных</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+<nav id="p-coll-print_export" class="mw-portlet mw-portlet-coll-print_export vector-menu-portal portal vector-menu" aria-labelledby="p-coll-print_export-label" role="navigation"  >
+	<h3
+		id="p-coll-print_export-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Печать/экспорт</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="coll-download-as-rl" class="mw-list-item"><a href="/w/index.php?title=%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:DownloadAsPdf&amp;page=%D0%9E%D0%B1%D1%85%D0%BE%D0%B4_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%B0&amp;action=show-download-screen" title="Скачать эту страницу как файл PDF"><span>Скачать как PDF</span></a></li><li id="t-print" class="mw-list-item"><a href="/w/index.php?title=%D0%9E%D0%B1%D1%85%D0%BE%D0%B4_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%B0&amp;printable=yes" title="Версия этой страницы для печати [p]" accesskey="p"><span>Версия для печати</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+	
+<nav id="p-lang" class="mw-portlet mw-portlet-lang vector-menu-portal portal vector-menu" aria-labelledby="p-lang-label" role="navigation"  >
+	<h3
+		id="p-lang-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">На других языках</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li class="interlanguage-link interwiki-ar mw-list-item"><a href="https://ar.wikipedia.org/wiki/%D9%85%D8%B3%D8%AD_%D9%87%D9%8A%D9%83%D9%84%D8%A9_%D8%A7%D9%84%D8%B4%D8%AC%D8%B1%D8%A9" title="مسح هيكلة الشجرة — арабский" lang="ar" hreflang="ar" class="interlanguage-link-target"><span>العربية</span></a></li><li class="interlanguage-link interwiki-cs mw-list-item"><a href="https://cs.wikipedia.org/wiki/Proch%C3%A1zen%C3%AD_stromu" title="Procházení stromu — чешский" lang="cs" hreflang="cs" class="interlanguage-link-target"><span>Čeština</span></a></li><li class="interlanguage-link interwiki-de mw-list-item"><a href="https://de.wikipedia.org/wiki/Traversierung" title="Traversierung — немецкий" lang="de" hreflang="de" class="interlanguage-link-target"><span>Deutsch</span></a></li><li class="interlanguage-link interwiki-en mw-list-item"><a href="https://en.wikipedia.org/wiki/Tree_traversal" title="Tree traversal — английский" lang="en" hreflang="en" class="interlanguage-link-target"><span>English</span></a></li><li class="interlanguage-link interwiki-es mw-list-item"><a href="https://es.wikipedia.org/wiki/Recorrido_de_%C3%A1rboles" title="Recorrido de árboles — испанский" lang="es" hreflang="es" class="interlanguage-link-target"><span>Español</span></a></li><li class="interlanguage-link interwiki-fa mw-list-item"><a href="https://fa.wikipedia.org/wiki/%D9%BE%DB%8C%D9%85%D8%A7%DB%8C%D8%B4_%D8%AF%D8%B1%D8%AE%D8%AA" title="پیمایش درخت — персидский" lang="fa" hreflang="fa" class="interlanguage-link-target"><span>فارسی</span></a></li><li class="interlanguage-link interwiki-fr mw-list-item"><a href="https://fr.wikipedia.org/wiki/Parcours_d%27arbre" title="Parcours d&#039;arbre — французский" lang="fr" hreflang="fr" class="interlanguage-link-target"><span>Français</span></a></li><li class="interlanguage-link interwiki-hu mw-list-item"><a href="https://hu.wikipedia.org/wiki/Fabej%C3%A1r%C3%A1s" title="Fabejárás — венгерский" lang="hu" hreflang="hu" class="interlanguage-link-target"><span>Magyar</span></a></li><li class="interlanguage-link interwiki-ko mw-list-item"><a href="https://ko.wikipedia.org/wiki/%ED%8A%B8%EB%A6%AC_%EC%88%9C%ED%9A%8C" title="트리 순회 — корейский" lang="ko" hreflang="ko" class="interlanguage-link-target"><span>한국어</span></a></li><li class="interlanguage-link interwiki-pl mw-list-item"><a href="https://pl.wikipedia.org/wiki/Przechodzenie_drzewa" title="Przechodzenie drzewa — польский" lang="pl" hreflang="pl" class="interlanguage-link-target"><span>Polski</span></a></li><li class="interlanguage-link interwiki-sh mw-list-item"><a href="https://sh.wikipedia.org/wiki/Obilazak_stabla" title="Obilazak stabla — сербскохорватский" lang="sh" hreflang="sh" class="interlanguage-link-target"><span>Srpskohrvatski / српскохрватски</span></a></li><li class="interlanguage-link interwiki-sr mw-list-item"><a href="https://sr.wikipedia.org/wiki/%D0%9E%D0%B1%D0%B8%D0%BB%D0%B0%D0%B7%D0%B0%D0%BA_%D1%81%D1%82%D0%B0%D0%B1%D0%BB%D0%B0" title="Обилазак стабла — сербский" lang="sr" hreflang="sr" class="interlanguage-link-target"><span>Српски / srpski</span></a></li><li class="interlanguage-link interwiki-sv mw-list-item"><a href="https://sv.wikipedia.org/wiki/Traversering" title="Traversering — шведский" lang="sv" hreflang="sv" class="interlanguage-link-target"><span>Svenska</span></a></li><li class="interlanguage-link interwiki-uk mw-list-item"><a href="https://uk.wikipedia.org/wiki/%D0%9E%D0%B1%D1%85%D1%96%D0%B4_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%B0" title="Обхід дерева — украинский" lang="uk" hreflang="uk" class="interlanguage-link-target"><span>Українська</span></a></li><li class="interlanguage-link interwiki-vi mw-list-item"><a href="https://vi.wikipedia.org/wiki/Duy%E1%BB%87t_c%C3%A2y" title="Duyệt cây — вьетнамский" lang="vi" hreflang="vi" class="interlanguage-link-target"><span>Tiếng Việt</span></a></li><li class="interlanguage-link interwiki-zh mw-list-item"><a href="https://zh.wikipedia.org/wiki/%E6%A0%91%E7%9A%84%E9%81%8D%E5%8E%86" title="树的遍历 — китайский" lang="zh" hreflang="zh" class="interlanguage-link-target"><span>中文</span></a></li><li class="interlanguage-link interwiki-zh-yue mw-list-item"><a href="https://zh-yue.wikipedia.org/wiki/%E6%A8%B9%E9%81%8D%E6%AD%B7" title="樹遍歷 — кантонский" lang="yue" hreflang="yue" class="interlanguage-link-target"><span>粵語</span></a></li>
+		</ul>
+		<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q1210082#sitelinks-wikipedia" title="Править ссылки на другие языки" class="wbc-editpage">Править ссылки</a></span></div>
+	</div>
+</nav>
+
+</div>
+
+</div>
+
+<footer id="footer" class="mw-footer" role="contentinfo" >
+	<ul id="footer-info">
+	<li id="footer-info-lastmod"> Эта страница в последний раз была отредактирована 21 октября 2023 в 14:10.</li>
+	<li id="footer-info-copyright">Текст доступен по <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.ru">лицензии Creative Commons «С указанием авторства — С сохранением условий» (CC BY-SA)</a><a rel="license" href="//creativecommons.org/licenses/by-sa/4.0/" style="display:none;"></a>; в отдельных случаях могут действовать дополнительные условия.
+<span class="noprint">Подробнее см. <a href="//foundation.wikimedia.org/wiki/Terms_of_Use/ru">Условия использования</a>.</span><br>
+Wikipedia® — зарегистрированный товарный знак некоммерческой организации <a href="//wikimediafoundation.org/ru/">Фонд Викимедиа (Wikimedia Foundation, Inc.)</a></li>
+</ul>
+
+	<ul id="footer-places">
+	<li id="footer-places-privacy"><a href="https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Privacy_policy/ru">Политика конфиденциальности</a></li>
+	<li id="footer-places-about"><a href="/wiki/%D0%92%D0%B8%D0%BA%D0%B8%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F:%D0%9E%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5">Описание Википедии</a></li>
+	<li id="footer-places-disclaimers"><a href="/wiki/%D0%92%D0%B8%D0%BA%D0%B8%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F:%D0%9E%D1%82%D0%BA%D0%B0%D0%B7_%D0%BE%D1%82_%D0%BE%D1%82%D0%B2%D0%B5%D1%82%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D0%BE%D1%81%D1%82%D0%B8">Отказ от ответственности</a></li>
+	<li id="footer-places-contact"><a href="//ru.wikipedia.org/wiki/Википедия:Контакты">Свяжитесь с нами</a></li>
+	<li id="footer-places-wm-codeofconduct"><a href="https://foundation.wikimedia.org/wiki/Policy:Universal_Code_of_Conduct/ru">Кодекс поведения</a></li>
+	<li id="footer-places-developers"><a href="https://developer.wikimedia.org">Разработчики</a></li>
+	<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/#/ru.wikipedia.org">Статистика</a></li>
+	<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Cookie_statement">Заявление о куки</a></li>
+	<li id="footer-places-mobileview"><a href="//ru.m.wikipedia.org/w/index.php?title=%D0%9E%D0%B1%D1%85%D0%BE%D0%B4_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%B0&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Мобильная версия</a></li>
+</ul>
+
+	<ul id="footer-icons" class="noprint">
+	<li id="footer-copyrightico"><a href="https://wikimediafoundation.org/"><img src="/static/images/footer/wikimedia-button.png" srcset="/static/images/footer/wikimedia-button-1.5x.png 1.5x, /static/images/footer/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation" loading="lazy" /></a></li>
+	<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="/static/images/footer/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/footer/poweredby_mediawiki_132x47.png 1.5x, /static/images/footer/poweredby_mediawiki_176x62.png 2x" width="88" height="31" loading="lazy"></a></li>
+</ul>
+
+</footer>
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgHostname":"mw-web.eqiad.main-659b846bd8-78nkf","wgBackendResponseTime":159,"wgPageParseReport":{"limitreport":{"cputime":"0.262","walltime":"0.343","ppvisitednodes":{"value":3689,"limit":1000000},"postexpandincludesize":{"value":64745,"limit":2097152},"templateargumentsize":{"value":3227,"limit":2097152},"expansiondepth":{"value":14,"limit":100},"expensivefunctioncount":{"value":14,"limit":500},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":13483,"limit":5000000},"entityaccesscount":{"value":0,"limit":400},"timingprofile":["100.00%  263.895      1 -total"," 15.84%   41.810      1 Шаблон:Статья"," 15.66%   41.327      1 Шаблон:Rq"," 14.96%   39.489      3 Шаблон:Книга"," 14.82%   39.114      1 Шаблон:Ambox"," 13.82%   36.479      8 Шаблон:Не_переведено_5"," 12.80%   33.771      1 Шаблон:Примечания"," 11.48%   30.287      2 Шаблон:Бсокр","  9.78%   25.818      5 Шаблон:Cite_web","  6.68%   17.638      2 Шаблон:Навигационная_таблица"]},"scribunto":{"limitreport-timeusage":{"value":"0.071","limit":"10.000"},"limitreport-memusage":{"value":3097111,"limit":52428800}},"cachereport":{"origin":"mw-web.codfw.main-7db646ff48-wwtdr","timestamp":"20240218052143","ttl":2592000,"transientcontent":false}}});});</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"\u041e\u0431\u0445\u043e\u0434 \u0434\u0435\u0440\u0435\u0432\u0430","url":"https:\/\/ru.wikipedia.org\/wiki\/%D0%9E%D0%B1%D1%85%D0%BE%D0%B4_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%B0","sameAs":"http:\/\/www.wikidata.org\/entity\/Q1210082","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q1210082","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"\u0424\u043e\u043d\u0434 \u0412\u0438\u043a\u0438\u043c\u0435\u0434\u0438\u0430","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2018-05-29T17:20:10Z","dateModified":"2023-10-21T14:10:27Z","headline":"\u0432\u0438\u0434 \u043e\u0431\u0445\u043e\u0434\u0430 \u0433\u0440\u0430\u0444\u0430, \u043e\u0431\u0443\u0441\u043b\u043e\u0432\u043b\u0438\u0432\u0430\u044e\u0449\u0438\u0439 \u043f\u0440\u043e\u0446\u0435\u0441\u0441 \u043f\u043e\u0441\u0435\u0449\u0435\u043d\u0438\u044f (\u043f\u0440\u043e\u0432\u0435\u0440\u043a\u0438 \u0438\/\u0438\u043b\u0438 \u043e\u0431\u043d\u043e\u0432\u043b\u0435\u043d\u0438\u044f) \u043a\u0430\u0436\u0434\u043e\u0433\u043e \u0443\u0437\u043b\u0430 \u0441\u0442\u0440\u0443\u043a\u0442\u0443\u0440\u044b \u0434\u0435\u0440\u0435\u0432\u0430 \u0434\u0430\u043d\u043d\u044b\u0445"}</script>
+</body>
+</html>
