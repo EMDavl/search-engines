@@ -10,9 +10,14 @@ import pymorphy2
 flatten = itertools.chain.from_iterable
 
 
+def compare(o1, o2):
+    o1
+
 def download_htmls():
     folder_path = "dir"
-    files = os.listdir(folder_path)
+    pattern = re.compile("\d+")
+    files = sorted(os.listdir(folder_path), key=lambda x: int(pattern.findall(x)[0]))
+
     html_files = []
     for file_name in files:
         file_path = os.path.join(folder_path, file_name)
@@ -69,7 +74,7 @@ def save_lemma_words_to_file(title_group_words: Dict[str, list[tuple[str, set[in
             file.write(lemma + ': ')
             for index, word in enumerate(title_group_words[lemma]):
                 if index < len(title_group_words[lemma]) - 1:
-                    file.write(word[0])
+                    file.write(word[0] + ' ')
                 else:
                     file.write(word[0])
             file.write('\n')
