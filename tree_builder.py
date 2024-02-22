@@ -1,6 +1,11 @@
-from tokens import TokenType, Token
 import exceptions
+from tokens import TokenType, Token
+from exceptions import WrongSyntaxException
 from tree_nodes import TreeNode, NotNode, AndNode, OrNode, LexemeNode
+
+
+def is_EOF(idx, parsed):
+    return idx >= len(parsed)
 
 
 class TreeBuilder:
@@ -9,148 +14,100 @@ class TreeBuilder:
     def __init__(self, parsed: list[Token]):
         self.parsed = parsed
 
-    def build(self) -> TreeNode:
-        return self.__parse_expression(0)
-
-    # end_idx - следующий символ после последнего, вошедшего в выражение
-    # По идее надо сделать чтобы он парсил до следующего оператора, а не до конца строки
-    def __parse_expression(self, idx):
+    def build(self):
         parsed = self.parsed
-        tree_stack = list()
-        while idx < len(parsed):
+        idx = 0
+        stack = list()
+        while not is_EOF(idx, parsed):
             elem = parsed[idx]
-            if elem.type == TokenType.UNARY_OPERATOR:
-                idx = self.__process_unary_operator(idx, tree_stack)
-            elif elem.type == TokenType.OP:
-                idx = self.__process_parenthesis(idx, tree_stack)
-            elif elem.type == TokenType.LEXEME:
-                self.__process_lexeme(elem, tree_stack)
-                idx += 1
-            elif elem.type == TokenType.OPERATOR:
-                idx = self.__process_operator(elem, tree_stack, idx)
-            else:
-                raise exceptions.WrongSyntaxException()
+            idx = self.__parse_elem(elem, idx, stack)
+        return stack.pop()
 
-        result = self.__get_result(tree_stack)
-        if result is None:
-            raise exceptions.WrongSyntaxException()
-
-        return result
-
-    def __process_unary_operator(self, idx, tree_stack):
-        # Parse Expression будет парсить до конца строки, а не до конца выражения. Конец выражения - следующий оператор
-        expression_node, end_idx = self.__parse_expression(idx + 1)
-        unary_node = NotNode(expression_node)
-        top_elem = None
-        if len(tree_stack) != 0:
-            top_elem = tree_stack.pop()
-
-        if top_elem is None:
-            tree_stack.append(unary_node)
-        elif self.__is_operator_node(top_elem) and top_elem.right is None:
-            top_elem.right = unary_node
-        else:
-            raise exceptions.WrongSyntaxException()
-        return end_idx
-
-    def __process_parenthesis(self, idx, tree_stack):
-        if idx == len(self.parsed) - 1 or self.parsed[idx + 1].type == TokenType.CP:
-            raise exceptions.WrongSyntaxException()
-        expression_node, end_idx = self.__parse_parenthesis_expression(idx + 1)
-        tree_stack.append(expression_node)
-        return end_idx
-
-    def __parse_parenthesis_expression(self, idx):
-        parsed = self.parsed
-        tree_stack = list()
-        while idx < len(parsed):
-            elem = parsed[idx]
-            if elem.type == TokenType.UNARY_OPERATOR:
-                idx = self.__process_unary_operator(idx, tree_stack)
-            elif elem.type == TokenType.OP:
-                idx = self.__process_parenthesis(idx, tree_stack)
-            elif elem.type == TokenType.CP:
-                result = self.__get_result(tree_stack)
-                if result is None:
-                    raise exceptions.WrongSyntaxException()
-                return result
-            elif elem.type == TokenType.LEXEME:
-                self.__process_lexeme(elem, tree_stack)
-                idx += 1
-            elif elem.type == TokenType.OPERATOR:
-                self.__process_operator(elem, tree_stack)
-            else:
-                raise exceptions.WrongSyntaxException()
-
-    def __process_lexeme(self, elem, tree_stack):
-        top_elem = None
-        if len(tree_stack) != 0:
-            top_elem = tree_stack.pop()
-
-        if top_elem is None:
-            tree_stack.append(LexemeNode(elem.value))
-        elif self.__is_operator_node(top_elem) and top_elem.right is None:
-            top_elem.right = LexemeNode(elem.value)
-            tree_stack.append(top_elem)
-        else:
-            raise exceptions.WrongSyntaxException()
-
-    def __process_operator(self, elem, tree_stack, idx):
-        top_elem = None
-        if len(tree_stack) != 0:
-            top_elem = tree_stack.pop()
-        if top_elem is None:
-            raise exceptions.WrongSyntaxException()
-        if elem.value == "AND":
-            tree_stack.append(AndNode(top_elem, None))
+    def __parse_elem(self, elem, idx, stack):
+        """
+        :param elem: элемент
+        :param idx: индекс элемента
+        :param stack: стек для того чтобы положить туда результат
+        :return: индекс следующий за обработанным элементом
+        """
+        if elem.type == TokenType.OP:
+            node, idx = self.__parse_parenthesis(idx + 1)
+            if node is None:
+                raise WrongSyntaxException("Нода отсутствует")
+            stack.append(node)
+            return idx
+        elif elem.type == TokenType.UNARY_OPERATOR:
+            if ((not is_EOF(idx + 1, self.parsed) and self.parsed[idx + 1].type == TokenType.OPERATOR)
+                    or idx == len(self.parsed) - 1):
+                raise WrongSyntaxException("Неверное использование унарного опрератора")
+            unary_op_stack = list()
+            idx = self.__parse_elem(self.parsed[idx + 1], idx + 1, unary_op_stack)
+            stack.append(NotNode(unary_op_stack.pop()))
+            return idx
+        elif elem.type == TokenType.LEXEME:
+            if len(stack) != 0:
+                raise WrongSyntaxException("Неверное положение лексемы")
+            stack.append(LexemeNode(elem.value))
             return idx + 1
+        elif elem.type == TokenType.OPERATOR:
+            return self.__parse_operator(elem, idx + 1, stack)
+        else:
+            raise WrongSyntaxException("Токен имеет неизвестный тип")
+
+    def __parse_parenthesis(self, idx):
+        """
+        Парсит содержимое скобок.
+
+        :param idx: индекс элемента
+        :return: узел, хранящий в себе все операции внутри скобок и индекс следующего элемента
+        """
+        parsed = self.parsed
+        parenthesis_closed = False
+        stack = list()
+        while not is_EOF(idx, parsed) and not parenthesis_closed:
+            elem = parsed[idx]
+            idx = self.__parse_elem(elem, idx, stack)
+            if not is_EOF(idx, parsed):
+                parenthesis_closed = parsed[idx].type == TokenType.CP
+        if not parenthesis_closed:
+            raise WrongSyntaxException("Скобки остались открытыми")
+
+        if len(stack) == 1:
+            return stack.pop(), idx + 1
+        else:
+            raise WrongSyntaxException("Ошибка при парсинге скобок")
+
+    def __parse_operator(self, elem, idx, stack):
+        """
+        :param idx: индекс следующего за оператором элемента
+        :param stack: текущий стек
+        :return: нода, определяющая операцию выполняемую с оператором
+        """
+        if len(stack) == 0:
+            raise WrongSyntaxException("Оператор не может быть первым символом")
+        left = stack.pop()
+        if elem.value == "AND":
+            local_stack = list()
+            idx = self.__parse_elem(self.parsed[idx], idx, local_stack)
+            right = local_stack.pop()
+            stack.append(AndNode(left, right))
+            return idx
         elif elem.value == "OR":
-            right_node, idx = self.__process_or_operator(idx + 1)
-            tree_stack.append(OrNode(top_elem, right_node))
+            parsed = self.parsed
+            local_stack = list()
+            while not is_EOF(idx, parsed) and parsed[idx].value != "OR":
+                local_elem = parsed[idx]
+                if local_elem.type == TokenType.CP:
+                    if not local_stack:
+                        raise exceptions.WrongSyntaxException("Неправильное положение закрывающей скобки")
+                    else:
+                        break
+                idx = self.__parse_elem(local_elem, idx, local_stack)
+            right = local_stack.pop()
+            stack.append(OrNode(left, right))
             return idx
         else:
-            raise exceptions.WrongSyntaxException()
+            raise WrongSyntaxException("Неизвестный оператор")
+# (олег OR петр) AND Димон AND Сема
+# олег OR )
 
-    def __process_or_operator(self, idx):
-        parsed = self.parsed
-        tree_stack = list()
-        while idx < len(parsed):
-            elem = parsed[idx]
-            if elem.type == TokenType.UNARY_OPERATOR:
-                idx = self.__process_unary_operator(idx, tree_stack)
-            elif elem.type == TokenType.OP:
-                idx = self.__process_parenthesis(idx, tree_stack)
-            elif elem.type == TokenType.LEXEME:
-                self.__process_lexeme(elem, tree_stack)
-                idx += 1
-            elif elem.type == TokenType.OPERATOR:
-                if elem.value == "OR":
-                    return tree_stack.pop(), idx
-                elif elem.value == "AND":
-                    tree_stack.append(AndNode(tree_stack.pop(), None))
-                else:
-                    raise exceptions.WrongSyntaxException()
-            else:
-                raise exceptions.WrongSyntaxException()
-
-        result = self.__get_result(tree_stack)
-        if result is None:
-            raise exceptions.WrongSyntaxException()
-
-        return result
-
-
-    def __is_operator_node(self, top_elem):
-        return isinstance(top_elem, (AndNode, OrNode))
-
-    def __get_result(self, tree_stack):
-        top_elem = None
-        if len(tree_stack) != 0:
-            top_elem = tree_stack.pop()
-
-        if isinstance(top_elem, (LexemeNode, NotNode)):
-            return top_elem
-        if (self.__is_operator_node(top_elem)
-                and top_elem.right is not None
-                and top_elem.left is not None):
-            return top_elem
