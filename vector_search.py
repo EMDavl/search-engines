@@ -52,9 +52,11 @@ def query_to_vector(query, unique_lemmas_idf):
 
 def calculate_tf_idf(parsed_query, unique_lemmas_idf):
     tf_idf = {}
-    length = len(parsed_query)
+    total_words_num = 0
+    for value in parsed_query.values():
+        total_words_num += value
     for token in parsed_query.keys():
-        tf_idf[token] = (parsed_query[token] / length) * unique_lemmas_idf[token]
+        tf_idf[token] = (parsed_query[token] / total_words_num) * unique_lemmas_idf[token]
     return tf_idf
 
 def find_relevant_documents(query_vector, documents_vectors):
