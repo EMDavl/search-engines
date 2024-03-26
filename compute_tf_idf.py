@@ -7,7 +7,7 @@ import pymorphy2
 DOCUMENTS_NUM = 121
 
 def download_htmls():
-    folder_path = "dir"
+    folder_path = "templates/dir"
     pattern = re.compile("\d+")
     files = sorted(os.listdir(folder_path), key=lambda x: int(pattern.findall(x)[0]))
 
